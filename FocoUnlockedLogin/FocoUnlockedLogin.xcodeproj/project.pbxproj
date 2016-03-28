@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		884764451C9A5EC0001D256F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884764441C9A5EC0001D256F /* AppDelegate.swift */; };
+		8847644A1C9A5EC0001D256F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 884764481C9A5EC0001D256F /* Main.storyboard */; };
+		8847644C1C9A5EC0001D256F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8847644B1C9A5EC0001D256F /* Assets.xcassets */; };
+		8847644F1C9A5EC0001D256F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8847644D1C9A5EC0001D256F /* LaunchScreen.storyboard */; };
+		8847645A1C9A5EC0001D256F /* FocoUnlockedLoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884764591C9A5EC0001D256F /* FocoUnlockedLoginTests.swift */; };
+		884764651C9A5EC0001D256F /* FocoUnlockedLoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884764641C9A5EC0001D256F /* FocoUnlockedLoginUITests.swift */; };
+		884764731C9A60FA001D256F /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884764721C9A60FA001D256F /* BaseService.swift */; };
+		884764751C9A6310001D256F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884764741C9A6310001D256F /* LoginViewController.swift */; };
+		884764771C9A6346001D256F /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884764761C9A6346001D256F /* CreateAccountViewController.swift */; };
+		EFAFAE24FE797857ACCCD226 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 261C2983E1C5C8516F1CAF0E /* Pods.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		884764561C9A5EC0001D256F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 884764391C9A5EC0001D256F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 884764401C9A5EC0001D256F;
+			remoteInfo = FocoUnlockedLogin;
+		};
+		884764611C9A5EC0001D256F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 884764391C9A5EC0001D256F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 884764401C9A5EC0001D256F;
+			remoteInfo = FocoUnlockedLogin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		261C2983E1C5C8516F1CAF0E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4743EB4D7B3BC9C7155784A9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		884764411C9A5EC0001D256F /* FocoUnlockedLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocoUnlockedLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		884764441C9A5EC0001D256F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		884764491C9A5EC0001D256F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8847644B1C9A5EC0001D256F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8847644E1C9A5EC0001D256F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		884764501C9A5EC0001D256F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		884764551C9A5EC0001D256F /* FocoUnlockedLoginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FocoUnlockedLoginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		884764591C9A5EC0001D256F /* FocoUnlockedLoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocoUnlockedLoginTests.swift; sourceTree = "<group>"; };
+		8847645B1C9A5EC0001D256F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		884764601C9A5EC0001D256F /* FocoUnlockedLoginUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FocoUnlockedLoginUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		884764641C9A5EC0001D256F /* FocoUnlockedLoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocoUnlockedLoginUITests.swift; sourceTree = "<group>"; };
+		884764661C9A5EC0001D256F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		884764721C9A60FA001D256F /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		884764741C9A6310001D256F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		884764761C9A6346001D256F /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		CA225CCE91D3E142CC39A7A0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8847643E1C9A5EC0001D256F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFAFAE24FE797857ACCCD226 /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		884764521C9A5EC0001D256F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8847645D1C9A5EC0001D256F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		612A77E5A88C035EEA5E1560 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4743EB4D7B3BC9C7155784A9 /* Pods.debug.xcconfig */,
+				CA225CCE91D3E142CC39A7A0 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		884764381C9A5EC0001D256F = {
+			isa = PBXGroup;
+			children = (
+				884764431C9A5EC0001D256F /* FocoUnlockedLogin */,
+				884764581C9A5EC0001D256F /* FocoUnlockedLoginTests */,
+				884764631C9A5EC0001D256F /* FocoUnlockedLoginUITests */,
+				884764421C9A5EC0001D256F /* Products */,
+				612A77E5A88C035EEA5E1560 /* Pods */,
+				8E44B7E25DAEF4A0E399A6BC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		884764421C9A5EC0001D256F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				884764411C9A5EC0001D256F /* FocoUnlockedLogin.app */,
+				884764551C9A5EC0001D256F /* FocoUnlockedLoginTests.xctest */,
+				884764601C9A5EC0001D256F /* FocoUnlockedLoginUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		884764431C9A5EC0001D256F /* FocoUnlockedLogin */ = {
+			isa = PBXGroup;
+			children = (
+				884764441C9A5EC0001D256F /* AppDelegate.swift */,
+				884764761C9A6346001D256F /* CreateAccountViewController.swift */,
+				884764741C9A6310001D256F /* LoginViewController.swift */,
+				884764721C9A60FA001D256F /* BaseService.swift */,
+				884764481C9A5EC0001D256F /* Main.storyboard */,
+				8847644B1C9A5EC0001D256F /* Assets.xcassets */,
+				8847644D1C9A5EC0001D256F /* LaunchScreen.storyboard */,
+				884764501C9A5EC0001D256F /* Info.plist */,
+			);
+			path = FocoUnlockedLogin;
+			sourceTree = "<group>";
+		};
+		884764581C9A5EC0001D256F /* FocoUnlockedLoginTests */ = {
+			isa = PBXGroup;
+			children = (
+				884764591C9A5EC0001D256F /* FocoUnlockedLoginTests.swift */,
+				8847645B1C9A5EC0001D256F /* Info.plist */,
+			);
+			path = FocoUnlockedLoginTests;
+			sourceTree = "<group>";
+		};
+		884764631C9A5EC0001D256F /* FocoUnlockedLoginUITests */ = {
+			isa = PBXGroup;
+			children = (
+				884764641C9A5EC0001D256F /* FocoUnlockedLoginUITests.swift */,
+				884764661C9A5EC0001D256F /* Info.plist */,
+			);
+			path = FocoUnlockedLoginUITests;
+			sourceTree = "<group>";
+		};
+		8E44B7E25DAEF4A0E399A6BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				261C2983E1C5C8516F1CAF0E /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		884764401C9A5EC0001D256F /* FocoUnlockedLogin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 884764691C9A5EC0001D256F /* Build configuration list for PBXNativeTarget "FocoUnlockedLogin" */;
+			buildPhases = (
+				EDAC06BCB713E0B6226E0E1D /* Check Pods Manifest.lock */,
+				8847643D1C9A5EC0001D256F /* Sources */,
+				8847643E1C9A5EC0001D256F /* Frameworks */,
+				8847643F1C9A5EC0001D256F /* Resources */,
+				3B11A165E849837124BE4C32 /* Embed Pods Frameworks */,
+				0FEC22448B48DEDD03DB15B5 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FocoUnlockedLogin;
+			productName = FocoUnlockedLogin;
+			productReference = 884764411C9A5EC0001D256F /* FocoUnlockedLogin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		884764541C9A5EC0001D256F /* FocoUnlockedLoginTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8847646C1C9A5EC0001D256F /* Build configuration list for PBXNativeTarget "FocoUnlockedLoginTests" */;
+			buildPhases = (
+				884764511C9A5EC0001D256F /* Sources */,
+				884764521C9A5EC0001D256F /* Frameworks */,
+				884764531C9A5EC0001D256F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				884764571C9A5EC0001D256F /* PBXTargetDependency */,
+			);
+			name = FocoUnlockedLoginTests;
+			productName = FocoUnlockedLoginTests;
+			productReference = 884764551C9A5EC0001D256F /* FocoUnlockedLoginTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8847645F1C9A5EC0001D256F /* FocoUnlockedLoginUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8847646F1C9A5EC0001D256F /* Build configuration list for PBXNativeTarget "FocoUnlockedLoginUITests" */;
+			buildPhases = (
+				8847645C1C9A5EC0001D256F /* Sources */,
+				8847645D1C9A5EC0001D256F /* Frameworks */,
+				8847645E1C9A5EC0001D256F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				884764621C9A5EC0001D256F /* PBXTargetDependency */,
+			);
+			name = FocoUnlockedLoginUITests;
+			productName = FocoUnlockedLoginUITests;
+			productReference = 884764601C9A5EC0001D256F /* FocoUnlockedLoginUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		884764391C9A5EC0001D256F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = wisp;
+				TargetAttributes = {
+					884764401C9A5EC0001D256F = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					884764541C9A5EC0001D256F = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 884764401C9A5EC0001D256F;
+					};
+					8847645F1C9A5EC0001D256F = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 884764401C9A5EC0001D256F;
+					};
+				};
+			};
+			buildConfigurationList = 8847643C1C9A5EC0001D256F /* Build configuration list for PBXProject "FocoUnlockedLogin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 884764381C9A5EC0001D256F;
+			productRefGroup = 884764421C9A5EC0001D256F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				884764401C9A5EC0001D256F /* FocoUnlockedLogin */,
+				884764541C9A5EC0001D256F /* FocoUnlockedLoginTests */,
+				8847645F1C9A5EC0001D256F /* FocoUnlockedLoginUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8847643F1C9A5EC0001D256F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8847644F1C9A5EC0001D256F /* LaunchScreen.storyboard in Resources */,
+				8847644C1C9A5EC0001D256F /* Assets.xcassets in Resources */,
+				8847644A1C9A5EC0001D256F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		884764531C9A5EC0001D256F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8847645E1C9A5EC0001D256F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FEC22448B48DEDD03DB15B5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B11A165E849837124BE4C32 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDAC06BCB713E0B6226E0E1D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8847643D1C9A5EC0001D256F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				884764771C9A6346001D256F /* CreateAccountViewController.swift in Sources */,
+				884764751C9A6310001D256F /* LoginViewController.swift in Sources */,
+				884764451C9A5EC0001D256F /* AppDelegate.swift in Sources */,
+				884764731C9A60FA001D256F /* BaseService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		884764511C9A5EC0001D256F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8847645A1C9A5EC0001D256F /* FocoUnlockedLoginTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8847645C1C9A5EC0001D256F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				884764651C9A5EC0001D256F /* FocoUnlockedLoginUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		884764571C9A5EC0001D256F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 884764401C9A5EC0001D256F /* FocoUnlockedLogin */;
+			targetProxy = 884764561C9A5EC0001D256F /* PBXContainerItemProxy */;
+		};
+		884764621C9A5EC0001D256F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 884764401C9A5EC0001D256F /* FocoUnlockedLogin */;
+			targetProxy = 884764611C9A5EC0001D256F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		884764481C9A5EC0001D256F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				884764491C9A5EC0001D256F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8847644D1C9A5EC0001D256F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8847644E1C9A5EC0001D256F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		884764671C9A5EC0001D256F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		884764681C9A5EC0001D256F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8847646A1C9A5EC0001D256F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4743EB4D7B3BC9C7155784A9 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FocoUnlockedLogin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.firebase.wisp.FocoUnlockedLogin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8847646B1C9A5EC0001D256F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA225CCE91D3E142CC39A7A0 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FocoUnlockedLogin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.firebase.wisp.FocoUnlockedLogin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8847646D1C9A5EC0001D256F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FocoUnlockedLoginTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.firebase.wisp.FocoUnlockedLoginTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FocoUnlockedLogin.app/FocoUnlockedLogin";
+			};
+			name = Debug;
+		};
+		8847646E1C9A5EC0001D256F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FocoUnlockedLoginTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.firebase.wisp.FocoUnlockedLoginTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FocoUnlockedLogin.app/FocoUnlockedLogin";
+			};
+			name = Release;
+		};
+		884764701C9A5EC0001D256F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FocoUnlockedLoginUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.firebase.wisp.FocoUnlockedLoginUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FocoUnlockedLogin;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		884764711C9A5EC0001D256F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FocoUnlockedLoginUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.firebase.wisp.FocoUnlockedLoginUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FocoUnlockedLogin;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8847643C1C9A5EC0001D256F /* Build configuration list for PBXProject "FocoUnlockedLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				884764671C9A5EC0001D256F /* Debug */,
+				884764681C9A5EC0001D256F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		884764691C9A5EC0001D256F /* Build configuration list for PBXNativeTarget "FocoUnlockedLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8847646A1C9A5EC0001D256F /* Debug */,
+				8847646B1C9A5EC0001D256F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8847646C1C9A5EC0001D256F /* Build configuration list for PBXNativeTarget "FocoUnlockedLoginTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8847646D1C9A5EC0001D256F /* Debug */,
+				8847646E1C9A5EC0001D256F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8847646F1C9A5EC0001D256F /* Build configuration list for PBXNativeTarget "FocoUnlockedLoginUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				884764701C9A5EC0001D256F /* Debug */,
+				884764711C9A5EC0001D256F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 884764391C9A5EC0001D256F /* Project object */;
+}
