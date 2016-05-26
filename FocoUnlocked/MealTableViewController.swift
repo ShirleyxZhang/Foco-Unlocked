@@ -19,6 +19,7 @@ class MealTableViewController: UITableViewController {
     var titles = [String]()
     var newImage: UIImageView = UIImageView()
     
+    
     func configureTableView() {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 300.0
@@ -31,20 +32,55 @@ class MealTableViewController: UITableViewController {
         
         // Load the sample data.
         loadSampleMeals()
-        //print(tappedButton)
     }
     
     
     func loadSampleMeals() {
-        let ref = FIRDatabase.database().reference().child("posts") //Firebase(url:"https://focounlocked.firebaseio.com/posts")
-        ref.queryOrderedByChild("Title")
-            .observeEventType(.ChildAdded, withBlock: { snapshot in
-                let base64EncodedString = snapshot.value!.objectForKey("Image")
-                let imageData = NSData(base64EncodedString: base64EncodedString as! String, options: NSDataBase64DecodingOptions.IgnoreUnknownCharacters)
+        var image: String = ""
+        var title: String = ""
+        var bites: String = ""
+        var decodedImage = UIImage()
+        let ref = FIRDatabase.database().reference().child("posts")
+        ref.observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
+            let postDict = snapshot.value as! [String : AnyObject]
+            for object in postDict {// as! [ModelAttachment] {
+                let obj = object.1 as! NSDictionary
+                for (key, value) in obj {
+                    if (key as! String == "Image") {
+                        image = value as! String
+                        let imageData = NSData(base64EncodedString: image as String, options: NSDataBase64DecodingOptions.IgnoreUnknownCharacters)
+                            decodedImage = UIImage(data: imageData!)!
+                    } else if (key as! String == "Title") {
+                        title = value as! String
+                    } else if (key as! String == "Bites Number") {
+                        bites = value as! String
+                    }
+                    if (image != "" && title != "" && bites != "") {
+                        let meal = Meal(name: title as String, photo: decodedImage, upvoted: true, bites: bites as String) as Meal!
+                        self.meals as NSArray
+                        self.meals.append(meal)
+                        image = ""
+                        title = ""
+                        bites = ""
+
+                    }
+                    //println("Property: \"\(key as String)\"")
+                }
+            }
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.tableView.reloadData()
+            })
+        })
+        
+        
+        /*ref.observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
+            if (snapshot.value!["Image"] != nil) {
+                let base64EncodedString = snapshot.value!["Image"] as! String
+                let imageData = NSData(base64EncodedString: base64EncodedString as String, options: NSDataBase64DecodingOptions.IgnoreUnknownCharacters)
                 if (imageData != nil) {
                     let decodedImage = UIImage(data: imageData!)
-                    let title = (snapshot.value!.objectForKey("Title") as! NSString)
-                    let bitesNum = (snapshot.value!.objectForKey("Bites Number") as! NSString)
+                    let title = (snapshot.value!["Title"] as! NSString)
+                    let bitesNum = (snapshot.value!["Bites Number"] as! NSString)
                     let meal = Meal(name: title as String, photo: decodedImage, upvoted: true, bites: bitesNum as String) as Meal!
                     self.meals as NSArray
                     self.meals.append(meal)
@@ -52,7 +88,8 @@ class MealTableViewController: UITableViewController {
                         self.tableView.reloadData()
                     })
                 }
-            })
+            }
+            })*/
     }
     
     override func didReceiveMemoryWarning() {

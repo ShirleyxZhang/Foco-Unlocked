@@ -47,8 +47,7 @@ class LoginViewController: UIViewController {
         {
             // Checks to see if account exists
             
-            FIRAuth.auth()!.signInAnonymouslyWithCompletion() { (user, error) in
-            
+            FIRAuth.auth()?.signInWithEmail(email!, password: password!) { (user, error) in
                 // If there is no error then a positive message will be sent to the terminal and not hide the logout button
                 
                 if error == nil

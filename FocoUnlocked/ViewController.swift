@@ -168,19 +168,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func cancelButton(sender: AnyObject) {
-        //var title: Bool = false
-        //var desc: Bool = false
-        //let itemNameCheck: String = itemName.text!
-        //let itemDescCheck: String = itemDesc.text!
+        var title: Bool = false
+        var desc: Bool = false
+        let itemNameCheck: String = itemName.text!
+        let itemDescCheck: String = itemDesc.text!
         
-        /*if itemNameCheck.characters.count >= 1 {
+        if itemNameCheck.characters.count >= 1 {
             title = true
         }
         if itemDescCheck.characters.count >= itemNameCheck.characters.count {
             desc = true
-        }*/
+        }
         
-        /*
+        
         if title == true || desc == true {
             let alertController = UIAlertController(title: "Discard Post", message:
                 "Are your sure you want to give up on your creation?", preferredStyle: UIAlertControllerStyle.Alert)
@@ -190,7 +190,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             self.presentViewController(alertController, animated: true, completion: nil)
             
         }
-*/
+
         
         navigationController?.popViewControllerAnimated(true)
 

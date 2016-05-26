@@ -34,6 +34,8 @@ class CreateAccountViewController: UIViewController {
         let email = self.emailTextField.text
         let password = self.passwordTextField.text
         
+        let ref = FIRDatabase.database().reference()
+        
         if email != "" && password != ""
         {
             FIRAuth.auth()?.createUserWithEmail(email!, password: password!) { (user, error) in
@@ -47,6 +49,7 @@ class CreateAccountViewController: UIViewController {
                         //if error == nil
                         //{
                             NSUserDefaults.standardUserDefaults().setValue(user!.uid, forKey: "uid")
+                            //ref.child("users").child(user!.uid).setValue(["username": email!, "password": password!])
                             NSUserDefaults.standardUserDefaults().synchronize()
                             print("Account Created :)")
                             self.performSegueWithIdentifier("fromSignupToFeed", sender: self)
@@ -55,7 +58,11 @@ class CreateAccountViewController: UIViewController {
                     // Otherwise an error will be printed to the terminal
                 }
                     else {
-                            print(error)
+                            let alert = UIAlertController(title: "Error", message: "Incorret Information.", preferredStyle: UIAlertControllerStyle.Alert)
+                            let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+                            alert.addAction(action)
+                            self.presentViewController(alert, animated: true, completion: nil)
+                            print("print error: \(error) \n")
                         }
             }
         }
