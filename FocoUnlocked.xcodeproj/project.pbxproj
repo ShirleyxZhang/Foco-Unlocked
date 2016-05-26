@@ -1,0 +1,670 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05C4BDA87043B4F76D2CC941 /* libPods-FocoUnlocked.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FF4445713557B87A3D3E40 /* libPods-FocoUnlocked.a */; };
+		886286721CF693B9007D8C94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286711CF693B9007D8C94 /* AppDelegate.swift */; };
+		886286741CF693B9007D8C94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286731CF693B9007D8C94 /* ViewController.swift */; };
+		886286791CF693B9007D8C94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 886286781CF693B9007D8C94 /* Assets.xcassets */; };
+		8862867C1CF693B9007D8C94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8862867A1CF693B9007D8C94 /* LaunchScreen.storyboard */; };
+		886286871CF693BA007D8C94 /* FocoUnlockedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286861CF693BA007D8C94 /* FocoUnlockedTests.swift */; };
+		886286921CF693BA007D8C94 /* FocoUnlockedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286911CF693BA007D8C94 /* FocoUnlockedUITests.swift */; };
+		886286A01CF693D4007D8C94 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8862869F1CF693D4007D8C94 /* GoogleService-Info.plist */; };
+		886286A31CF694A9007D8C94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 886286A11CF694A9007D8C94 /* Main.storyboard */; };
+		886286B71CF694F7007D8C94 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286A41CF694F7007D8C94 /* BaseService.swift */; };
+		886286B81CF694F7007D8C94 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286A51CF694F7007D8C94 /* Constants.swift */; };
+		886286B91CF694F7007D8C94 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286A61CF694F7007D8C94 /* CreateAccountViewController.swift */; };
+		886286BA1CF694F7007D8C94 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286A71CF694F7007D8C94 /* DataService.swift */; };
+		886286BB1CF694F7007D8C94 /* DetailPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286A81CF694F7007D8C94 /* DetailPostViewController.swift */; };
+		886286BC1CF694F7007D8C94 /* filled cookie.png in Resources */ = {isa = PBXBuildFile; fileRef = 886286A91CF694F7007D8C94 /* filled cookie.png */; };
+		886286BD1CF694F7007D8C94 /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286AA1CF694F7007D8C94 /* ImageUtil.swift */; };
+		886286BE1CF694F7007D8C94 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286AB1CF694F7007D8C94 /* LoginViewController.swift */; };
+		886286BF1CF694F7007D8C94 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286AC1CF694F7007D8C94 /* Meal.swift */; };
+		886286C01CF694F7007D8C94 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286AD1CF694F7007D8C94 /* MealTableViewCell.swift */; };
+		886286C11CF694F7007D8C94 /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286AE1CF694F7007D8C94 /* MealTableViewController.swift */; };
+		886286C21CF694F7007D8C94 /* PhotoGalleryCropping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286AF1CF694F7007D8C94 /* PhotoGalleryCropping.swift */; };
+		886286C31CF694F7007D8C94 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286B01CF694F7007D8C94 /* Post.swift */; };
+		886286C41CF694F7007D8C94 /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286B11CF694F7007D8C94 /* PostList.swift */; };
+		886286C51CF694F7007D8C94 /* PostsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286B21CF694F7007D8C94 /* PostsController.swift */; };
+		886286C61CF694F7007D8C94 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286B31CF694F7007D8C94 /* SettingsController.swift */; };
+		886286C71CF694F7007D8C94 /* unfilled cookie.png in Resources */ = {isa = PBXBuildFile; fileRef = 886286B41CF694F7007D8C94 /* unfilled cookie.png */; };
+		886286C81CF694F7007D8C94 /* UpvoteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286B51CF694F7007D8C94 /* UpvoteButton.swift */; };
+		886286C91CF694F7007D8C94 /* UpvoteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286B61CF694F7007D8C94 /* UpvoteControl.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		886286831CF693BA007D8C94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 886286661CF693B9007D8C94 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8862866D1CF693B9007D8C94;
+			remoteInfo = FocoUnlocked;
+		};
+		8862868E1CF693BA007D8C94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 886286661CF693B9007D8C94 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8862866D1CF693B9007D8C94;
+			remoteInfo = FocoUnlocked;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		32FF4445713557B87A3D3E40 /* libPods-FocoUnlocked.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FocoUnlocked.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D53409A1FE30BFA33A17A95 /* Pods-FocoUnlocked.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FocoUnlocked.release.xcconfig"; path = "Pods/Target Support Files/Pods-FocoUnlocked/Pods-FocoUnlocked.release.xcconfig"; sourceTree = "<group>"; };
+		8862866E1CF693B9007D8C94 /* FocoUnlocked.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocoUnlocked.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		886286711CF693B9007D8C94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		886286731CF693B9007D8C94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		886286781CF693B9007D8C94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8862867B1CF693B9007D8C94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8862867D1CF693B9007D8C94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		886286821CF693BA007D8C94 /* FocoUnlockedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FocoUnlockedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		886286861CF693BA007D8C94 /* FocoUnlockedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocoUnlockedTests.swift; sourceTree = "<group>"; };
+		886286881CF693BA007D8C94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8862868D1CF693BA007D8C94 /* FocoUnlockedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FocoUnlockedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		886286911CF693BA007D8C94 /* FocoUnlockedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocoUnlockedUITests.swift; sourceTree = "<group>"; };
+		886286931CF693BA007D8C94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8862869F1CF693D4007D8C94 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		886286A21CF694A9007D8C94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		886286A41CF694F7007D8C94 /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		886286A51CF694F7007D8C94 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		886286A61CF694F7007D8C94 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		886286A71CF694F7007D8C94 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		886286A81CF694F7007D8C94 /* DetailPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPostViewController.swift; sourceTree = "<group>"; };
+		886286A91CF694F7007D8C94 /* filled cookie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filled cookie.png"; sourceTree = "<group>"; };
+		886286AA1CF694F7007D8C94 /* ImageUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
+		886286AB1CF694F7007D8C94 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		886286AC1CF694F7007D8C94 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		886286AD1CF694F7007D8C94 /* MealTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
+		886286AE1CF694F7007D8C94 /* MealTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewController.swift; sourceTree = "<group>"; };
+		886286AF1CF694F7007D8C94 /* PhotoGalleryCropping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGalleryCropping.swift; sourceTree = "<group>"; };
+		886286B01CF694F7007D8C94 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		886286B11CF694F7007D8C94 /* PostList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostList.swift; sourceTree = "<group>"; };
+		886286B21CF694F7007D8C94 /* PostsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsController.swift; sourceTree = "<group>"; };
+		886286B31CF694F7007D8C94 /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		886286B41CF694F7007D8C94 /* unfilled cookie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unfilled cookie.png"; sourceTree = "<group>"; };
+		886286B51CF694F7007D8C94 /* UpvoteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpvoteButton.swift; sourceTree = "<group>"; };
+		886286B61CF694F7007D8C94 /* UpvoteControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpvoteControl.swift; sourceTree = "<group>"; };
+		C9502387C505A257A6A6C661 /* Pods-FocoUnlocked.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FocoUnlocked.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FocoUnlocked/Pods-FocoUnlocked.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8862866B1CF693B9007D8C94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05C4BDA87043B4F76D2CC941 /* libPods-FocoUnlocked.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8862867F1CF693BA007D8C94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8862868A1CF693BA007D8C94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3DFC87358B0D540D32D8C49E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32FF4445713557B87A3D3E40 /* libPods-FocoUnlocked.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		886286651CF693B9007D8C94 = {
+			isa = PBXGroup;
+			children = (
+				886286701CF693B9007D8C94 /* FocoUnlocked */,
+				886286851CF693BA007D8C94 /* FocoUnlockedTests */,
+				886286901CF693BA007D8C94 /* FocoUnlockedUITests */,
+				8862866F1CF693B9007D8C94 /* Products */,
+				FACB77BC3F0A4F031EBC4797 /* Pods */,
+				3DFC87358B0D540D32D8C49E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8862866F1CF693B9007D8C94 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8862866E1CF693B9007D8C94 /* FocoUnlocked.app */,
+				886286821CF693BA007D8C94 /* FocoUnlockedTests.xctest */,
+				8862868D1CF693BA007D8C94 /* FocoUnlockedUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		886286701CF693B9007D8C94 /* FocoUnlocked */ = {
+			isa = PBXGroup;
+			children = (
+				886286711CF693B9007D8C94 /* AppDelegate.swift */,
+				886286731CF693B9007D8C94 /* ViewController.swift */,
+				8862869F1CF693D4007D8C94 /* GoogleService-Info.plist */,
+				886286A11CF694A9007D8C94 /* Main.storyboard */,
+				886286A41CF694F7007D8C94 /* BaseService.swift */,
+				886286A51CF694F7007D8C94 /* Constants.swift */,
+				886286A61CF694F7007D8C94 /* CreateAccountViewController.swift */,
+				886286A71CF694F7007D8C94 /* DataService.swift */,
+				886286A81CF694F7007D8C94 /* DetailPostViewController.swift */,
+				886286A91CF694F7007D8C94 /* filled cookie.png */,
+				886286AA1CF694F7007D8C94 /* ImageUtil.swift */,
+				886286AB1CF694F7007D8C94 /* LoginViewController.swift */,
+				886286AC1CF694F7007D8C94 /* Meal.swift */,
+				886286AD1CF694F7007D8C94 /* MealTableViewCell.swift */,
+				886286AE1CF694F7007D8C94 /* MealTableViewController.swift */,
+				886286AF1CF694F7007D8C94 /* PhotoGalleryCropping.swift */,
+				886286B01CF694F7007D8C94 /* Post.swift */,
+				886286B11CF694F7007D8C94 /* PostList.swift */,
+				886286B21CF694F7007D8C94 /* PostsController.swift */,
+				886286B31CF694F7007D8C94 /* SettingsController.swift */,
+				886286B41CF694F7007D8C94 /* unfilled cookie.png */,
+				886286B51CF694F7007D8C94 /* UpvoteButton.swift */,
+				886286B61CF694F7007D8C94 /* UpvoteControl.swift */,
+				886286781CF693B9007D8C94 /* Assets.xcassets */,
+				8862867A1CF693B9007D8C94 /* LaunchScreen.storyboard */,
+				8862867D1CF693B9007D8C94 /* Info.plist */,
+			);
+			path = FocoUnlocked;
+			sourceTree = "<group>";
+		};
+		886286851CF693BA007D8C94 /* FocoUnlockedTests */ = {
+			isa = PBXGroup;
+			children = (
+				886286861CF693BA007D8C94 /* FocoUnlockedTests.swift */,
+				886286881CF693BA007D8C94 /* Info.plist */,
+			);
+			path = FocoUnlockedTests;
+			sourceTree = "<group>";
+		};
+		886286901CF693BA007D8C94 /* FocoUnlockedUITests */ = {
+			isa = PBXGroup;
+			children = (
+				886286911CF693BA007D8C94 /* FocoUnlockedUITests.swift */,
+				886286931CF693BA007D8C94 /* Info.plist */,
+			);
+			path = FocoUnlockedUITests;
+			sourceTree = "<group>";
+		};
+		FACB77BC3F0A4F031EBC4797 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C9502387C505A257A6A6C661 /* Pods-FocoUnlocked.debug.xcconfig */,
+				4D53409A1FE30BFA33A17A95 /* Pods-FocoUnlocked.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8862866D1CF693B9007D8C94 /* FocoUnlocked */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 886286961CF693BA007D8C94 /* Build configuration list for PBXNativeTarget "FocoUnlocked" */;
+			buildPhases = (
+				66128E3B23F4E738660323E4 /* Check Pods Manifest.lock */,
+				8862866A1CF693B9007D8C94 /* Sources */,
+				8862866B1CF693B9007D8C94 /* Frameworks */,
+				8862866C1CF693B9007D8C94 /* Resources */,
+				4BD1C8C09BDB48DA1E735905 /* Embed Pods Frameworks */,
+				48425538BDFDE2F26EFB2EDF /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FocoUnlocked;
+			productName = FocoUnlocked;
+			productReference = 8862866E1CF693B9007D8C94 /* FocoUnlocked.app */;
+			productType = "com.apple.product-type.application";
+		};
+		886286811CF693BA007D8C94 /* FocoUnlockedTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 886286991CF693BA007D8C94 /* Build configuration list for PBXNativeTarget "FocoUnlockedTests" */;
+			buildPhases = (
+				8862867E1CF693BA007D8C94 /* Sources */,
+				8862867F1CF693BA007D8C94 /* Frameworks */,
+				886286801CF693BA007D8C94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				886286841CF693BA007D8C94 /* PBXTargetDependency */,
+			);
+			name = FocoUnlockedTests;
+			productName = FocoUnlockedTests;
+			productReference = 886286821CF693BA007D8C94 /* FocoUnlockedTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8862868C1CF693BA007D8C94 /* FocoUnlockedUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8862869C1CF693BA007D8C94 /* Build configuration list for PBXNativeTarget "FocoUnlockedUITests" */;
+			buildPhases = (
+				886286891CF693BA007D8C94 /* Sources */,
+				8862868A1CF693BA007D8C94 /* Frameworks */,
+				8862868B1CF693BA007D8C94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8862868F1CF693BA007D8C94 /* PBXTargetDependency */,
+			);
+			name = FocoUnlockedUITests;
+			productName = FocoUnlockedUITests;
+			productReference = 8862868D1CF693BA007D8C94 /* FocoUnlockedUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		886286661CF693B9007D8C94 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Sudikoff Lab iMac";
+				TargetAttributes = {
+					8862866D1CF693B9007D8C94 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 7SNLCB4JQ2;
+					};
+					886286811CF693BA007D8C94 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 7SNLCB4JQ2;
+						TestTargetID = 8862866D1CF693B9007D8C94;
+					};
+					8862868C1CF693BA007D8C94 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 7SNLCB4JQ2;
+						TestTargetID = 8862866D1CF693B9007D8C94;
+					};
+				};
+			};
+			buildConfigurationList = 886286691CF693B9007D8C94 /* Build configuration list for PBXProject "FocoUnlocked" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 886286651CF693B9007D8C94;
+			productRefGroup = 8862866F1CF693B9007D8C94 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8862866D1CF693B9007D8C94 /* FocoUnlocked */,
+				886286811CF693BA007D8C94 /* FocoUnlockedTests */,
+				8862868C1CF693BA007D8C94 /* FocoUnlockedUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8862866C1CF693B9007D8C94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8862867C1CF693B9007D8C94 /* LaunchScreen.storyboard in Resources */,
+				886286C71CF694F7007D8C94 /* unfilled cookie.png in Resources */,
+				886286A01CF693D4007D8C94 /* GoogleService-Info.plist in Resources */,
+				886286791CF693B9007D8C94 /* Assets.xcassets in Resources */,
+				886286BC1CF694F7007D8C94 /* filled cookie.png in Resources */,
+				886286A31CF694A9007D8C94 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		886286801CF693BA007D8C94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8862868B1CF693BA007D8C94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		48425538BDFDE2F26EFB2EDF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FocoUnlocked/Pods-FocoUnlocked-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4BD1C8C09BDB48DA1E735905 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FocoUnlocked/Pods-FocoUnlocked-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66128E3B23F4E738660323E4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8862866A1CF693B9007D8C94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				886286BF1CF694F7007D8C94 /* Meal.swift in Sources */,
+				886286C41CF694F7007D8C94 /* PostList.swift in Sources */,
+				886286C91CF694F7007D8C94 /* UpvoteControl.swift in Sources */,
+				886286C01CF694F7007D8C94 /* MealTableViewCell.swift in Sources */,
+				886286C61CF694F7007D8C94 /* SettingsController.swift in Sources */,
+				886286BE1CF694F7007D8C94 /* LoginViewController.swift in Sources */,
+				886286B91CF694F7007D8C94 /* CreateAccountViewController.swift in Sources */,
+				886286C81CF694F7007D8C94 /* UpvoteButton.swift in Sources */,
+				886286BB1CF694F7007D8C94 /* DetailPostViewController.swift in Sources */,
+				886286C31CF694F7007D8C94 /* Post.swift in Sources */,
+				886286741CF693B9007D8C94 /* ViewController.swift in Sources */,
+				886286BD1CF694F7007D8C94 /* ImageUtil.swift in Sources */,
+				886286C21CF694F7007D8C94 /* PhotoGalleryCropping.swift in Sources */,
+				886286721CF693B9007D8C94 /* AppDelegate.swift in Sources */,
+				886286BA1CF694F7007D8C94 /* DataService.swift in Sources */,
+				886286B71CF694F7007D8C94 /* BaseService.swift in Sources */,
+				886286C51CF694F7007D8C94 /* PostsController.swift in Sources */,
+				886286C11CF694F7007D8C94 /* MealTableViewController.swift in Sources */,
+				886286B81CF694F7007D8C94 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8862867E1CF693BA007D8C94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				886286871CF693BA007D8C94 /* FocoUnlockedTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		886286891CF693BA007D8C94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				886286921CF693BA007D8C94 /* FocoUnlockedUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		886286841CF693BA007D8C94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8862866D1CF693B9007D8C94 /* FocoUnlocked */;
+			targetProxy = 886286831CF693BA007D8C94 /* PBXContainerItemProxy */;
+		};
+		8862868F1CF693BA007D8C94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8862866D1CF693B9007D8C94 /* FocoUnlocked */;
+			targetProxy = 8862868E1CF693BA007D8C94 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8862867A1CF693B9007D8C94 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8862867B1CF693B9007D8C94 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		886286A11CF694A9007D8C94 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				886286A21CF694A9007D8C94 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		886286941CF693BA007D8C94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		886286951CF693BA007D8C94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		886286971CF693BA007D8C94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9502387C505A257A6A6C661 /* Pods-FocoUnlocked.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FocoUnlocked/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Ijemma.FocoUnlocked;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		886286981CF693BA007D8C94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D53409A1FE30BFA33A17A95 /* Pods-FocoUnlocked.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FocoUnlocked/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Ijemma.FocoUnlocked;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8862869A1CF693BA007D8C94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FocoUnlockedTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Ijemma.FocoUnlockedTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FocoUnlocked.app/FocoUnlocked";
+			};
+			name = Debug;
+		};
+		8862869B1CF693BA007D8C94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FocoUnlockedTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Ijemma.FocoUnlockedTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FocoUnlocked.app/FocoUnlocked";
+			};
+			name = Release;
+		};
+		8862869D1CF693BA007D8C94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FocoUnlockedUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Ijemma.FocoUnlockedUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FocoUnlocked;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		8862869E1CF693BA007D8C94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FocoUnlockedUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Ijemma.FocoUnlockedUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FocoUnlocked;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		886286691CF693B9007D8C94 /* Build configuration list for PBXProject "FocoUnlocked" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				886286941CF693BA007D8C94 /* Debug */,
+				886286951CF693BA007D8C94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		886286961CF693BA007D8C94 /* Build configuration list for PBXNativeTarget "FocoUnlocked" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				886286971CF693BA007D8C94 /* Debug */,
+				886286981CF693BA007D8C94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		886286991CF693BA007D8C94 /* Build configuration list for PBXNativeTarget "FocoUnlockedTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8862869A1CF693BA007D8C94 /* Debug */,
+				8862869B1CF693BA007D8C94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8862869C1CF693BA007D8C94 /* Build configuration list for PBXNativeTarget "FocoUnlockedUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8862869D1CF693BA007D8C94 /* Debug */,
+				8862869E1CF693BA007D8C94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 886286661CF693B9007D8C94 /* Project object */;
+}
