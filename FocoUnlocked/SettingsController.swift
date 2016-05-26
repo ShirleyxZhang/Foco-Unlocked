@@ -52,9 +52,8 @@ class SettingsController: UIViewController {
         
         if (sugg == true) {
             let newSuggestions = ["How often goes to Foco": focoFreqCheck, "How to use the app": usingAppCheck, "post": suggestionsCheck]
-            let postsRef = ref.child("suggestions")
             let idString = NSUUID().UUIDString
-            postsRef.child(idString).setValue(newSuggestions)
+            ref.child(idString).setValue(newSuggestions)
             //Suggestion.setValue(newSuggestions)
             let alertController = UIAlertController(title: "Successful Suggestion", message:
                 "Thank you for your feedback!", preferredStyle: UIAlertControllerStyle.Alert)
