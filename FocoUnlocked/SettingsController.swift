@@ -31,11 +31,15 @@ class SettingsController: UIViewController {
         usingApp!.layer.borderColor = UIColor.grayColor().CGColor
     }
     
+    @IBAction func logout(sender: AnyObject) {
+        try! FIRAuth.auth()!.signOut()
+        self.performSegueWithIdentifier("logout", sender: self)
+        print("Logged out :)")
+    }
+    
     
     @IBAction func sendSuggestion(sender: AnyObject) {
-        let ref = FIRDatabase.database().reference().child("suggestions")//Firebase(url: "https://focounlocked.firebaseio.com/suggestions")
-        
-        //let Suggestion = ref.child("suggestions")
+        let ref = FIRDatabase.database().reference().child("suggestions")
         
         var sugg: Bool = true;
         let suggestionsCheck: String = suggestions.text!
@@ -59,7 +63,7 @@ class SettingsController: UIViewController {
             }))
         } else {
             let alertController = UIAlertController(title: "Suggestions Error", message:
-                "Your suggestions isn't long enough", preferredStyle: UIAlertControllerStyle.Alert)
+                "Your suggestion isn't detailed enough", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Dimiss", style: UIAlertActionStyle.Default,handler: nil))
         }
         

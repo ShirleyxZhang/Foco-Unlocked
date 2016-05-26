@@ -64,32 +64,12 @@ class MealTableViewController: UITableViewController {
                         bites = ""
 
                     }
-                    //println("Property: \"\(key as String)\"")
                 }
             }
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.tableView.reloadData()
             })
         })
-        
-        
-        /*ref.observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
-            if (snapshot.value!["Image"] != nil) {
-                let base64EncodedString = snapshot.value!["Image"] as! String
-                let imageData = NSData(base64EncodedString: base64EncodedString as String, options: NSDataBase64DecodingOptions.IgnoreUnknownCharacters)
-                if (imageData != nil) {
-                    let decodedImage = UIImage(data: imageData!)
-                    let title = (snapshot.value!["Title"] as! NSString)
-                    let bitesNum = (snapshot.value!["Bites Number"] as! NSString)
-                    let meal = Meal(name: title as String, photo: decodedImage, upvoted: true, bites: bitesNum as String) as Meal!
-                    self.meals as NSArray
-                    self.meals.append(meal)
-                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        self.tableView.reloadData()
-                    })
-                }
-            }
-            })*/
     }
     
     override func didReceiveMemoryWarning() {
