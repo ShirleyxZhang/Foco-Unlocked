@@ -168,7 +168,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func cancelButton(sender: AnyObject) {
-        var title: Bool = false
+        /*var title: Bool = false
         var desc: Bool = false
         let itemNameCheck: String = itemName.text!
         let itemDescCheck: String = itemDesc.text!
@@ -186,10 +186,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 "Are your sure you want to give up on your creation?", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default,handler: nil))
             alertController.addAction(UIAlertAction(title: "Discard", style: UIAlertActionStyle.Default, handler: nil))
-            
             self.presentViewController(alertController, animated: true, completion: nil)
             
-        }
+        }*/
 
         
         navigationController?.popViewControllerAnimated(true)

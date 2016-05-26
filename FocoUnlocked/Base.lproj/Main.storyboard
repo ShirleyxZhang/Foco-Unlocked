@@ -504,12 +504,12 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LNo-We-OHa">
-                                <rect key="frame" x="16" y="303" width="380" height="168"/>
+                                <rect key="frame" x="16" y="303" width="385" height="168"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="168" id="7De-Qu-deD"/>
-                                    <constraint firstAttribute="width" constant="364" id="IfP-xO-5dk"/>
-                                    <constraint firstAttribute="width" secondItem="LNo-We-OHa" secondAttribute="height" multiplier="91:51" constant="64.235294117647015" id="Xy3-sZ-3uP"/>
+                                    <constraint firstAttribute="width" constant="385" id="IfP-xO-5dk"/>
+                                    <constraint firstAttribute="width" secondItem="LNo-We-OHa" secondAttribute="height" multiplier="91:51" constant="85.235294117647015" id="Xy3-sZ-3uP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1048,7 +1048,7 @@
         <image name="namefinal.png" width="3000" height="900"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="k2o-08-g4L"/>
+        <segue reference="bjH-U2-eaw"/>
         <segue reference="iPE-Ci-ocB"/>
         <segue reference="dJg-QI-aDM"/>
     </inferredMetricsTieBreakers>
