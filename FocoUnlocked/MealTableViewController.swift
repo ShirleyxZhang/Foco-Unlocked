@@ -39,11 +39,18 @@ class MealTableViewController: UITableViewController {
         var image: String = ""
         var title: String = ""
         var bites: String = ""
+        var lastCount = 0
         var decodedImage = UIImage()
         let ref = FIRDatabase.database().reference().child("posts")
+        self.meals = []
         ref.observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
-            let postDict = snapshot.value as! [String : AnyObject]
-            for object in postDict {// as! [ModelAttachment] {
+            if (self.meals.count == lastCount) {
+                self.meals = []
+                lastCount = 0
+            }
+            if (!(snapshot.value is NSNull)) {
+            let postDict = snapshot.value as? [String : AnyObject]
+            for object in postDict! {
                 let obj = object.1 as! NSDictionary
                 for (key, value) in obj {
                     if (key as! String == "Image") {
@@ -59,16 +66,20 @@ class MealTableViewController: UITableViewController {
                         let meal = Meal(name: title as String, photo: decodedImage, upvoted: true, bites: bites as String) as Meal!
                         self.meals as NSArray
                         self.meals.append(meal)
+                        lastCount++
                         image = ""
                         title = ""
                         bites = ""
 
                     }
                 }
+                }
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    self.tableView.reloadData()
+                })
+                
             }
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                self.tableView.reloadData()
-            })
+            
         })
     }
     
