@@ -16,16 +16,18 @@ class Meal: NSObject {
     var photo: UIImage?
     var upvoted: Bool
     var bites: String
+    var idString: String
     
     // MARK: Initialization
     
-    init?(name: String, photo: UIImage?, upvoted: Bool, bites: String) {
+    init?(name: String, photo: UIImage?, upvoted: Bool, bites: String, id: String) {
         
         // Initialize stored properties.
         self.name = name
         self.photo = photo
         self.upvoted = upvoted
         self.bites = bites
+        self.idString = id
         
         // Initialization should fail if there is no name or if the rating is negative.
         //if name.isEmpty {

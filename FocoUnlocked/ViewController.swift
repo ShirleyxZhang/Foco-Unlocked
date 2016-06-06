@@ -11,6 +11,8 @@ import Firebase
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    // Elements that show up on the Upload page
+    
     @IBOutlet var naviBar: UIView!
     @IBOutlet var itemName: UITextField!
     @IBOutlet var itemDesc: UITextView!
@@ -26,7 +28,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //uploadButton.layer.cornerRadius = 3
+        
+        // Adding attributes to the item's description box
         
         itemDesc!.layer.borderWidth = 1
         itemDesc!.layer.cornerRadius = 5
@@ -47,6 +50,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     }
     
+    // Function to open the Camera Button
     
     @IBAction func openCameraButton(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
@@ -58,6 +62,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
 
+    // Function to open the Photo Library
+    
     @IBAction func openPhotoLibraryButton(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
             let imagePicker = UIImagePickerController()

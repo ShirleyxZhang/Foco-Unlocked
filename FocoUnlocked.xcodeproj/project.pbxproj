@@ -32,11 +32,11 @@
 		886286C71CF694F7007D8C94 /* unfilled cookie.png in Resources */ = {isa = PBXBuildFile; fileRef = 886286B41CF694F7007D8C94 /* unfilled cookie.png */; };
 		886286C81CF694F7007D8C94 /* UpvoteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286B51CF694F7007D8C94 /* UpvoteButton.swift */; };
 		886286C91CF694F7007D8C94 /* UpvoteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286B61CF694F7007D8C94 /* UpvoteControl.swift */; };
-		886286CE1CF69FD5007D8C94 /* menu_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 886286CA1CF69FD5007D8C94 /* menu_dark.png */; };
-		886286CF1CF69FD5007D8C94 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 886286CB1CF69FD5007D8C94 /* menu.png */; };
-		886286D01CF69FD5007D8C94 /* namefinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 886286CC1CF69FD5007D8C94 /* namefinal.png */; };
-		886286D11CF69FD5007D8C94 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 886286CD1CF69FD5007D8C94 /* settings.png */; };
 		886CA0811CF7D31800C58372 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 886CA0801CF7D31800C58372 /* GoogleService-Info.plist */; };
+		88C71FEC1D054BCD002E26C9 /* menu_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C71FE81D054BCD002E26C9 /* menu_dark.png */; };
+		88C71FED1D054BCD002E26C9 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C71FE91D054BCD002E26C9 /* menu.png */; };
+		88C71FEE1D054BCD002E26C9 /* namefinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C71FEA1D054BCD002E26C9 /* namefinal.png */; };
+		88C71FEF1D054BCD002E26C9 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C71FEB1D054BCD002E26C9 /* settings.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,11 +89,11 @@
 		886286B41CF694F7007D8C94 /* unfilled cookie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unfilled cookie.png"; sourceTree = "<group>"; };
 		886286B51CF694F7007D8C94 /* UpvoteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpvoteButton.swift; sourceTree = "<group>"; };
 		886286B61CF694F7007D8C94 /* UpvoteControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpvoteControl.swift; sourceTree = "<group>"; };
-		886286CA1CF69FD5007D8C94 /* menu_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu_dark.png; path = ../FocoUnlocked14/menu_dark.png; sourceTree = "<group>"; };
-		886286CB1CF69FD5007D8C94 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu.png; path = ../FocoUnlocked14/menu.png; sourceTree = "<group>"; };
-		886286CC1CF69FD5007D8C94 /* namefinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = namefinal.png; path = ../FocoUnlocked14/namefinal.png; sourceTree = "<group>"; };
-		886286CD1CF69FD5007D8C94 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings.png; path = ../FocoUnlocked14/settings.png; sourceTree = "<group>"; };
 		886CA0801CF7D31800C58372 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		88C71FE81D054BCD002E26C9 /* menu_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_dark.png; sourceTree = "<group>"; };
+		88C71FE91D054BCD002E26C9 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		88C71FEA1D054BCD002E26C9 /* namefinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = namefinal.png; sourceTree = "<group>"; };
+		88C71FEB1D054BCD002E26C9 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		C9502387C505A257A6A6C661 /* Pods-FocoUnlocked.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FocoUnlocked.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FocoUnlocked/Pods-FocoUnlocked.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,10 +125,10 @@
 		3DFC87358B0D540D32D8C49E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				886286CA1CF69FD5007D8C94 /* menu_dark.png */,
-				886286CB1CF69FD5007D8C94 /* menu.png */,
-				886286CC1CF69FD5007D8C94 /* namefinal.png */,
-				886286CD1CF69FD5007D8C94 /* settings.png */,
+				88C71FE81D054BCD002E26C9 /* menu_dark.png */,
+				88C71FE91D054BCD002E26C9 /* menu.png */,
+				88C71FEA1D054BCD002E26C9 /* namefinal.png */,
+				88C71FEB1D054BCD002E26C9 /* settings.png */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -324,16 +324,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				886286CF1CF69FD5007D8C94 /* menu.png in Resources */,
 				8862867C1CF693B9007D8C94 /* LaunchScreen.storyboard in Resources */,
 				886286C71CF694F7007D8C94 /* unfilled cookie.png in Resources */,
-				886286CE1CF69FD5007D8C94 /* menu_dark.png in Resources */,
+				88C71FED1D054BCD002E26C9 /* menu.png in Resources */,
 				886286A01CF693D4007D8C94 /* GoogleService-Info.plist in Resources */,
-				886286D01CF69FD5007D8C94 /* namefinal.png in Resources */,
-				886286D11CF69FD5007D8C94 /* settings.png in Resources */,
+				88C71FEF1D054BCD002E26C9 /* settings.png in Resources */,
+				88C71FEE1D054BCD002E26C9 /* namefinal.png in Resources */,
 				886286791CF693B9007D8C94 /* Assets.xcassets in Resources */,
 				886CA0811CF7D31800C58372 /* GoogleService-Info.plist in Resources */,
 				886286BC1CF694F7007D8C94 /* filled cookie.png in Resources */,
+				88C71FEC1D054BCD002E26C9 /* menu_dark.png in Resources */,
 				886286A31CF694A9007D8C94 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

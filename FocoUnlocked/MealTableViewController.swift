@@ -39,6 +39,7 @@ class MealTableViewController: UITableViewController {
         var image: String = ""
         var title: String = ""
         var bites: String = ""
+        var idString: String = ""
         var lastCount = 0
         var decodedImage = UIImage()
         let ref = FIRDatabase.database().reference().child("posts")
@@ -61,15 +62,18 @@ class MealTableViewController: UITableViewController {
                         title = value as! String
                     } else if (key as! String == "Bites Number") {
                         bites = value as! String
+                    } else if (key as! String == "ID String") {
+                        idString = value as! String
                     }
-                    if (image != "" && title != "" && bites != "") {
-                        let meal = Meal(name: title as String, photo: decodedImage, upvoted: true, bites: bites as String) as Meal!
+                    if (image != "" && title != "" && bites != "" && idString != "") {
+                        let meal = Meal(name: title as String, photo: decodedImage, upvoted: true, bites: bites as String, id: idString as String) as Meal!
                         self.meals as NSArray
                         self.meals.append(meal)
                         lastCount++
                         image = ""
                         title = ""
                         bites = ""
+                        idString = ""
 
                     }
                 }
@@ -117,6 +121,9 @@ class MealTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
+        // Fetches the appropriate meal for the data source layout.
+        let meal = meals[indexPath.row]
+        
         tableView.rowHeight = 300.00
         //UITableViewAutomaticDimension
         //tableView.estimatedRowHeight = 300.0
@@ -125,21 +132,19 @@ class MealTableViewController: UITableViewController {
         let cellIdentifier = "MealTableViewCell"
         
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! MealTableViewCell
-        
-        
-        // Fetches the appropriate meal for the data source layout.
-        let meal = meals[indexPath.row]
-        
+        if let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as? MealTableViewCell {
         
         cell.nameLabel.text = meal.name
         cell.photoImageView.image = meal.photo
         //cell.upvoteControl.upvote = meal.upvoted
         cell.bitesCounter.text = meal.bites
-        
+        cell.idString = meal.idString
         
         
         return cell
+        } else {
+            return MealTableViewCell()
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
