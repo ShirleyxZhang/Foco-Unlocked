@@ -1,4 +1,4 @@
-# Foco-Unlocked
+# FocoUnlocked
 An application that allows users to share their food creations in local cafeterias.
 
 ## Purpose & Future Plans
