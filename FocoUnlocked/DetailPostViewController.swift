@@ -21,8 +21,6 @@ class DetailPostViewController: UIViewController, UIImagePickerControllerDelegat
     var newDescription: String = " "
     var newImage: UIImageView = UIImageView()
     
-    var PostsArray = [PostList]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

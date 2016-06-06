@@ -11,6 +11,8 @@ import Firebase
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    // Elements that show up on the Upload page
+    
     @IBOutlet var naviBar: UIView!
     @IBOutlet var itemName: UITextField!
     @IBOutlet var itemDesc: UITextView!
@@ -26,7 +28,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //uploadButton.layer.cornerRadius = 3
+        
+        // Adding attributes to the item's description box
         
         itemDesc!.layer.borderWidth = 1
         itemDesc!.layer.cornerRadius = 5
@@ -47,6 +50,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     }
     
+    // Function to open the Camera Button
     
     @IBAction func openCameraButton(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
@@ -58,6 +62,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
 
+    // Function to open the Photo Library
+    
     @IBAction func openPhotoLibraryButton(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
             let imagePicker = UIImagePickerController()
@@ -83,7 +89,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBAction func uploadButton(sender: AnyObject) {
         
-        let myRootRef = FIRDatabase.database().reference() //Firebase(url: "https://focounlocked.firebaseio.com/")
+        let myRootRef = FIRDatabase.database().reference()
         let Posts = myRootRef.child("posts")
         
         var title: Bool = false
@@ -123,9 +129,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             if photoImageView.image != nil {
                 
                 if itemTags != nil {
+                    let user = FIRAuth.auth()?.currentUser
+                    let email: String! = user!.email
+                    let userEmail = email.componentsSeparatedByString(".")[0]
                     self.imageData = UIImageJPEGRepresentation(photoImageView.image!, 0.1)!
                     let base64String = imageData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength)
-                    let newPost: Post = Post(title: itemName.text!, description: itemDesc.text!, image: base64String, tagsString: itemTags.text!)
+                    let newPost: Post = Post(user: userEmail, title: itemName.text!, description: itemDesc.text!, image: base64String, tagsString: itemTags.text!)
                     postsList.append(newPost)
                     Posts.child(newPost.getIdString()).setValue(newPost.toArray())
                     
@@ -142,9 +151,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
                     }
                 else if itemTags == nil {
+                    let user = FIRAuth.auth()?.currentUser
+                    let email: String! = user!.email
+                    let userEmail = email.componentsSeparatedByString(".")[0]
                     self.imageData = UIImageJPEGRepresentation(photoImageView.image!, 0.1)!
                     let base64String = imageData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength)
-                    let newPost: Post = Post(title: itemName.text!, description: itemDesc.text!, image: base64String)
+                    let newPost: Post = Post(user: userEmail, title: itemName.text!, description: itemDesc.text!, image: base64String)
                     postsList.append(newPost)
                     Posts.child(newPost.getIdString()).setValue(newPost.toArray())
                     navigationController?.popViewControllerAnimated(true)
@@ -168,29 +180,28 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func cancelButton(sender: AnyObject) {
-        //var title: Bool = false
-        //var desc: Bool = false
-        //let itemNameCheck: String = itemName.text!
-        //let itemDescCheck: String = itemDesc.text!
+        /*var title: Bool = false
+        var desc: Bool = false
+        let itemNameCheck: String = itemName.text!
+        let itemDescCheck: String = itemDesc.text!
         
-        /*if itemNameCheck.characters.count >= 1 {
+        if itemNameCheck.characters.count >= 1 {
             title = true
         }
         if itemDescCheck.characters.count >= itemNameCheck.characters.count {
             desc = true
-        }*/
+        }
         
-        /*
+        
         if title == true || desc == true {
             let alertController = UIAlertController(title: "Discard Post", message:
                 "Are your sure you want to give up on your creation?", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default,handler: nil))
             alertController.addAction(UIAlertAction(title: "Discard", style: UIAlertActionStyle.Default, handler: nil))
-            
             self.presentViewController(alertController, animated: true, completion: nil)
             
-        }
-*/
+        }*/
+
         
         navigationController?.popViewControllerAnimated(true)
 

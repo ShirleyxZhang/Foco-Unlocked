@@ -17,9 +17,6 @@ class UpvoteButton: UIButton {
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
-        //self.layer.cornerRadius = 5.0;
-        //self.backgroundColor = UIColor.blueColor()
-        //self.tintColor = UIColor.whiteColor()
         
         //let unfilledCookie = UIImage(named: "unfilled cookie.png")
         

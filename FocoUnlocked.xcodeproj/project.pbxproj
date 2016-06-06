@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05C4BDA87043B4F76D2CC941 /* libPods-FocoUnlocked.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FF4445713557B87A3D3E40 /* libPods-FocoUnlocked.a */; };
 		886286721CF693B9007D8C94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286711CF693B9007D8C94 /* AppDelegate.swift */; };
 		886286741CF693B9007D8C94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286731CF693B9007D8C94 /* ViewController.swift */; };
 		886286791CF693B9007D8C94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 886286781CF693B9007D8C94 /* Assets.xcassets */; };
@@ -17,7 +16,6 @@
 		886286A01CF693D4007D8C94 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8862869F1CF693D4007D8C94 /* GoogleService-Info.plist */; };
 		886286A31CF694A9007D8C94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 886286A11CF694A9007D8C94 /* Main.storyboard */; };
 		886286B71CF694F7007D8C94 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286A41CF694F7007D8C94 /* BaseService.swift */; };
-		886286B81CF694F7007D8C94 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286A51CF694F7007D8C94 /* Constants.swift */; };
 		886286B91CF694F7007D8C94 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286A61CF694F7007D8C94 /* CreateAccountViewController.swift */; };
 		886286BA1CF694F7007D8C94 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286A71CF694F7007D8C94 /* DataService.swift */; };
 		886286BB1CF694F7007D8C94 /* DetailPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286A81CF694F7007D8C94 /* DetailPostViewController.swift */; };
@@ -29,12 +27,16 @@
 		886286C11CF694F7007D8C94 /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286AE1CF694F7007D8C94 /* MealTableViewController.swift */; };
 		886286C21CF694F7007D8C94 /* PhotoGalleryCropping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286AF1CF694F7007D8C94 /* PhotoGalleryCropping.swift */; };
 		886286C31CF694F7007D8C94 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286B01CF694F7007D8C94 /* Post.swift */; };
-		886286C41CF694F7007D8C94 /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286B11CF694F7007D8C94 /* PostList.swift */; };
 		886286C51CF694F7007D8C94 /* PostsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286B21CF694F7007D8C94 /* PostsController.swift */; };
 		886286C61CF694F7007D8C94 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286B31CF694F7007D8C94 /* SettingsController.swift */; };
 		886286C71CF694F7007D8C94 /* unfilled cookie.png in Resources */ = {isa = PBXBuildFile; fileRef = 886286B41CF694F7007D8C94 /* unfilled cookie.png */; };
 		886286C81CF694F7007D8C94 /* UpvoteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286B51CF694F7007D8C94 /* UpvoteButton.swift */; };
 		886286C91CF694F7007D8C94 /* UpvoteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286B61CF694F7007D8C94 /* UpvoteControl.swift */; };
+		886CA0811CF7D31800C58372 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 886CA0801CF7D31800C58372 /* GoogleService-Info.plist */; };
+		88C71FEC1D054BCD002E26C9 /* menu_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C71FE81D054BCD002E26C9 /* menu_dark.png */; };
+		88C71FED1D054BCD002E26C9 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C71FE91D054BCD002E26C9 /* menu.png */; };
+		88C71FEE1D054BCD002E26C9 /* namefinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C71FEA1D054BCD002E26C9 /* namefinal.png */; };
+		88C71FEF1D054BCD002E26C9 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C71FEB1D054BCD002E26C9 /* settings.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +57,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		32FF4445713557B87A3D3E40 /* libPods-FocoUnlocked.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FocoUnlocked.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D53409A1FE30BFA33A17A95 /* Pods-FocoUnlocked.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FocoUnlocked.release.xcconfig"; path = "Pods/Target Support Files/Pods-FocoUnlocked/Pods-FocoUnlocked.release.xcconfig"; sourceTree = "<group>"; };
 		8862866E1CF693B9007D8C94 /* FocoUnlocked.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocoUnlocked.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		886286711CF693B9007D8C94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,7 +73,6 @@
 		8862869F1CF693D4007D8C94 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		886286A21CF694A9007D8C94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		886286A41CF694F7007D8C94 /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
-		886286A51CF694F7007D8C94 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		886286A61CF694F7007D8C94 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		886286A71CF694F7007D8C94 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		886286A81CF694F7007D8C94 /* DetailPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPostViewController.swift; sourceTree = "<group>"; };
@@ -84,12 +84,16 @@
 		886286AE1CF694F7007D8C94 /* MealTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewController.swift; sourceTree = "<group>"; };
 		886286AF1CF694F7007D8C94 /* PhotoGalleryCropping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGalleryCropping.swift; sourceTree = "<group>"; };
 		886286B01CF694F7007D8C94 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		886286B11CF694F7007D8C94 /* PostList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostList.swift; sourceTree = "<group>"; };
 		886286B21CF694F7007D8C94 /* PostsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsController.swift; sourceTree = "<group>"; };
 		886286B31CF694F7007D8C94 /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		886286B41CF694F7007D8C94 /* unfilled cookie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unfilled cookie.png"; sourceTree = "<group>"; };
 		886286B51CF694F7007D8C94 /* UpvoteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpvoteButton.swift; sourceTree = "<group>"; };
 		886286B61CF694F7007D8C94 /* UpvoteControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpvoteControl.swift; sourceTree = "<group>"; };
+		886CA0801CF7D31800C58372 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		88C71FE81D054BCD002E26C9 /* menu_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_dark.png; sourceTree = "<group>"; };
+		88C71FE91D054BCD002E26C9 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		88C71FEA1D054BCD002E26C9 /* namefinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = namefinal.png; sourceTree = "<group>"; };
+		88C71FEB1D054BCD002E26C9 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		C9502387C505A257A6A6C661 /* Pods-FocoUnlocked.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FocoUnlocked.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FocoUnlocked/Pods-FocoUnlocked.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,7 +102,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05C4BDA87043B4F76D2CC941 /* libPods-FocoUnlocked.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +125,10 @@
 		3DFC87358B0D540D32D8C49E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				32FF4445713557B87A3D3E40 /* libPods-FocoUnlocked.a */,
+				88C71FE81D054BCD002E26C9 /* menu_dark.png */,
+				88C71FE91D054BCD002E26C9 /* menu.png */,
+				88C71FEA1D054BCD002E26C9 /* namefinal.png */,
+				88C71FEB1D054BCD002E26C9 /* settings.png */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -157,11 +163,11 @@
 				8862869F1CF693D4007D8C94 /* GoogleService-Info.plist */,
 				886286A11CF694A9007D8C94 /* Main.storyboard */,
 				886286A41CF694F7007D8C94 /* BaseService.swift */,
-				886286A51CF694F7007D8C94 /* Constants.swift */,
 				886286A61CF694F7007D8C94 /* CreateAccountViewController.swift */,
 				886286A71CF694F7007D8C94 /* DataService.swift */,
 				886286A81CF694F7007D8C94 /* DetailPostViewController.swift */,
 				886286A91CF694F7007D8C94 /* filled cookie.png */,
+				886CA0801CF7D31800C58372 /* GoogleService-Info.plist */,
 				886286AA1CF694F7007D8C94 /* ImageUtil.swift */,
 				886286AB1CF694F7007D8C94 /* LoginViewController.swift */,
 				886286AC1CF694F7007D8C94 /* Meal.swift */,
@@ -169,7 +175,6 @@
 				886286AE1CF694F7007D8C94 /* MealTableViewController.swift */,
 				886286AF1CF694F7007D8C94 /* PhotoGalleryCropping.swift */,
 				886286B01CF694F7007D8C94 /* Post.swift */,
-				886286B11CF694F7007D8C94 /* PostList.swift */,
 				886286B21CF694F7007D8C94 /* PostsController.swift */,
 				886286B31CF694F7007D8C94 /* SettingsController.swift */,
 				886286B41CF694F7007D8C94 /* unfilled cookie.png */,
@@ -321,9 +326,14 @@
 			files = (
 				8862867C1CF693B9007D8C94 /* LaunchScreen.storyboard in Resources */,
 				886286C71CF694F7007D8C94 /* unfilled cookie.png in Resources */,
+				88C71FED1D054BCD002E26C9 /* menu.png in Resources */,
 				886286A01CF693D4007D8C94 /* GoogleService-Info.plist in Resources */,
+				88C71FEF1D054BCD002E26C9 /* settings.png in Resources */,
+				88C71FEE1D054BCD002E26C9 /* namefinal.png in Resources */,
 				886286791CF693B9007D8C94 /* Assets.xcassets in Resources */,
+				886CA0811CF7D31800C58372 /* GoogleService-Info.plist in Resources */,
 				886286BC1CF694F7007D8C94 /* filled cookie.png in Resources */,
+				88C71FEC1D054BCD002E26C9 /* menu_dark.png in Resources */,
 				886286A31CF694A9007D8C94 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,7 +408,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				886286BF1CF694F7007D8C94 /* Meal.swift in Sources */,
-				886286C41CF694F7007D8C94 /* PostList.swift in Sources */,
 				886286C91CF694F7007D8C94 /* UpvoteControl.swift in Sources */,
 				886286C01CF694F7007D8C94 /* MealTableViewCell.swift in Sources */,
 				886286C61CF694F7007D8C94 /* SettingsController.swift in Sources */,
@@ -415,7 +424,6 @@
 				886286B71CF694F7007D8C94 /* BaseService.swift in Sources */,
 				886286C51CF694F7007D8C94 /* PostsController.swift in Sources */,
 				886286C11CF694F7007D8C94 /* MealTableViewController.swift in Sources */,
-				886286B81CF694F7007D8C94 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

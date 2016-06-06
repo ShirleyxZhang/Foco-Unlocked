@@ -19,6 +19,7 @@ class MealTableViewController: UITableViewController {
     var titles = [String]()
     var newImage: UIImageView = UIImageView()
     
+    
     func configureTableView() {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 300.0
@@ -31,28 +32,62 @@ class MealTableViewController: UITableViewController {
         
         // Load the sample data.
         loadSampleMeals()
-        //print(tappedButton)
     }
     
     
     func loadSampleMeals() {
-        let ref = FIRDatabase.database().reference().child("posts") //Firebase(url:"https://focounlocked.firebaseio.com/posts")
-        ref.queryOrderedByChild("Title")
-            .observeEventType(.ChildAdded, withBlock: { snapshot in
-                let base64EncodedString = snapshot.value!.objectForKey("Image")
-                let imageData = NSData(base64EncodedString: base64EncodedString as! String, options: NSDataBase64DecodingOptions.IgnoreUnknownCharacters)
-                if (imageData != nil) {
-                    let decodedImage = UIImage(data: imageData!)
-                    let title = (snapshot.value!.objectForKey("Title") as! NSString)
-                    let bitesNum = (snapshot.value!.objectForKey("Bites Number") as! NSString)
-                    let meal = Meal(name: title as String, photo: decodedImage, upvoted: true, bites: bitesNum as String) as Meal!
-                    self.meals as NSArray
-                    self.meals.append(meal)
-                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        self.tableView.reloadData()
-                    })
+        var image: String = ""
+        var title: String = ""
+        var bites: String = ""
+        var idString: String = ""
+        var lastCount = 0
+        var decodedImage = UIImage()
+        let ref = FIRDatabase.database().reference().child("posts")
+        self.meals = []
+        ref.observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
+            if (self.meals.count == lastCount) {
+                self.meals = []
+                lastCount = 0
+            }
+            if (!(snapshot.value is NSNull)) {
+            let postDict = snapshot.value as? [String : AnyObject]
+            for object in postDict! {
+                let obj = object.1 as! NSDictionary
+                for (key, value) in obj {
+                    if (key as! String == "Image") {
+                        image = value as! String
+                        let imageData = NSData(base64EncodedString: image as String, options: NSDataBase64DecodingOptions.IgnoreUnknownCharacters)
+                            decodedImage = UIImage(data: imageData!)!
+                    } else if (key as! String == "Title") {
+                        title = value as! String
+                    } else if (key as! String == "Bites Number") {
+                        bites = value as! String
+                    } else if (key as! String == "ID String") {
+                        idString = value as! String
+                    }
+                    if (image != "" && title != "" && bites != "" && idString != "") {
+                        let user = FIRAuth.auth()?.currentUser
+                        let email: String! = user!.email
+                        let userEmail = email.componentsSeparatedByString(".")[0]
+                        let meal = Meal(user: userEmail, name: title as String, photo: decodedImage, upvoted: true, bites: bites as String, id: idString as String) as Meal!
+                        self.meals as NSArray
+                        self.meals.append(meal)
+                        lastCount++
+                        image = ""
+                        title = ""
+                        bites = ""
+                        idString = ""
+
+                    }
                 }
-            })
+                }
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    self.tableView.reloadData()
+                })
+                
+            }
+            
+        })
     }
     
     override func didReceiveMemoryWarning() {
@@ -89,6 +124,9 @@ class MealTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
+        // Fetches the appropriate meal for the data source layout.
+        let meal = meals[indexPath.row]
+        
         tableView.rowHeight = 300.00
         //UITableViewAutomaticDimension
         //tableView.estimatedRowHeight = 300.0
@@ -97,21 +135,15 @@ class MealTableViewController: UITableViewController {
         let cellIdentifier = "MealTableViewCell"
         
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! MealTableViewCell
+        if let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as? MealTableViewCell {
         
-        
-        // Fetches the appropriate meal for the data source layout.
-        let meal = meals[indexPath.row]
-        
-        
-        cell.nameLabel.text = meal.name
-        cell.photoImageView.image = meal.photo
-        //cell.upvoteControl.upvote = meal.upvoted
-        cell.bitesCounter.text = meal.bites
-        
+        cell.configureCell(meal)
         
         
         return cell
+        } else {
+            return MealTableViewCell()
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
