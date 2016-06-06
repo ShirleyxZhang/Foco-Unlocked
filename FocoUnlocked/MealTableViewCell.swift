@@ -104,10 +104,11 @@ class MealTableViewCell: UITableViewCell {
                                 correctPost = false
                             }
                         } else if (key as! String == "Bites Number" && correctPost == true) {
-                            if (self.tapped && click == true) {
-                                let user = FIRAuth.auth()?.currentUser
-                                let email: String! = user!.email
-                                let userEmail = email.componentsSeparatedByString(".")[0]
+                            let user = FIRAuth.auth()?.currentUser
+                            let email: String! = user!.email
+                            let userEmail = email.componentsSeparatedByString(".")[0]
+                            self.usersRef.child("\(userEmail)/\(self.idString)").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+                            if ((snapshot.value! as! String == "false" && click == true) || snapshot.value == nil) {
                                 self.usersRef.child("\(userEmail)/\(self.idString)").setValue("true")
                                 click = false
                                 print("Button filled")
@@ -116,10 +117,7 @@ class MealTableViewCell: UITableViewCell {
                                             var bitesNumber:Int = Int(bitesNumberString as! String)!
                                             bitesNumber = bitesNumber + 1
                                             self.ref.child(self.idString + "/Bites Number").setValue(String(bitesNumber) as! String)
-                        } else if (!self.tapped && click == true) {
-                                let user = FIRAuth.auth()?.currentUser
-                                let email: String! = user!.email
-                                let userEmail = email.componentsSeparatedByString(".")[0]
+                        } else if (snapshot.value! as! String == "true" && click == true) {
                                 self.usersRef.child("\(userEmail)/\(self.idString)").setValue("false")
                             click = false
                             print("Button unfilled")
@@ -128,7 +126,8 @@ class MealTableViewCell: UITableViewCell {
                                 var bitesNumber:Int = Int(bitesNumberString as! String)!
                                 bitesNumber = bitesNumber - 1
                                 self.ref.child(self.idString + "/Bites Number").setValue(String(bitesNumber) as! String)
-                }
+                                }
+                            })
                     }
                 }
                 }
