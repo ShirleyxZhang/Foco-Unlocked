@@ -5,6 +5,7 @@ import UIKit
 import Firebase
 
 class Post {
+    var user: String
     var id: Int
     var idString: String
     var title: String
@@ -18,7 +19,8 @@ class Post {
         static var id = 0
     }
     
-    init(title: String, description: String, image: NSString) {
+    init(user: String, title: String, description: String, image: NSString) {
+        self.user = user
         self.id = Post.idNumber.id++
         self.idString = NSUUID().UUIDString
         self.title = title
@@ -29,7 +31,8 @@ class Post {
         self.tags = [String]()
     }
     
-    init(title: String, description: String, image: NSString, tagsString: String) {
+    init(user: String, title: String, description: String, image: NSString, tagsString: String) {
+        self.user = user
         self.id = Post.idNumber.id++
         self.idString = NSUUID().UUIDString
         self.title = title
@@ -50,8 +53,12 @@ class Post {
     }
     
     func toArray() -> NSDictionary {
-        let newArray = ["ID Number": "\(id)", "ID String": "\(idString)", "Title": "\(title)", "Description": "\(description)", "Image": "\(image)", "Bites Number": "\(bites)", "Post Date": "\(postDate)", "Tags": "\(tags)"]
+        let newArray = ["ID Number": "\(id)", "ID String": "\(idString)", "Username": "\(user)", "Title": "\(title)", "Description": "\(description)", "Image": "\(image)", "Bites Number": "\(bites)", "Post Date": "\(postDate)", "Tags": "\(tags)"]
         return newArray
+    }
+    
+    func getUser() -> String {
+        return user
     }
 
     

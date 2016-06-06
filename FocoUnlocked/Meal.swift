@@ -12,6 +12,7 @@ class Meal: NSObject {
     
     // MARK: Properties
     
+    var user: String
     var name: String
     var photo: UIImage?
     var upvoted: Bool
@@ -20,9 +21,10 @@ class Meal: NSObject {
     
     // MARK: Initialization
     
-    init?(name: String, photo: UIImage?, upvoted: Bool, bites: String, id: String) {
+    init?(user: String, name: String, photo: UIImage?, upvoted: Bool, bites: String, id: String) {
         
         // Initialize stored properties.
+        self.user = user
         self.name = name
         self.photo = photo
         self.upvoted = upvoted

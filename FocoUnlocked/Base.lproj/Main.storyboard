@@ -148,15 +148,27 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdw-J5-yZ5" customClass="UpvoteButton" customModule="FocoUnlocked" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdw-J5-yZ5">
                                             <rect key="frame" x="519" y="215" width="33" height="28"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="33" id="5s5-u3-NHz"/>
                                             </constraints>
                                         </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="knW-SG-bIA">
+                                            <rect key="frame" x="13" y="218" width="245" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="knW-SG-bIA" secondAttribute="height" multiplier="35:3" id="3CS-oH-pGN"/>
+                                                <constraint firstAttribute="height" constant="21" id="QWx-Ne-sDH"/>
+                                                <constraint firstAttribute="width" constant="245" id="qd9-Fl-wMb"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="p4h-os-ekj" firstAttribute="leading" secondItem="Lx3-R1-mxm" secondAttribute="leadingMargin" id="8Yr-Ky-55e"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="knW-SG-bIA" secondAttribute="bottom" constant="5.5" id="Hza-0v-Vp3"/>
                                         <constraint firstItem="OhE-hR-Zoc" firstAttribute="top" secondItem="p4h-os-ekj" secondAttribute="bottom" constant="11" id="ILy-k2-RtU"/>
                                         <constraint firstItem="tdw-J5-yZ5" firstAttribute="top" secondItem="OhE-hR-Zoc" secondAttribute="bottom" constant="5" id="IzD-dJ-FVQ"/>
                                         <constraint firstItem="i1o-3O-hoV" firstAttribute="leading" secondItem="tdw-J5-yZ5" secondAttribute="trailing" constant="3" id="OSl-bx-MGK"/>
@@ -181,6 +193,7 @@
                                     <outlet property="nameLabel" destination="p4h-os-ekj" id="wJD-UP-FVr"/>
                                     <outlet property="photoImageView" destination="OhE-hR-Zoc" id="ddu-4p-JjW"/>
                                     <outlet property="upvoteButton" destination="tdw-J5-yZ5" id="bUC-os-I2l"/>
+                                    <outlet property="username" destination="knW-SG-bIA" id="2C6-BO-oxL"/>
                                     <segue destination="fCO-We-bK2" kind="show" id="x8f-25-VBq"/>
                                 </connections>
                             </tableViewCell>

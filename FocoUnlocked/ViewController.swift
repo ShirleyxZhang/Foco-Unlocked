@@ -89,7 +89,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBAction func uploadButton(sender: AnyObject) {
         
-        let myRootRef = FIRDatabase.database().reference() //Firebase(url: "https://focounlocked.firebaseio.com/")
+        let myRootRef = FIRDatabase.database().reference()
         let Posts = myRootRef.child("posts")
         
         var title: Bool = false
@@ -129,9 +129,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             if photoImageView.image != nil {
                 
                 if itemTags != nil {
+                    let user = FIRAuth.auth()?.currentUser
+                    let email: String! = user!.email
+                    let userEmail = email.componentsSeparatedByString(".")[0]
                     self.imageData = UIImageJPEGRepresentation(photoImageView.image!, 0.1)!
                     let base64String = imageData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength)
-                    let newPost: Post = Post(title: itemName.text!, description: itemDesc.text!, image: base64String, tagsString: itemTags.text!)
+                    let newPost: Post = Post(user: userEmail, title: itemName.text!, description: itemDesc.text!, image: base64String, tagsString: itemTags.text!)
                     postsList.append(newPost)
                     Posts.child(newPost.getIdString()).setValue(newPost.toArray())
                     
@@ -148,9 +151,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
                     }
                 else if itemTags == nil {
+                    let user = FIRAuth.auth()?.currentUser
+                    let email: String! = user!.email
+                    let userEmail = email.componentsSeparatedByString(".")[0]
                     self.imageData = UIImageJPEGRepresentation(photoImageView.image!, 0.1)!
                     let base64String = imageData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength)
-                    let newPost: Post = Post(title: itemName.text!, description: itemDesc.text!, image: base64String)
+                    let newPost: Post = Post(user: userEmail, title: itemName.text!, description: itemDesc.text!, image: base64String)
                     postsList.append(newPost)
                     Posts.child(newPost.getIdString()).setValue(newPost.toArray())
                     navigationController?.popViewControllerAnimated(true)

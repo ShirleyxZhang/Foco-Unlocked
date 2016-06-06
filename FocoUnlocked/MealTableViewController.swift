@@ -66,7 +66,10 @@ class MealTableViewController: UITableViewController {
                         idString = value as! String
                     }
                     if (image != "" && title != "" && bites != "" && idString != "") {
-                        let meal = Meal(name: title as String, photo: decodedImage, upvoted: true, bites: bites as String, id: idString as String) as Meal!
+                        let user = FIRAuth.auth()?.currentUser
+                        let email: String! = user!.email
+                        let userEmail = email.componentsSeparatedByString(".")[0]
+                        let meal = Meal(user: userEmail, name: title as String, photo: decodedImage, upvoted: true, bites: bites as String, id: idString as String) as Meal!
                         self.meals as NSArray
                         self.meals.append(meal)
                         lastCount++
@@ -134,11 +137,7 @@ class MealTableViewController: UITableViewController {
         
         if let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as? MealTableViewCell {
         
-        cell.nameLabel.text = meal.name
-        cell.photoImageView.image = meal.photo
-        //cell.upvoteControl.upvote = meal.upvoted
-        cell.bitesCounter.text = meal.bites
-        cell.idString = meal.idString
+        cell.configureCell(meal)
         
         
         return cell

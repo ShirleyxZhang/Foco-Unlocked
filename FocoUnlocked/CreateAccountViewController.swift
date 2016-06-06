@@ -42,19 +42,10 @@ class CreateAccountViewController: UIViewController {
                 
                 if error == nil
                 {
-                    /*FIREBASE_REF.authUser(email, password: password, withCompletionBlock: { error, authData in*/
-                        
-                        // If there is no error, a positive message will be sent to the terminal and the user will have a new account
-                        
-                        //if error == nil
-                        //{
                             NSUserDefaults.standardUserDefaults().setValue(user!.uid, forKey: "uid")
-                            //ref.child("users").child(user!.uid).setValue(["username": email!, "password": password!])
                             NSUserDefaults.standardUserDefaults().synchronize()
                             print("Account Created :)")
                             self.performSegueWithIdentifier("fromSignupToFeed", sender: self)
-                            //self.dismissViewControllerAnimated(true,    completion: nil)
-                        //}
                     // Otherwise an error will be printed to the terminal
                 }
                     else {
@@ -66,11 +57,6 @@ class CreateAccountViewController: UIViewController {
                         }
             }
         }
-                //else // Otherwise an error will be printed to the terminal
-                //{
-                  //  print(error)
-                //}
-                
         else // If nothing is entered in the email or password fields, an error will be returned to the user
         {
             let alert = UIAlertController(title: "Error", message: "Enter Email and Password.", preferredStyle: UIAlertControllerStyle.Alert)

@@ -10,10 +10,8 @@ import UIKit
 import Firebase
 
 class MealTableViewCell: UITableViewCell {
-
-    // MARK: Properties
     
-    
+    @IBOutlet weak var username: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var bitesLabel: UILabel!
@@ -24,6 +22,7 @@ class MealTableViewCell: UITableViewCell {
     var idString: String = ""
     
     let ref = FIRDatabase.database().reference().child("posts")
+    let usersRef = FIRDatabase.database().reference().child("users")
     
     var tapped = false
 
@@ -39,35 +38,48 @@ class MealTableViewCell: UITableViewCell {
         upvoteButton.userInteractionEnabled = true
     }
     
-    func configureCell(post: Post) {
-        let post = post
+    func configureCell(meal: Meal) {
+        let meal = meal
         
         // Set the labels and textView.
         
-        self.nameLabel.text = post.title
-        self.bitesCounter.text = "Total Votes: \(post.bites)"
+        nameLabel.text = meal.name
+        photoImageView.image = meal.photo
+        //cell.upvoteControl.upvote = meal.upvoted
+        bitesCounter.text = meal.bites
+        idString = meal.idString
+        username.text = meal.user
+        
+        /*self.nameLabel.text = post.title
+        self.bitesCounter.text = "\(post.bites)"*/
         //self.usernameLabel.text = joke.username
         
         // observeSingleEventOfType() listens for the thumb to be tapped, by any user, on any device.
         
-        ref.observeSingleEventOfType(.Value, withBlock: { snapshot in
-            
-            // Set the thumb image.
-            
-            if let thumbsUpDown = snapshot.value as? NSNull {
-                
-                // Current user hasn't voted for the joke... yet.
-                
-                print(thumbsUpDown)
-                //upvoteButton.image = UIImage(named: "unfilled cookie.png")
-            } else {
-                
-                // Current user voted for the joke!
-                print("Yo")
-                //upvoteButton.image = UIImage(named: "filled cookie.png")
-            }
-        })
-    }
+        let user = FIRAuth.auth()?.currentUser
+        let email: String! = user!.email
+        let userEmail = email.componentsSeparatedByString(".")[0]
+        
+        /*ref.child("users/\(userEmail)").observeEventType(FIRDataEventType.Value, withBlock: { snapshot in
+                print("FDSAF")
+                if (!(snapshot.value is NSNull)) {
+                    print("HERE")
+                    let postDict = snapshot.value as? [String : AnyObject]
+                    for object in postDict! {
+                        print("SECOND")
+                        let key = object.0 as! String
+                        let obj = object.1 as! String
+                        if (obj == "true" && key == self.idString) {
+                            self.upvoteButton.setBackgroundImage(UIImage(named: "filled cookie.png"), forState: UIControlState.Normal)
+                        } else if (obj == "false" && key == self.idString) {
+                            self.upvoteButton.setBackgroundImage(UIImage(named: "unfilled cookie.png"), forState: UIControlState.Normal)
+                        }
+                    }
+                } else {
+                    self.upvoteButton.setBackgroundImage(UIImage(named: "unfilled cookie.png"), forState: UIControlState.Normal)
+                }
+            })*/
+        }
     
     func voteTapped(sender: UITapGestureRecognizer) {
         
@@ -76,6 +88,8 @@ class MealTableViewCell: UITableViewCell {
         self.tapped = !self.tapped
         var correctPost = false
         var click = true
+        
+        
         
         ref.observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
             if (!(snapshot.value is NSNull)) {
@@ -91,6 +105,10 @@ class MealTableViewCell: UITableViewCell {
                             }
                         } else if (key as! String == "Bites Number" && correctPost == true) {
                             if (self.tapped && click == true) {
+                                let user = FIRAuth.auth()?.currentUser
+                                let email: String! = user!.email
+                                let userEmail = email.componentsSeparatedByString(".")[0]
+                                self.usersRef.child("\(userEmail)/\(self.idString)").setValue("true")
                                 click = false
                                 print("Button filled")
                                 self.upvoteButton.setBackgroundImage(UIImage(named: "filled cookie.png"), forState: UIControlState.Normal)
@@ -99,9 +117,12 @@ class MealTableViewCell: UITableViewCell {
                                             bitesNumber = bitesNumber + 1
                                             self.ref.child(self.idString + "/Bites Number").setValue(String(bitesNumber) as! String)
                         } else if (!self.tapped && click == true) {
+                                let user = FIRAuth.auth()?.currentUser
+                                let email: String! = user!.email
+                                let userEmail = email.componentsSeparatedByString(".")[0]
+                                self.usersRef.child("\(userEmail)/\(self.idString)").setValue("false")
                             click = false
                             print("Button unfilled")
-                            print(value)
                             self.upvoteButton.setBackgroundImage(UIImage(named: "unfilled cookie.png"), forState: UIControlState.Normal)
                                 var bitesNumberString = value
                                 var bitesNumber:Int = Int(bitesNumberString as! String)!
@@ -113,57 +134,7 @@ class MealTableViewCell: UITableViewCell {
                 }
             }
         })
-        
-        /*if (correctPost == true) {
-        
-        ref.observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
-        if (self.tapped) {
-            print("Button filled")
-            self.upvoteButton.setBackgroundImage(UIImage(named: "filled cookie.png"), forState: UIControlState.Normal)
-            let postDict = snapshot.value as? [String : AnyObject]
-            for object in postDict! {
-                let obj = object.1 as! NSDictionary
-                for (key, value) in obj {
-                    if (key as! String == "Bites Number") {
-                        var bitesNumberString = value
-                        var bitesNumber:Int = Int(bitesNumberString as! String)!
-                        print("Number of bites: /(bitesNumber)")
-                        bitesNumber = bitesNumber + 1
-                        self.ref.child(self.idString + "/Bites Number").setValue(String(bitesNumber) as! String)
-                    }
-                }
-            }
-        } else if (!self.tapped) {
-            print("Button unfilled")
-            //print(value)
-            self.upvoteButton.setBackgroundImage(UIImage(named: "unfilled cookie.png"), forState: UIControlState.Normal)
-            let postDict = snapshot.value as? [String : AnyObject]
-            for object in postDict! {
-                let obj = object.1 as! NSDictionary
-                for (key, value) in obj {
-                    if (key as! String == "Bites Number") {
-                        var bitesNumberString = value
-                        var bitesNumber:Int = Int(bitesNumberString as! String)!
-                        print("Number of bites: /(bitesNumber)")
-                        bitesNumber = bitesNumber + 1
-                        self.ref.child(self.idString + "/Bites Number").setValue(String(bitesNumber) as! String)
-                    }
-                }
-            }
-            }
-            })
-        }*/
-    }
-    
-    
-                // addSubtractVote(), in Joke.swift, handles the vote.
-    
-                //self.joke.addSubtractVote(true)
-    
-                // setValue saves the vote as true for the current user.
-                // voteRef is a reference to the user's "votes" path.
-    
-                //self.voteRef.setValue(true)
+           }
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
