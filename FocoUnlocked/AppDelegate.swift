@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  FocoUnlocked
 //
-//  Created by Sudikoff Lab iMac on 5/25/16.
-//  Copyright © 2016 Sudikoff Lab iMac. All rights reserved.
+//  Created by WISP on 5/25/16.
+//  Copyright © 2016 DALI Lab. All rights reserved.
 //
 
 import UIKit

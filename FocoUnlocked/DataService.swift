@@ -1,9 +1,11 @@
 //
 //  DataService.swift
-//  FocoUnlockedFeed
+//  FocoUnlocked
 //
-//  Created by Madison Minsk on 3/18/16.
-//  Copyright © 2016 Madison Minsk. All rights reserved.
+//  Base references for users and urls
+//
+//  Created by WISP on 3/18/16.
+//  Copyright © 2016 DALI Lab. All rights reserved.
 //
 
 import Foundation
@@ -16,7 +18,7 @@ class DataService {
     
     private var _BASE_REF = FIRDatabase.database().reference()
     private var _USER_REF = FIRDatabase.database().reference()
-    private var _IMAGE_REF = FIRDatabase.database().reference().child("images") //Firebase(url: "https:focounlocked.firebaseio.com/images")
+    private var _IMAGE_REF = FIRDatabase.database().reference().child("images")
     
     var BASE_REF: FIRDatabaseReference {
         return _BASE_REF
@@ -29,7 +31,7 @@ class DataService {
     var CURRENT_USER_REF: FIRDatabaseReference {
         let userID = NSUserDefaults.standardUserDefaults().valueForKey("uid") as! String
         
-        let currentUser = FIRDatabase.database().reference().child("users").child(userID)//Firebase(url: "\(BASE_REF)").childByAppendingPath("users").childByAppendingPath(userID)
+        let currentUser = FIRDatabase.database().reference().child("users").child(userID)
         
         return currentUser
     }

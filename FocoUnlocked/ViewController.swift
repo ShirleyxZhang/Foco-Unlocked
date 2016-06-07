@@ -1,9 +1,11 @@
 //
 //  ViewController.swift
-//  Camera
+//  FocoUnlocked
+// 
+//  The view controller that defines the Upload Page
 //
-//  Created by Sudikoff Lab iMac on 3/25/16.
-//  Copyright © 2016 Sudikoff Lab iMac. All rights reserved.
+//  Created by WISP on 3/25/16.
+//  Copyright © 2016 DALI Lab. All rights reserved.
 //
 
 import UIKit
@@ -12,7 +14,6 @@ import Firebase
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     // Elements that show up on the Upload page
-    
     @IBOutlet var naviBar: UIView!
     @IBOutlet var itemName: UITextField!
     @IBOutlet var itemDesc: UITextView!
@@ -30,12 +31,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         
         // Adding attributes to the item's description box
-        
         itemDesc!.layer.borderWidth = 1
         itemDesc!.layer.cornerRadius = 5
         itemDesc!.layer.borderColor = UIColor.grayColor().CGColor
         
         self.photoImageView.backgroundColor = UIColor.lightGrayColor()
+        self.photoImageView.contentMode = .ScaleAspect
         self.view.addSubview(photoImageView)
 
         let border = CALayer()
@@ -51,7 +52,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     // Function to open the Camera Button
-    
     @IBAction func openCameraButton(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
             let imagePicker = UIImagePickerController()
@@ -63,7 +63,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     // Function to open the Photo Library
-    
     @IBAction func openPhotoLibraryButton(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
             let imagePicker = UIImagePickerController()
@@ -74,6 +73,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
+    // Function to choose an image from the Photo Library
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         photoImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         self.dismissViewControllerAnimated(false, completion: nil)
@@ -81,12 +81,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     
-    //keyboard goes away after you tap somewhere else
+    // Keyboard goes away after you tap somewhere else
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
         view.endEditing(true)
         super.touchesBegan(touches, withEvent: event)
     }
     
+    // Implements the uploadButton
     @IBAction func uploadButton(sender: AnyObject) {
         
         let myRootRef = FIRDatabase.database().reference()
@@ -104,6 +105,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             desc = true
         }
         
+        // Handles incorrect uploads
         if title == true && desc == false {
             let alertController = UIAlertController(title: "Upload Error", message:
                 "Description information is too short", preferredStyle: UIAlertControllerStyle.Alert)
@@ -125,7 +127,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             
             self.presentViewController(alertController, animated: true, completion: nil)
         }
-        else {
+        else { // If the user enters all the necessary information, the post will be uploaded to the database
             if photoImageView.image != nil {
                 
                 if itemTags != nil {
@@ -179,6 +181,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
+    // Checks to see if the user has enter information
+    // If the user did, then the program will double check before popping to previous page
+    // I the user didn't, then the program will pop to the previous page
     @IBAction func cancelButton(sender: AnyObject) {
         /*var title: Bool = false
         var desc: Bool = false
@@ -209,7 +214,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 

@@ -1,9 +1,12 @@
 //
 //  UpvoteButton.swift
-//  Camera
+//  FocoUnlocked
 //
-//  Created by Madison Minsk on 4/27/16.
-//  Copyright © 2016 Sudikoff Lab iMac. All rights reserved.
+//  Implmentation of the upvote (bite) button
+//  MIGHT NEED TO DELETE THIS FILE
+//
+//  Created by WISP on 4/27/16.
+//  Copyright © 2016 DALI Lab. All rights reserved.
 //
 
 import Foundation
@@ -18,11 +21,7 @@ class UpvoteButton: UIButton {
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
         
-        //let unfilledCookie = UIImage(named: "unfilled cookie.png")
-        
         self.setBackgroundImage(unfilledCookie, forState: .Normal)
-        
-        // self.setBackgroundImage(UIImage(named: "filledCookie"), forState: UIControlState.Normal)
         
         self.addTarget(self, action: "buttonPressed:", forControlEvents: .TouchUpInside)
     }

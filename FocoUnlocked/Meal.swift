@@ -2,25 +2,27 @@
 //  Meal.swift
 //  FocoUnlockedFeed
 //
-//  Created by Madison Minsk on 3/20/16.
-//  Copyright © 2016 Madison Minsk. All rights reserved.
+//  Object that holds the information for each meal
+//  A meal is pulled from the database
+//  Object will be inserted into a long list that will print out to the feed
+//
+//  Created by WISP on 3/20/16.
+//  Copyright © 2016 DALI Lab. All rights reserved.
 //
 
 import UIKit
 
 class Meal: NSObject {
     
-    // MARK: Properties
-    
+    // The attributes of the meal
     var user: String
     var name: String
     var photo: UIImage?
     var upvoted: Bool
     var bites: String
     var idString: String
-    
-    // MARK: Initialization
-    
+
+    // Initializer function
     init?(user: String, name: String, photo: UIImage?, upvoted: Bool, bites: String, id: String) {
         
         // Initialize stored properties.
@@ -30,11 +32,6 @@ class Meal: NSObject {
         self.upvoted = upvoted
         self.bites = bites
         self.idString = id
-        
-        // Initialization should fail if there is no name or if the rating is negative.
-        //if name.isEmpty {
-            //return nil
-        //}
     }
     
 }

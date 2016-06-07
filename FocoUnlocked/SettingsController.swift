@@ -1,9 +1,13 @@
 //
 //  SettingsController.swift
-//  
+//  FocoUnlocked
 //
-//  Created by Sudikoff Lab iMac on 4/11/16.
+//  View controller for the settings page
+//  This will be changed to hold more options
+//  Later, users should have the ability to swipe from the right to open the settings page
 //
+//  Created by WISP on 4/11/16.
+//  Copyright © 2016 DALI Lab. All rights reserved.
 //
 
 import Foundation

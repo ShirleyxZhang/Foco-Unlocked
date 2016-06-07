@@ -20,14 +20,12 @@
 		886286BA1CF694F7007D8C94 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286A71CF694F7007D8C94 /* DataService.swift */; };
 		886286BB1CF694F7007D8C94 /* DetailPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286A81CF694F7007D8C94 /* DetailPostViewController.swift */; };
 		886286BC1CF694F7007D8C94 /* filled cookie.png in Resources */ = {isa = PBXBuildFile; fileRef = 886286A91CF694F7007D8C94 /* filled cookie.png */; };
-		886286BD1CF694F7007D8C94 /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286AA1CF694F7007D8C94 /* ImageUtil.swift */; };
 		886286BE1CF694F7007D8C94 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286AB1CF694F7007D8C94 /* LoginViewController.swift */; };
 		886286BF1CF694F7007D8C94 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286AC1CF694F7007D8C94 /* Meal.swift */; };
 		886286C01CF694F7007D8C94 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286AD1CF694F7007D8C94 /* MealTableViewCell.swift */; };
 		886286C11CF694F7007D8C94 /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286AE1CF694F7007D8C94 /* MealTableViewController.swift */; };
 		886286C21CF694F7007D8C94 /* PhotoGalleryCropping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286AF1CF694F7007D8C94 /* PhotoGalleryCropping.swift */; };
 		886286C31CF694F7007D8C94 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286B01CF694F7007D8C94 /* Post.swift */; };
-		886286C51CF694F7007D8C94 /* PostsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286B21CF694F7007D8C94 /* PostsController.swift */; };
 		886286C61CF694F7007D8C94 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286B31CF694F7007D8C94 /* SettingsController.swift */; };
 		886286C71CF694F7007D8C94 /* unfilled cookie.png in Resources */ = {isa = PBXBuildFile; fileRef = 886286B41CF694F7007D8C94 /* unfilled cookie.png */; };
 		886286C81CF694F7007D8C94 /* UpvoteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286B51CF694F7007D8C94 /* UpvoteButton.swift */; };
@@ -76,17 +74,15 @@
 		886286A61CF694F7007D8C94 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		886286A71CF694F7007D8C94 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		886286A81CF694F7007D8C94 /* DetailPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPostViewController.swift; sourceTree = "<group>"; };
-		886286A91CF694F7007D8C94 /* filled cookie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filled cookie.png"; sourceTree = "<group>"; };
-		886286AA1CF694F7007D8C94 /* ImageUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
+		886286A91CF694F7007D8C94 /* filled cookie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "filled cookie.png"; path = "FocoUnlocked/filled cookie.png"; sourceTree = "<group>"; };
 		886286AB1CF694F7007D8C94 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		886286AC1CF694F7007D8C94 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		886286AD1CF694F7007D8C94 /* MealTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		886286AE1CF694F7007D8C94 /* MealTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewController.swift; sourceTree = "<group>"; };
 		886286AF1CF694F7007D8C94 /* PhotoGalleryCropping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGalleryCropping.swift; sourceTree = "<group>"; };
 		886286B01CF694F7007D8C94 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		886286B21CF694F7007D8C94 /* PostsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsController.swift; sourceTree = "<group>"; };
 		886286B31CF694F7007D8C94 /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
-		886286B41CF694F7007D8C94 /* unfilled cookie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unfilled cookie.png"; sourceTree = "<group>"; };
+		886286B41CF694F7007D8C94 /* unfilled cookie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "unfilled cookie.png"; path = "FocoUnlocked/unfilled cookie.png"; sourceTree = "<group>"; };
 		886286B51CF694F7007D8C94 /* UpvoteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpvoteButton.swift; sourceTree = "<group>"; };
 		886286B61CF694F7007D8C94 /* UpvoteControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpvoteControl.swift; sourceTree = "<group>"; };
 		886CA0801CF7D31800C58372 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -125,10 +121,6 @@
 		3DFC87358B0D540D32D8C49E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				88C71FE81D054BCD002E26C9 /* menu_dark.png */,
-				88C71FE91D054BCD002E26C9 /* menu.png */,
-				88C71FEA1D054BCD002E26C9 /* namefinal.png */,
-				88C71FEB1D054BCD002E26C9 /* settings.png */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -136,6 +128,7 @@
 		886286651CF693B9007D8C94 = {
 			isa = PBXGroup;
 			children = (
+				88C71FF21D07470D002E26C9 /* Images */,
 				886286701CF693B9007D8C94 /* FocoUnlocked */,
 				886286851CF693BA007D8C94 /* FocoUnlockedTests */,
 				886286901CF693BA007D8C94 /* FocoUnlockedUITests */,
@@ -166,18 +159,14 @@
 				886286A61CF694F7007D8C94 /* CreateAccountViewController.swift */,
 				886286A71CF694F7007D8C94 /* DataService.swift */,
 				886286A81CF694F7007D8C94 /* DetailPostViewController.swift */,
-				886286A91CF694F7007D8C94 /* filled cookie.png */,
 				886CA0801CF7D31800C58372 /* GoogleService-Info.plist */,
-				886286AA1CF694F7007D8C94 /* ImageUtil.swift */,
 				886286AB1CF694F7007D8C94 /* LoginViewController.swift */,
 				886286AC1CF694F7007D8C94 /* Meal.swift */,
 				886286AD1CF694F7007D8C94 /* MealTableViewCell.swift */,
 				886286AE1CF694F7007D8C94 /* MealTableViewController.swift */,
 				886286AF1CF694F7007D8C94 /* PhotoGalleryCropping.swift */,
 				886286B01CF694F7007D8C94 /* Post.swift */,
-				886286B21CF694F7007D8C94 /* PostsController.swift */,
 				886286B31CF694F7007D8C94 /* SettingsController.swift */,
-				886286B41CF694F7007D8C94 /* unfilled cookie.png */,
 				886286B51CF694F7007D8C94 /* UpvoteButton.swift */,
 				886286B61CF694F7007D8C94 /* UpvoteControl.swift */,
 				886286781CF693B9007D8C94 /* Assets.xcassets */,
@@ -203,6 +192,19 @@
 				886286931CF693BA007D8C94 /* Info.plist */,
 			);
 			path = FocoUnlockedUITests;
+			sourceTree = "<group>";
+		};
+		88C71FF21D07470D002E26C9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				886286B41CF694F7007D8C94 /* unfilled cookie.png */,
+				88C71FE81D054BCD002E26C9 /* menu_dark.png */,
+				88C71FE91D054BCD002E26C9 /* menu.png */,
+				88C71FEA1D054BCD002E26C9 /* namefinal.png */,
+				88C71FEB1D054BCD002E26C9 /* settings.png */,
+				886286A91CF694F7007D8C94 /* filled cookie.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		FACB77BC3F0A4F031EBC4797 /* Pods */ = {
@@ -417,12 +419,10 @@
 				886286BB1CF694F7007D8C94 /* DetailPostViewController.swift in Sources */,
 				886286C31CF694F7007D8C94 /* Post.swift in Sources */,
 				886286741CF693B9007D8C94 /* ViewController.swift in Sources */,
-				886286BD1CF694F7007D8C94 /* ImageUtil.swift in Sources */,
 				886286C21CF694F7007D8C94 /* PhotoGalleryCropping.swift in Sources */,
 				886286721CF693B9007D8C94 /* AppDelegate.swift in Sources */,
 				886286BA1CF694F7007D8C94 /* DataService.swift in Sources */,
 				886286B71CF694F7007D8C94 /* BaseService.swift in Sources */,
-				886286C51CF694F7007D8C94 /* PostsController.swift in Sources */,
 				886286C11CF694F7007D8C94 /* MealTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

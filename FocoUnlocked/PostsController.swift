@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  FocoUnlockedFeed
 //
-//  Created by Madison Minsk on 3/8/16.
-//  Copyright © 2016 Madison Minsk. All rights reserved.
+//  Created by WISP on 3/8/16.
+//  Copyright © 2016 DALI Lab. All rights reserved.
 //
 
 import Foundation

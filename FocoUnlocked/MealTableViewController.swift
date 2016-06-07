@@ -2,8 +2,10 @@
 //  MealTableViewController.swift
 //  FocoUnlockedFeed
 //
-//  Created by Madison Minsk on 3/20/16.
-//  Copyright © 2016 Madison Minsk. All rights reserved.
+//  The table view that will hold all the table view cells
+//
+//  Created by WISP on 3/20/16.
+//  Copyright © 2016 DALI Lab. All rights reserved.
 //
 
 import UIKit
@@ -12,9 +14,7 @@ import Firebase
 class MealTableViewController: UITableViewController {
     
     @IBOutlet weak var upvoteButton: UpvoteButton!
-    
-    // MARK: Properties
-    
+
     var meals = [Meal]()
     var titles = [String]()
     var newImage: UIImageView = UIImageView()
@@ -30,12 +30,12 @@ class MealTableViewController: UITableViewController {
         
         super.viewDidLoad()
         
-        // Load the sample data.
-        loadSampleMeals()
+        // Loads all the posts from the database
+        loadMeals()
     }
     
-    
-    func loadSampleMeals() {
+    // Loads all the posts from the database
+    func loadMeals() {
         var image: String = ""
         var title: String = ""
         var bites: String = ""
@@ -80,23 +80,21 @@ class MealTableViewController: UITableViewController {
 
                     }
                 }
-                }
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    self.tableView.reloadData()
-                })
-                
             }
-            
+                
+            // Reloads the feed so all the posts can be viewed by the user
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.tableView.reloadData()
+            })
+            }
         })
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    //************************************* Disables the delete option in list cells *******************/
-    
+    // Disables the delete option for each cell in the feed
     override func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
         
         if tableView.editing {
@@ -128,8 +126,6 @@ class MealTableViewController: UITableViewController {
         let meal = meals[indexPath.row]
         
         tableView.rowHeight = 300.00
-        //UITableViewAutomaticDimension
-        //tableView.estimatedRowHeight = 300.0
         
         // Table view cells are reused and should be dequeued using a cell identifier.
         let cellIdentifier = "MealTableViewCell"

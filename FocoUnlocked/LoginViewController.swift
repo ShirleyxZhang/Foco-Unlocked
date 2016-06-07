@@ -1,9 +1,11 @@
 //
 //  LoginViewController.swift
-//  FocoUnlockedLogin
+//  FocoUnlocked
 //
-//  Created by Sudikoff Lab iMac on 3/16/16.
-//  Copyright © 2016 wisp. All rights reserved.
+//  The view controller for defining the Login Page
+//
+//  Created by WISP on 3/16/16.
+//  Copyright © 2016 DALI Lab. All rights reserved.
 //
 
 import UIKit
@@ -12,32 +14,23 @@ import Firebase
 class LoginViewController: UIViewController {
     
     // All the variables that will be shown within the app
-
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var logoutButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
-        /*if NSUserDefaults.standardUserDefaults().valueForKey("uid") != nil && CURRENT_USER.authData != nil
-        //{
-            self.logoutButton.hidden = false
-        }*/
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // Logins in the user
-    
     @IBAction func loginAction(sender: AnyObject) {
         
         let email = self.emailTextField.text
@@ -45,28 +38,35 @@ class LoginViewController: UIViewController {
         
         if email != "" && password != ""
         {
-            // Checks to see if account exists
-            
+            // Attemps to log into an existing account
             FIRAuth.auth()?.signInWithEmail(email!, password: password!) { (user, error) in
-                // If there is no error then a positive message will be sent to the terminal and not hide the logout button
                 
+                // Handels the case of an error
                 if error == nil
                 {
                     NSUserDefaults.standardUserDefaults().setValue(user!.uid, forKey: "uid")
                     print("Logged in :)")
                     self.performSegueWithIdentifier("fromLoginToFeed", sender: self)
-                    //self.logoutButton.hidden = false
                 }
-                else // Otherwise, an error message will be printed to the terminal
+                else if (error!.code == 17020) // An error message for no internet connection
                 {
-                    print(error)
+                    print("Error Code: \(error!.code)")
+                    let alert = UIAlertController(title: "Log in Error", message: "No Internet Connection", preferredStyle:.Alert)
+                    let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                    alert.addAction(action)
+                    self.presentViewController(alert, animated: true, completion: nil)
+                } else {  // An error message for any other error
+                    let alert = UIAlertController(title: "System Error", message: "Error in the System. Please try again later", preferredStyle:.Alert)
+                    let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                    alert.addAction(action)
+                    self.presentViewController(alert, animated: true, completion: nil)
                 }
             }
         }
         
         else // If nothing was input to the text fields, an error message will be returned to the users
         {
-            let alert = UIAlertController(title: "Error", message: "Enter Email and Password", preferredStyle:.Alert)
+            let alert = UIAlertController(title: "Log in Error", message: "Enter Email and Password", preferredStyle:.Alert)
             let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
             alert.addAction(action)
             self.presentViewController(alert, animated: true, completion: nil)
@@ -75,9 +75,9 @@ class LoginViewController: UIViewController {
         }
     }
     
+    // Logs the user out
     @IBAction func logoutAction(sender: AnyObject) {
         try! FIRAuth.auth()!.signOut()
-        //CURRENT_USER.unauth()
         NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "uid")
         self.logoutButton.hidden = true
     }

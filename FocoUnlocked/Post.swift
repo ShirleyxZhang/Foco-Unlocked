@@ -1,10 +1,21 @@
-    
+//
+//  Post.swift
+//  FocoUnlocked
+//
+//  Holds all the information for each
+//  A post will be sent to the database
+//
+//  Created by WISP on 6/7/16.
+//  Copyright © 2016 DALI Lab. All rights reserved.
+//
 
 import Foundation
 import UIKit
 import Firebase
 
 class Post {
+    
+    // The attributes of the meal
     var user: String
     var id: Int
     var idString: String
@@ -15,10 +26,12 @@ class Post {
     var postDate: NSDate
     var tags: Array<String>
     
+    // Struct to hold each post's idNumber
     struct idNumber {
         static var id = 0
     }
     
+    // Initializer function that doesn't take in tags
     init(user: String, title: String, description: String, image: NSString) {
         self.user = user
         self.id = Post.idNumber.id++
@@ -31,6 +44,7 @@ class Post {
         self.tags = [String]()
     }
     
+    // Initializer function that does take in tags
     init(user: String, title: String, description: String, image: NSString, tagsString: String) {
         self.user = user
         self.id = Post.idNumber.id++
@@ -52,10 +66,14 @@ class Post {
         }
     }
     
+    // Function that prints out all the contents of each post
     func toArray() -> NSDictionary {
         let newArray = ["ID Number": "\(id)", "ID String": "\(idString)", "Username": "\(user)", "Title": "\(title)", "Description": "\(description)", "Image": "\(image)", "Bites Number": "\(bites)", "Post Date": "\(postDate)", "Tags": "\(tags)"]
         return newArray
     }
+    
+    
+    /******** The following functions are accessor functions for each attribute ********/
     
     func getUser() -> String {
         return user
@@ -94,10 +112,12 @@ class Post {
         return self.idString
     }
     
+    // Adds a bite to the current post
     func addBite() {
         self.bites++
     }
     
+    // Subtracts a bite from the current post
     func subBite() {
         self.bites--
     }

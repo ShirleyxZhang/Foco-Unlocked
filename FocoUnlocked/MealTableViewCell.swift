@@ -2,8 +2,10 @@
 //  MealTableViewCell.swift
 //  FocoUnlockedFeed
 //
-//  Created by Madison Minsk on 3/18/16.
-//  Copyright © 2016 Madison Minsk. All rights reserved.
+//  The table view cell that will hold each post
+//
+//  Created by WISP on 3/18/16.
+//  Copyright © 2016 DALI Lab. All rights reserved.
 //
 
 import UIKit
@@ -11,6 +13,7 @@ import Firebase
 
 class MealTableViewCell: UITableViewCell {
     
+    // Elements that show up on the Upload page
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
@@ -31,18 +34,19 @@ class MealTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         
         super.awakeFromNib()
-        // Initialization code
         
+        // Calls listener functions that will handle the user's actions
         let tap = UITapGestureRecognizer(target: self, action: "voteTapped:")
         tap.numberOfTapsRequired = 1
         upvoteButton.addGestureRecognizer(tap)
         upvoteButton.userInteractionEnabled = true
     }
     
+    // Configures the cell upon initial creation
     func configureCell(meal: Meal) {
         let meal = meal
         
-        // Set the labels and textView.
+        // Set the labels and textView
         
         nameLabel.text = meal.name
         photoImageView.image = meal.photo
@@ -89,6 +93,7 @@ class MealTableViewCell: UITableViewCell {
         
     }
     
+    // Function that will be called when the user clicks the like button
     func voteTapped(sender: UITapGestureRecognizer) {
         
         // observeSingleEventOfType listens for a tap by the current user.
@@ -97,8 +102,7 @@ class MealTableViewCell: UITableViewCell {
         var correctPost = false
         var click = true
         
-        
-        
+        // Loops through all the cells to add the right attributes
         ref.observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
             if (!(snapshot.value is NSNull)) {
                 let postDict = snapshot.value as? [String : AnyObject]
@@ -143,12 +147,9 @@ class MealTableViewCell: UITableViewCell {
         })
     }
     
+    // Function that handles each cell upon selection
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-        
-        
     }
     
     

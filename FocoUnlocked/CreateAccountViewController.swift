@@ -2,8 +2,10 @@
 //  CreateAccountViewController.swift
 //  FocoUnlockedLogin
 //
-//  Created by Sudikoff Lab iMac on 3/17/16.
-//  Copyright © 2016 wisp. All rights reserved.
+//  The view controller to create a new account
+//
+//  Created by WISP on 3/17/16.
+//  Copyright © 2016 DALI Lab. All rights reserved.
 //
 
 import UIKit
@@ -12,32 +14,26 @@ import Firebase
 class CreateAccountViewController: UIViewController {
 
     // Variables for the text fields show in the app
-    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
     @IBAction func createAccount(sender: AnyObject) {
         
         // Holds the text of the email and password text fields
-        
         let email = self.emailTextField.text
         let password = self.passwordTextField.text
         
-        let ref = FIRDatabase.database().reference()
-        
         if email != "" && password != ""
         {
+            // Attempts to create a new user
             FIRAuth.auth()?.createUserWithEmail(email!, password: password!) { (user, error) in
                 
                 if error == nil
@@ -46,8 +42,7 @@ class CreateAccountViewController: UIViewController {
                             NSUserDefaults.standardUserDefaults().synchronize()
                             print("Account Created :)")
                             self.performSegueWithIdentifier("fromSignupToFeed", sender: self)
-                    // Otherwise an error will be printed to the terminal
-                }
+                } // HANDLE THE ERROR WHEN A NEW USER TRIES TO USE THE SAME EMAIL ADDRESS
                     else {
                             let alert = UIAlertController(title: "Error", message: "Incorret Information.", preferredStyle: UIAlertControllerStyle.Alert)
                             let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
@@ -69,8 +64,8 @@ class CreateAccountViewController: UIViewController {
             
     }
     
+    // Pops the user back to the previous page
     @IBAction func cancel(sender: AnyObject) {
-        // self.dismissViewControllerAnimated(true, completion: nil)
         navigationController?.popViewControllerAnimated(true)
     }
 }

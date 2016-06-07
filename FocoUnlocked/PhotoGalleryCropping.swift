@@ -1,9 +1,9 @@
 //
 //  PhotoGalleryCropping.swift
-//  NewCamera
+//  FocoUnlocked
 //
-//  Created by Sudikoff Lab iMac on 3/27/16.
-//  Copyright © 2016 Sudikoff Lab iMac. All rights reserved.
+//  Created by WISP on 3/27/16.
+//  Copyright © 2016 DALI Lab. All rights reserved.
 //
 
 import Foundation

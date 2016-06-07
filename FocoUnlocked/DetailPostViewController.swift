@@ -1,9 +1,11 @@
 //
-//  ViewController.swift
-//  Camera
+//  DetailPostViewController.swift
+//  FocoUnlocked
 //
-//  Created by Sudikoff Lab iMac on 3/25/16.
-//  Copyright © 2016 Sudikoff Lab iMac. All rights reserved.
+//  Grabs information from the database and populates the page with correct information
+//
+//  Created by WISP on 3/25/16.
+//  Copyright © 2016 DALI Lab. All rights reserved.
 //
 
 import UIKit
@@ -11,7 +13,7 @@ import Firebase
 
 class DetailPostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    
+    // Elements that show up on the Upload page
     @IBOutlet weak var postTitle: UILabel!
     @IBOutlet weak var postImage: UIImageView!
     @IBOutlet weak var postTags: UILabel!
@@ -26,7 +28,7 @@ class DetailPostViewController: UIViewController, UIImagePickerControllerDelegat
 
         postTitle.text = newTitle
         postDescription.text = newDescription
-        let ref = FIRDatabase.database().reference().child("posts")//Firebase(url:"https://focounlocked.firebaseio.com/posts")
+        let ref = FIRDatabase.database().reference().child("posts")
         ref.queryOrderedByChild("Title")
             .observeEventType(.ChildAdded, withBlock: { snapshot in
                 if (snapshot.value!.objectForKey("Title") as! String == self.newTitle) {
@@ -35,7 +37,11 @@ class DetailPostViewController: UIViewController, UIImagePickerControllerDelegat
                 if (imageData != nil) {
                 let decodedImage = UIImage(data: imageData!)
                 self.postImage.image = decodedImage;
+                    
+                /********* WILL LATER PRINT OUT BITES NUM AND USERNAME **********/
+                     
                 //var bitesNum = (snapshot.value.objectForKey("Bites Number") as! NSString)
+                //var username = (snapshot.value.objectForKey("") as! NSString)
                 let tags = snapshot.value!.objectForKey("Tags") as! NSString
                 var tempString: String = "";
                     self.postTags.text = tags as String;
@@ -58,18 +64,18 @@ class DetailPostViewController: UIViewController, UIImagePickerControllerDelegat
             })
     }
     
+    // Pops the program to previous page
     @IBAction func backButton(sender: AnyObject) {
-        
         navigationController?.popViewControllerAnimated(true)
-        
     }
     
+    // Helper function to get the title to print out
     func assignTitle(title: String) {
         newTitle = title
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     

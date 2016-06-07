@@ -1,20 +1,18 @@
 //
 //  UpvoteControl.swift
-//  FocoUnlockedFeed
+//  FocoUnlocked
 //
-//  Created by Madison Minsk on 3/18/16.
-//  Copyright © 2016 Madison Minsk. All rights reserved.
+//  Control file that will handle the actions of the bite button
+//
+//  Created by WISP on 3/18/16.
+//  Copyright © 2016 DALI Lab. All rights reserved.
 //
 
 import UIKit
 
 class UpvoteControl: UIView {
     
-    // MARK: Properties
-    
     var upvote = false
-
-    // MARK: Initialization
     
     required init?(coder aDecoder: NSCoder) {
         
