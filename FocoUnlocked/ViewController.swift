@@ -36,7 +36,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         itemDesc!.layer.borderColor = UIColor.grayColor().CGColor
         
         self.photoImageView.backgroundColor = UIColor.lightGrayColor()
-        self.photoImageView.contentMode = .ScaleAspect
+        //self.photoImageView.contentMode = .ScaleAspect
         self.view.addSubview(photoImageView)
 
         let border = CALayer()
