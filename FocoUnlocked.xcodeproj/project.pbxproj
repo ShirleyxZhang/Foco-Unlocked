@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4783DE007F1AF35752A0EFB4 /* libPods-FocoUnlocked.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 217D12FDD5BB4DE4BBBB4A40 /* libPods-FocoUnlocked.a */; };
 		886286721CF693B9007D8C94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286711CF693B9007D8C94 /* AppDelegate.swift */; };
 		886286741CF693B9007D8C94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286731CF693B9007D8C94 /* ViewController.swift */; };
 		886286791CF693B9007D8C94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 886286781CF693B9007D8C94 /* Assets.xcassets */; };
@@ -35,7 +36,6 @@
 		88C71FED1D054BCD002E26C9 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C71FE91D054BCD002E26C9 /* menu.png */; };
 		88C71FEE1D054BCD002E26C9 /* namefinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C71FEA1D054BCD002E26C9 /* namefinal.png */; };
 		88C71FEF1D054BCD002E26C9 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C71FEB1D054BCD002E26C9 /* settings.png */; };
-		C278CE05C44E1DD228129AF2 /* Pods_FocoUnlocked.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0EF94DECA6052650857716 /* Pods_FocoUnlocked.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3E0EF94DECA6052650857716 /* Pods_FocoUnlocked.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FocoUnlocked.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		217D12FDD5BB4DE4BBBB4A40 /* libPods-FocoUnlocked.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FocoUnlocked.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D53409A1FE30BFA33A17A95 /* Pods-FocoUnlocked.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FocoUnlocked.release.xcconfig"; path = "Pods/Target Support Files/Pods-FocoUnlocked/Pods-FocoUnlocked.release.xcconfig"; sourceTree = "<group>"; };
 		8862866E1CF693B9007D8C94 /* FocoUnlocked.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocoUnlocked.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		886286711CF693B9007D8C94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C278CE05C44E1DD228129AF2 /* Pods_FocoUnlocked.framework in Frameworks */,
+				4783DE007F1AF35752A0EFB4 /* libPods-FocoUnlocked.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,7 +124,7 @@
 		3DFC87358B0D540D32D8C49E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3E0EF94DECA6052650857716 /* Pods_FocoUnlocked.framework */,
+				217D12FDD5BB4DE4BBBB4A40 /* libPods-FocoUnlocked.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

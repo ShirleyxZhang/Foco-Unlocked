@@ -132,12 +132,12 @@ class MealTableViewController: UITableViewController {
         
         
         if let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as? MealTableViewCell {
-        
-        cell.configureCell(meal)
-        
+            print("Blanket")
+            cell.configureCell(meal)
         
         return cell
         } else {
+            print("Cartoon")
             return MealTableViewCell()
         }
     }
