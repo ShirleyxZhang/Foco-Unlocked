@@ -2,7 +2,7 @@
 An application that allows users to share their food creations in local cafeterias.
 
 ## Purpose & Future Plans
-This application was created by three Dartmouth College Computer Science partnered with the Computer Science Department and the DALI Lab. The students are Madison Minsk, Ijemma Onwuzulike, and Shirley Zhang.
+This application was created by three Dartmouth College Computer Science students partnered with the Computer Science Department and the DALI Lab. The students are Madison Minsk, Ijemma Onwuzulike, and Shirley Zhang.
 
 This application was created to allow Dartmouth students to share their creative food combinations at the food court. Students would be able to comment, share, and build an creative and collaborative environment.
 
