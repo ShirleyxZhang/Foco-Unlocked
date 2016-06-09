@@ -55,7 +55,16 @@ class LoginViewController: UIViewController {
                     let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
                     alert.addAction(action)
                     self.presentViewController(alert, animated: true, completion: nil)
-                } else {  // An error message for any other error
+                } else if (error!.code == 17010) { // An error message for too many requests    
+                    print(error)
+                    print("Error Code: \(error!.code)")
+                    let alert = UIAlertController(title: "Too Many Requests", message: "Too Many System Requests. Please try again later", preferredStyle:.Alert)
+                    let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                    alert.addAction(action)
+                    self.presentViewController(alert, animated: true, completion: nil)
+                } else { // An error message for any other error
+                    print(error)
+                    print("Error Code: \(error!.code)")
                     let alert = UIAlertController(title: "System Error", message: "Error in the System. Please try again later", preferredStyle:.Alert)
                     let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
                     alert.addAction(action)

@@ -133,8 +133,14 @@ class MealTableViewCell: UITableViewCell {
                                         self.ref.child(self.idString + "/Bites Number").setValue(String(bitesNumber) )
                                     }
                                 } else {
-                                    print("ERROR")
                                     self.usersRef.child("\(userEmail)/\(self.idString)").setValue("true")
+                                    self.upvoteButton.setBackgroundImage(UIImage(named: "filled cookie.png"), forState: UIControlState.Normal)
+                                    click = false
+                                    print("Button filled")
+                                    let bitesNumberString = value
+                                    var bitesNumber:Int = Int(bitesNumberString as! String)!
+                                    bitesNumber = bitesNumber + 1
+                                    self.ref.child(self.idString + "/Bites Number").setValue(String(bitesNumber) )
                                 }
                                 
                             })
