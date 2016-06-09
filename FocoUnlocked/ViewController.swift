@@ -1,7 +1,7 @@
 //
 //  ViewController.swift
 //  FocoUnlocked
-// 
+//
 //  The view controller that defines the Upload Page
 //
 //  Created by WISP on 3/25/16.
@@ -27,6 +27,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     var imageData: NSData = NSData()
     
+    let usersRef = FIRDatabase.database().reference().child("users")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,7 +40,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.photoImageView.backgroundColor = UIColor.lightGrayColor()
         //self.photoImageView.contentMode = .ScaleAspect
         self.view.addSubview(photoImageView)
-
+        
         let border = CALayer()
         let width = CGFloat(1.0)
         border.borderColor = UIColor.whiteColor().CGColor
@@ -60,7 +62,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             self.presentViewController(imagePicker, animated: true, completion: nil)
         }
     }
-
+    
     // Function to open the Photo Library
     @IBAction func openPhotoLibraryButton(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
@@ -96,6 +98,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         var desc: Bool = false
         let itemNameCheck: String = itemName.text!
         let itemDescCheck: String = itemDesc.text!
+        
+        var userPoints: Int = 0
         
         if itemNameCheck.characters.count >= 4 {
             title = true
@@ -153,11 +157,29 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                         return
                     }))
                     
-                    
-                    
                     self.presentViewController(alertController, animated: true, completion: nil)
-
-                    }
+                    
+                    
+                    /*usersRef.child(userEmail).observeEventType(FIRDataEventType.Value, withBlock: { snapshot in
+                        let postDict = snapshot.value as? [String : AnyObject]
+                        if (postDict != nil) {
+                            for object in postDict! {
+                                let key = object.0
+                                let obj = String(object.1)
+                                if (key == "Points") {
+                                    userPoints = Int(obj)!
+                                    userPoints++
+                                    print(userPoints)
+                                    
+                                } else if (key != "Points") {
+                                    print("skip")
+                                }
+                            }
+                        }
+                    })
+                    self.usersRef.child("\(userEmail)/Points").setValue(String(userPoints))*/
+                    
+                }
                 else if itemTags == nil {
                     let user = FIRAuth.auth()?.currentUser
                     let email: String! = user!.email
@@ -175,7 +197,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     postsList.append(newPost)
                     Posts.child(newPost.getIdString()).setValue(newPost.toArray())
                     navigationController?.popViewControllerAnimated(true)
-                
+                    
                     let alertController = UIAlertController(title: "Successful Upload", message:
                         "You item is now on the public field!", preferredStyle: UIAlertControllerStyle.Alert)
                     alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default,handler: { action in
@@ -204,31 +226,30 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let itemDescCheck: String = itemDesc.text!
         
         if itemNameCheck.characters.count >= 1 {
-            title = true
+        title = true
         }
         if itemDescCheck.characters.count >= itemNameCheck.characters.count {
-            desc = true
+        desc = true
         }
         
         
         if title == true || desc == true {
-            let alertController = UIAlertController(title: "Discard Post", message:
-                "Are your sure you want to give up on your creation?", preferredStyle: UIAlertControllerStyle.Alert)
-            alertController.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default,handler: nil))
-            alertController.addAction(UIAlertAction(title: "Discard", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alertController, animated: true, completion: nil)
-            
+        let alertController = UIAlertController(title: "Discard Post", message:
+        "Are your sure you want to give up on your creation?", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default,handler: nil))
+        alertController.addAction(UIAlertAction(title: "Discard", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alertController, animated: true, completion: nil)
+        
         }*/
-
+        
         print("HELP ME")
         navigationController?.popViewControllerAnimated(true)
-
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-
+    
+    
 }
-

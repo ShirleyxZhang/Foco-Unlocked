@@ -19,6 +19,9 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    
+    let usersRef = FIRDatabase.database().reference().child("users")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -44,6 +47,13 @@ class CreateAccountViewController: UIViewController {
                     NSUserDefaults.standardUserDefaults().setValue(user!.uid, forKey: "uid")
                     NSUserDefaults.standardUserDefaults().synchronize()
                     print("Account Created :)")
+                    let user = FIRAuth.auth()?.currentUser
+                    let email: String! = user!.email
+                    let userEmail = email.componentsSeparatedByString(".")[0]
+                    
+                    // Sets the user's points to 0 when they first create an account
+                    
+                    self.usersRef.child("\(userEmail)/Points").setValue("0")
                     self.performSegueWithIdentifier("fromSignupToFeed", sender: self)
                 } // HANDLE THE ERROR WHEN A NEW USER TRIES TO USE THE SAME EMAIL ADDRESS
                 else if (error!.code == 17007) {

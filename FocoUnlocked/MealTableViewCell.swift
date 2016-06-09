@@ -69,7 +69,7 @@ class MealTableViewCell: UITableViewCell {
             if (postDict != nil) {
                 for object in postDict! {
                     let key = object.0
-                    let obj = object.1 as! String
+                    let obj = String(object.1)
                     if (obj == "true" && key == self.idString) {
                         self.upvoteButton.setBackgroundImage(UIImage(named: "filled cookie.png"), forState: UIControlState.Normal)
                     } else if ((obj == "false" && key == self.idString) || (postDict == nil && key == self.idString)) {
