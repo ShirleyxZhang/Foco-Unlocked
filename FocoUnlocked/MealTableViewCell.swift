@@ -40,7 +40,6 @@ class MealTableViewCell: UITableViewCell {
         tap.numberOfTapsRequired = 1
         upvoteButton.addGestureRecognizer(tap)
         upvoteButton.userInteractionEnabled = true
-        
     }
     
     // Configures the cell upon initial creation
@@ -55,7 +54,12 @@ class MealTableViewCell: UITableViewCell {
         bitesCounter.text = meal.bites
         idString = meal.idString
         username.text = meal.user
-        print("USERNAME.TEXT: \(username.text!)")
+        
+        /*self.nameLabel.text = post.title
+        self.bitesCounter.text = "\(post.bites)"*/
+        //self.usernameLabel.text = joke.username
+        
+        /*********** MAKE SURE TO CHANGE WHEN USERNAMES ARE USED INSTEAD OF EMAILS **********/
         
         let user = FIRAuth.auth()?.currentUser
         let email: String! = user!.email
@@ -67,10 +71,8 @@ class MealTableViewCell: UITableViewCell {
                     let key = object.0
                     let obj = object.1 as! String
                     if (obj == "true" && key == self.idString) {
-                        print("in configure cell: \(obj)")
                         self.upvoteButton.setBackgroundImage(UIImage(named: "filled cookie.png"), forState: UIControlState.Normal)
                     } else if ((obj == "false" && key == self.idString) || (postDict == nil && key == self.idString)) {
-                        print("in configure cell: \(obj)")
                         self.upvoteButton.setBackgroundImage(UIImage(named: "unfilled cookie.png"), forState: UIControlState.Normal)
                     }
                 }
@@ -78,7 +80,7 @@ class MealTableViewCell: UITableViewCell {
                 print(postDict)
                 self.upvoteButton.setBackgroundImage(UIImage(named: "unfilled cookie.png"), forState: UIControlState.Normal)
             }
-
+            
         })
         
     }
@@ -127,7 +129,7 @@ class MealTableViewCell: UITableViewCell {
                                         self.upvoteButton.setBackgroundImage(UIImage(named: "unfilled cookie.png"), forState: UIControlState.Normal)
                                         let bitesNumberString = value
                                         var bitesNumber:Int = Int(bitesNumberString as! String)!
-                                            bitesNumber = bitesNumber - 1
+                                        bitesNumber = bitesNumber - 1
                                         self.ref.child(self.idString + "/Bites Number").setValue(String(bitesNumber) )
                                     }
                                 } else {
