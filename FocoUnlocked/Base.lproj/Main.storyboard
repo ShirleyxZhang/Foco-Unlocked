@@ -135,7 +135,7 @@
             <objects>
                 <tableViewController title="Feed" id="ZZw-mG-EQ9" customClass="MealTableViewController" customModule="FocoUnlocked" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="253" sectionHeaderHeight="28" sectionFooterHeight="28" id="88J-hV-DnQ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="481"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -1071,7 +1071,7 @@
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="backButton:" destination="P5w-kp-qGa" eventType="touchUpInside" id="aOC-4D-h3I"/>
+                                    <action selector="backButton:" destination="P5w-kp-qGa" eventType="touchUpInside" id="Ofn-Tl-QQd"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOH-jz-XQA">
@@ -1125,7 +1125,7 @@
                         <viewControllerLayoutGuide type="bottom" id="c5L-Zh-liv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gWo-Ar-dda">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="481"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Ingredient Tags" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVP-mk-Qji">
@@ -1185,7 +1185,7 @@
                                     <constraint firstAttribute="width" secondItem="MiK-fG-1gH" secondAttribute="height" multiplier="385:204" constant="5" id="myf-Xa-ypj"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Mp-iz-bAu">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Mp-iz-bAu">
                                 <rect key="frame" x="0.0" y="440" width="177" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="177" id="FVb-U0-1u6"/>
@@ -1268,8 +1268,8 @@
         <image name="namefinal.png" width="3000" height="900"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Y6H-rP-alj"/>
-        <segue reference="bjH-U2-eaw"/>
+        <segue reference="WPu-xT-W1f"/>
         <segue reference="dJg-QI-aDM"/>
+        <segue reference="Y6H-rP-alj"/>
     </inferredMetricsTieBreakers>
 </document>
