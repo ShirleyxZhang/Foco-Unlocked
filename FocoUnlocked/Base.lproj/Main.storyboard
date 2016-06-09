@@ -176,6 +176,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="33" id="5s5-u3-NHz"/>
                                             </constraints>
+                                            <state key="normal" backgroundImage="unfilled cookie.png"/>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="knW-SG-bIA">
                                             <rect key="frame" x="13" y="218" width="245" height="21"/>
@@ -1266,6 +1267,7 @@
         <image name="menu.png" width="1200" height="1200"/>
         <image name="menu_dark.png" width="1200" height="1200"/>
         <image name="namefinal.png" width="3000" height="900"/>
+        <image name="unfilled cookie.png" width="1200" height="1200"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="WPu-xT-W1f"/>
