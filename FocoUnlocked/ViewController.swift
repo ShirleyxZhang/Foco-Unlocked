@@ -91,8 +91,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // Implements the uploadButton
     @IBAction func uploadButton(sender: AnyObject) {
         
-        let myRootRef = FIRDatabase.database().reference()
-        let Posts = myRootRef.child("posts")
+        let Posts = FIRDatabase.database().reference()
         
         var title: Bool = false
         var desc: Bool = false
@@ -148,7 +147,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     }
                     let newPost: Post = Post(user: author, title: itemName.text!, description: itemDesc.text!, image: base64String, tagsString: itemTags.text!)
                     postsList.append(newPost)
-                    Posts.child(newPost.getIdString()).setValue(newPost.toArray())
+                    Posts.child("posts").child(newPost.getIdString()).setValue(newPost.toArray())
                     
                     let alertController = UIAlertController(title: "Successful Upload", message:
                         "Your item is now on the public field!", preferredStyle: UIAlertControllerStyle.Alert)
@@ -160,7 +159,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     self.presentViewController(alertController, animated: true, completion: nil)
                     
                     
-                    /*usersRef.child(userEmail).observeEventType(FIRDataEventType.Value, withBlock: { snapshot in
+                    usersRef.child(userEmail).observeEventType(FIRDataEventType.Value, withBlock: { snapshot in
                         let postDict = snapshot.value as? [String : AnyObject]
                         if (postDict != nil) {
                             for object in postDict! {
@@ -170,14 +169,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                                     userPoints = Int(obj)!
                                     userPoints++
                                     print(userPoints)
-                                    
                                 } else if (key != "Points") {
-                                    print("skip")
                                 }
                             }
                         }
                     })
-                    self.usersRef.child("\(userEmail)/Points").setValue(String(userPoints))*/
+                    self.usersRef.child("\(userEmail)").child("Points").setValue(String(userPoints))
                     
                 }
                 else if itemTags == nil {
@@ -195,7 +192,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     }
                     let newPost: Post = Post(user: author, title: itemName.text!, description: itemDesc.text!, image: base64String)
                     postsList.append(newPost)
-                    Posts.child(newPost.getIdString()).setValue(newPost.toArray())
+                    Posts.child("posts").child(newPost.getIdString()).setValue(newPost.toArray())
                     navigationController?.popViewControllerAnimated(true)
                     
                     let alertController = UIAlertController(title: "Successful Upload", message:
