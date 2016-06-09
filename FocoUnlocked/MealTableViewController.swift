@@ -40,6 +40,7 @@ class MealTableViewController: UITableViewController {
         var title: String = ""
         var bites: String = ""
         var idString: String = ""
+        var author: String = ""
         var lastCount = 0
         var decodedImage = UIImage()
         let ref = FIRDatabase.database().reference().child("posts")
@@ -64,12 +65,11 @@ class MealTableViewController: UITableViewController {
                         bites = value as! String
                     } else if (key as! String == "ID String") {
                         idString = value as! String
+                    } else if (key as! String == "Author") {
+                        author = value as! String
                     }
                     if (image != "" && title != "" && bites != "" && idString != "") {
-                        let user = FIRAuth.auth()?.currentUser
-                        let email: String! = user!.email
-                        let userEmail = email.componentsSeparatedByString(".")[0]
-                        let meal = Meal(user: userEmail, name: title as String, photo: decodedImage, upvoted: true, bites: bites as String, id: idString as String) as Meal!
+                        let meal = Meal(user: author, name: title as String, photo: decodedImage, upvoted: true, bites: bites as String, id: idString as String) as Meal!
                         self.meals as NSArray
                         self.meals.append(meal)
                         lastCount++
@@ -77,6 +77,7 @@ class MealTableViewController: UITableViewController {
                         title = ""
                         bites = ""
                         idString = ""
+                        author = ""
 
                     }
                 }

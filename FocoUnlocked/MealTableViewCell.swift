@@ -40,6 +40,7 @@ class MealTableViewCell: UITableViewCell {
         tap.numberOfTapsRequired = 1
         upvoteButton.addGestureRecognizer(tap)
         upvoteButton.userInteractionEnabled = true
+        
     }
     
     // Configures the cell upon initial creation
@@ -54,12 +55,7 @@ class MealTableViewCell: UITableViewCell {
         bitesCounter.text = meal.bites
         idString = meal.idString
         username.text = meal.user
-        
-        /*self.nameLabel.text = post.title
-        self.bitesCounter.text = "\(post.bites)"*/
-        //self.usernameLabel.text = joke.username
-        
-        // observeSingleEventOfType() listens for the thumb to be tapped, by any user, on any device.
+        print("USERNAME.TEXT: \(username.text!)")
         
         let user = FIRAuth.auth()?.currentUser
         let email: String! = user!.email

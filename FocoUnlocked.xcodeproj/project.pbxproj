@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4783DE007F1AF35752A0EFB4 /* libPods-FocoUnlocked.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 217D12FDD5BB4DE4BBBB4A40 /* libPods-FocoUnlocked.a */; };
+		5D0E2F74A66C212F6492EA84 /* libPods-FocoUnlocked.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D45F42D79B0F6F27ADFF10DF /* libPods-FocoUnlocked.a */; };
 		886286721CF693B9007D8C94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286711CF693B9007D8C94 /* AppDelegate.swift */; };
 		886286741CF693B9007D8C94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286731CF693B9007D8C94 /* ViewController.swift */; };
 		886286791CF693B9007D8C94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 886286781CF693B9007D8C94 /* Assets.xcassets */; };
@@ -56,7 +56,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		217D12FDD5BB4DE4BBBB4A40 /* libPods-FocoUnlocked.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FocoUnlocked.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D53409A1FE30BFA33A17A95 /* Pods-FocoUnlocked.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FocoUnlocked.release.xcconfig"; path = "Pods/Target Support Files/Pods-FocoUnlocked/Pods-FocoUnlocked.release.xcconfig"; sourceTree = "<group>"; };
 		8862866E1CF693B9007D8C94 /* FocoUnlocked.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocoUnlocked.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		886286711CF693B9007D8C94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +92,7 @@
 		88C71FEA1D054BCD002E26C9 /* namefinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = namefinal.png; sourceTree = "<group>"; };
 		88C71FEB1D054BCD002E26C9 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		C9502387C505A257A6A6C661 /* Pods-FocoUnlocked.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FocoUnlocked.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FocoUnlocked/Pods-FocoUnlocked.debug.xcconfig"; sourceTree = "<group>"; };
+		D45F42D79B0F6F27ADFF10DF /* libPods-FocoUnlocked.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FocoUnlocked.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4783DE007F1AF35752A0EFB4 /* libPods-FocoUnlocked.a in Frameworks */,
+				5D0E2F74A66C212F6492EA84 /* libPods-FocoUnlocked.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,7 +124,7 @@
 		3DFC87358B0D540D32D8C49E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				217D12FDD5BB4DE4BBBB4A40 /* libPods-FocoUnlocked.a */,
+				D45F42D79B0F6F27ADFF10DF /* libPods-FocoUnlocked.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

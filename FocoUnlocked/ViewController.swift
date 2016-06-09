@@ -11,7 +11,7 @@
 import UIKit
 import Firebase
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     
     // Elements that show up on the Upload page
     @IBOutlet var naviBar: UIView!
@@ -48,7 +48,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         itemName.layer.addSublayer(border)
         itemName.layer.masksToBounds = true
         
-
     }
     
     // Function to open the Camera Button
@@ -134,9 +133,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     let user = FIRAuth.auth()?.currentUser
                     let email: String! = user!.email
                     let userEmail = email.componentsSeparatedByString(".")[0]
+                    let username = user!.displayName
+                    var author: String = ""
                     self.imageData = UIImageJPEGRepresentation(photoImageView.image!, 0.1)!
                     let base64String = imageData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength)
-                    let newPost: Post = Post(user: userEmail, title: itemName.text!, description: itemDesc.text!, image: base64String, tagsString: itemTags.text!)
+                    if (username != nil) {
+                        author = username!
+                    } else if (username == nil) {
+                        author = userEmail
+                    }
+                    let newPost: Post = Post(user: author, title: itemName.text!, description: itemDesc.text!, image: base64String, tagsString: itemTags.text!)
                     postsList.append(newPost)
                     Posts.child(newPost.getIdString()).setValue(newPost.toArray())
                     
@@ -156,9 +162,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     let user = FIRAuth.auth()?.currentUser
                     let email: String! = user!.email
                     let userEmail = email.componentsSeparatedByString(".")[0]
+                    let username = user!.displayName
+                    var author: String = ""
                     self.imageData = UIImageJPEGRepresentation(photoImageView.image!, 0.1)!
                     let base64String = imageData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength)
-                    let newPost: Post = Post(user: userEmail, title: itemName.text!, description: itemDesc.text!, image: base64String)
+                    if (username != nil) {
+                        author = username!
+                    } else if (username == nil) {
+                        author = userEmail
+                    }
+                    let newPost: Post = Post(user: author, title: itemName.text!, description: itemDesc.text!, image: base64String)
                     postsList.append(newPost)
                     Posts.child(newPost.getIdString()).setValue(newPost.toArray())
                     navigationController?.popViewControllerAnimated(true)
@@ -207,7 +220,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             
         }*/
 
-        
+        print("HELP ME")
         navigationController?.popViewControllerAnimated(true)
 
     }

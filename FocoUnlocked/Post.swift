@@ -68,7 +68,7 @@ class Post {
     
     // Function that prints out all the contents of each post
     func toArray() -> NSDictionary {
-        let newArray = ["ID Number": "\(id)", "ID String": "\(idString)", "Username": "\(user)", "Title": "\(title)", "Description": "\(description)", "Image": "\(image)", "Bites Number": "\(bites)", "Post Date": "\(postDate)", "Tags": "\(tags)"]
+        let newArray = ["ID Number": "\(id)", "ID String": "\(idString)", "Author": "\(user)", "Title": "\(title)", "Description": "\(description)", "Image": "\(image)", "Bites Number": "\(bites)", "Post Date": "\(postDate)", "Tags": "\(tags)"]
         return newArray
     }
     
