@@ -22,11 +22,19 @@ class SettingsController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+        userImage!.layer.masksToBounds = false
         userImage!.layer.borderWidth = 1
-        userImage!.layer.cornerRadius = 112.5
+        userImage!.layer.cornerRadius = userImage.frame.size.width / 2
+        userImage!.clipsToBounds = true
         
         let user = FIRAuth.auth()?.currentUser
         userEmail.text = user!.email
+        
+        if (user?.photoURL == nil) {
+            userImage.image = UIImage(named: "user.png")
+        } else if (user?.photoURL == nil) {
+            //userImage.image = user?.photoURL
+        }
         
     }
     
