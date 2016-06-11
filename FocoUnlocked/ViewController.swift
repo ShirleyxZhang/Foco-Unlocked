@@ -238,8 +238,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.presentViewController(alertController, animated: true, completion: nil)
         
         }*/
-        
-        print("HELP ME")
         navigationController?.popViewControllerAnimated(true)
         
     }
