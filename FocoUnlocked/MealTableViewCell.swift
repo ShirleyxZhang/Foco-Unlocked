@@ -25,8 +25,8 @@ class MealTableViewCell: UITableViewCell {
     var idString: String = ""
     var configured: Bool = false
     
-    let ref = FIRDatabase.database().reference().child("posts")
-    let usersRef = FIRDatabase.database().reference().child("users")
+    let ref = FIRDatabase.database().reference()
+    let usersRef = FIRDatabase.database().reference()
     
     var tapped = false
     
@@ -64,7 +64,7 @@ class MealTableViewCell: UITableViewCell {
         let user = FIRAuth.auth()?.currentUser
         let email: String! = user!.email
         let userEmail = email.componentsSeparatedByString(".")[0]
-        usersRef.child(userEmail).observeEventType(FIRDataEventType.Value, withBlock: { snapshot in
+        usersRef.child("users").child(userEmail).observeEventType(FIRDataEventType.Value, withBlock: { snapshot in
             let postDict = snapshot.value as? [String : AnyObject]
             if (postDict != nil) {
                 for object in postDict! {
@@ -95,7 +95,7 @@ class MealTableViewCell: UITableViewCell {
         var click = true
         
         // Loops through all the cells to add the right attributes
-        ref.observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
+        ref.child("posts").observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
             if (!(snapshot.value is NSNull)) {
                 let postDict = snapshot.value as? [String : AnyObject]
                 for object in postDict! {
@@ -111,36 +111,36 @@ class MealTableViewCell: UITableViewCell {
                             let user = FIRAuth.auth()?.currentUser
                             let email: String! = user!.email
                             let userEmail = email.componentsSeparatedByString(".")[0]
-                            self.usersRef.child("\(userEmail)/\(self.idString)").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+                            self.usersRef.child("users").child("\(userEmail)/\(self.idString)").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
                                 if (!(snapshot.value is NSNull)) {
                                     if ((snapshot.value! as! String == "false" && click == true) || (snapshot.value == nil && click == true)) {
-                                        self.usersRef.child("\(userEmail)/\(self.idString)").setValue("true")
+                                        self.usersRef.child("users").child("\(userEmail)/\(self.idString)").setValue("true")
                                         click = false
                                         print("Button filled")
                                         self.upvoteButton.setBackgroundImage(UIImage(named: "filled cookie.png"), forState: UIControlState.Normal)
                                         let bitesNumberString = value
                                         var bitesNumber:Int = Int(bitesNumberString as! String)!
                                         bitesNumber = bitesNumber + 1
-                                        self.ref.child(self.idString + "/Bites Number").setValue(String(bitesNumber) )
+                                        self.ref.child("posts").child(self.idString + "/Bites Number").setValue(String(bitesNumber) )
                                     } else if (snapshot.value! as! String == "true" && click == true) {
-                                        self.usersRef.child("\(userEmail)/\(self.idString)").setValue("false")
+                                        self.usersRef.child("users").child("\(userEmail)/\(self.idString)").setValue("false")
                                         click = false
                                         print("Button unfilled")
                                         self.upvoteButton.setBackgroundImage(UIImage(named: "unfilled cookie.png"), forState: UIControlState.Normal)
                                         let bitesNumberString = value
                                         var bitesNumber:Int = Int(bitesNumberString as! String)!
                                         bitesNumber = bitesNumber - 1
-                                        self.ref.child(self.idString + "/Bites Number").setValue(String(bitesNumber) )
+                                        self.ref.child("posts").child(self.idString + "/Bites Number").setValue(String(bitesNumber) )
                                     }
                                 } else {
-                                    self.usersRef.child("\(userEmail)/\(self.idString)").setValue("true")
+                                    self.usersRef.child("users").child("\(userEmail)/\(self.idString)").setValue("true")
                                     self.upvoteButton.setBackgroundImage(UIImage(named: "filled cookie.png"), forState: UIControlState.Normal)
                                     click = false
                                     print("Button filled")
                                     let bitesNumberString = value
                                     var bitesNumber:Int = Int(bitesNumberString as! String)!
                                     bitesNumber = bitesNumber + 1
-                                    self.ref.child(self.idString + "/Bites Number").setValue(String(bitesNumber) )
+                                    self.ref.child("posts").child(self.idString + "/Bites Number").setValue(String(bitesNumber) )
                                 }
                                 
                             })

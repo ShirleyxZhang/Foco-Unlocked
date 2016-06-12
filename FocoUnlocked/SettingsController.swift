@@ -18,6 +18,8 @@ class SettingsController: UIViewController {
     
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userEmail: UILabel!
+    @IBOutlet weak var rankNumber: UILabel!
+    @IBOutlet weak var pointsNumber: UILabel!
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -25,6 +27,8 @@ class SettingsController: UIViewController {
         userImage!.layer.masksToBounds = false
         userImage!.layer.borderWidth = 1
         userImage!.layer.cornerRadius = userImage.frame.size.width / 2
+        userImage!.alpha = 0.3
+        //userImage!.backgroundColor = UIColor.lightGrayColor()
         userImage!.clipsToBounds = true
         
         let user = FIRAuth.auth()?.currentUser
