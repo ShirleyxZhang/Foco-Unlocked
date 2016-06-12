@@ -562,13 +562,11 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rW8-k0-tyx">
-                                <rect key="frame" x="479" y="327" width="48" height="30"/>
-                                <state key="normal" title="Gallery"/>
-                                <connections>
-                                    <action selector="openPhotoLibraryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jg9-5h-Zmd"/>
-                                </connections>
-                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Item Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SCM-C0-QEN">
+                                <rect key="frame" x="11" y="73" width="579" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="yes" keyboardAppearance="alert" returnKeyType="done"/>
+                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="comma, separated, tags" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nSX-SP-C1T">
                                 <rect key="frame" x="11" y="632" width="579" height="20"/>
                                 <constraints>
@@ -577,13 +575,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="yes"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNG-2i-B7H">
-                                <rect key="frame" x="81" y="327" width="54" height="30"/>
-                                <state key="normal" title="Camera"/>
-                                <connections>
-                                    <action selector="openCameraButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Mz-O1-qvd"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients and Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yI-Ws-h2f">
                                 <rect key="frame" x="11" y="395" width="579" height="21"/>
                                 <constraints>
@@ -647,11 +638,20 @@
                                     <action selector="cancelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pqe-w2-QIq"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Item Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SCM-C0-QEN">
-                                <rect key="frame" x="11" y="73" width="579" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="yes" keyboardAppearance="alert" returnKeyType="done"/>
-                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNG-2i-B7H">
+                                <rect key="frame" x="81" y="342" width="54" height="30"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="openCameraButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Mz-O1-qvd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rW8-k0-tyx">
+                                <rect key="frame" x="266" y="342" width="48" height="30"/>
+                                <state key="normal" title="Gallery"/>
+                                <connections>
+                                    <action selector="openPhotoLibraryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jg9-5h-Zmd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -660,27 +660,31 @@
                             <constraint firstItem="25g-b4-sWJ" firstAttribute="leading" secondItem="nSX-SP-C1T" secondAttribute="leading" id="4gH-yE-zkA"/>
                             <constraint firstItem="4yI-Ws-h2f" firstAttribute="centerX" secondItem="sUj-vo-wK3" secondAttribute="centerX" id="4pg-7d-4Z5"/>
                             <constraint firstItem="25g-b4-sWJ" firstAttribute="top" secondItem="nSX-SP-C1T" secondAttribute="bottom" constant="3" id="5T3-hU-j3b"/>
+                            <constraint firstItem="rW8-k0-tyx" firstAttribute="centerY" secondItem="jNG-2i-B7H" secondAttribute="centerY" id="6On-wE-z5O"/>
                             <constraint firstItem="Zb6-ry-Hy6" firstAttribute="top" secondItem="4yI-Ws-h2f" secondAttribute="bottom" constant="8" symbolic="YES" id="6sY-py-5uD"/>
                             <constraint firstItem="Zb6-ry-Hy6" firstAttribute="centerX" secondItem="sUj-vo-wK3" secondAttribute="centerX" id="7M5-zQ-lYC"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rW8-k0-tyx" secondAttribute="trailing" constant="53" id="BaS-hd-gVo"/>
-                            <constraint firstItem="jNG-2i-B7H" firstAttribute="top" secondItem="SZ2-BA-2Bl" secondAttribute="bottom" constant="39" id="CkO-3D-45Q"/>
+                            <constraint firstItem="rW8-k0-tyx" firstAttribute="width" secondItem="jNG-2i-B7H" secondAttribute="width" constant="-6" id="8D0-wV-bQn"/>
                             <constraint firstItem="SCM-C0-QEN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CyL-Lg-IjI"/>
                             <constraint firstItem="SZ2-BA-2Bl" firstAttribute="top" secondItem="SCM-C0-QEN" secondAttribute="bottom" constant="8" id="HXU-xy-qFR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SZ2-BA-2Bl" secondAttribute="trailing" constant="-10" id="Lxo-v9-w6z"/>
+                            <constraint firstItem="4yI-Ws-h2f" firstAttribute="top" secondItem="jNG-2i-B7H" secondAttribute="bottom" constant="23" id="MNs-tC-Mzn"/>
+                            <constraint firstItem="jNG-2i-B7H" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="7" id="QTO-By-yy6"/>
                             <constraint firstItem="4yI-Ws-h2f" firstAttribute="trailing" secondItem="SZ2-BA-2Bl" secondAttribute="trailing" id="R6e-0f-ywS"/>
-                            <constraint firstItem="4yI-Ws-h2f" firstAttribute="top" secondItem="jNG-2i-B7H" secondAttribute="bottom" constant="38" id="UwT-Eb-Ace"/>
+                            <constraint firstItem="rW8-k0-tyx" firstAttribute="top" secondItem="SZ2-BA-2Bl" secondAttribute="bottom" constant="54" id="Tz4-fh-F7L"/>
                             <constraint firstItem="4yI-Ws-h2f" firstAttribute="leading" secondItem="SZ2-BA-2Bl" secondAttribute="leading" id="Wxi-2O-XNV"/>
                             <constraint firstItem="NF7-i7-XQi" firstAttribute="baseline" secondItem="25g-b4-sWJ" secondAttribute="baseline" id="Xoo-QO-Iko"/>
-                            <constraint firstItem="rW8-k0-tyx" firstAttribute="top" secondItem="SZ2-BA-2Bl" secondAttribute="bottom" constant="39" id="byP-bx-BLw"/>
                             <constraint firstItem="SCM-C0-QEN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-9" id="cmY-PT-BA9"/>
                             <constraint firstItem="SZ2-BA-2Bl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-9" id="dIW-9c-AcP"/>
                             <constraint firstItem="z5K-q6-Djy" firstAttribute="leading" secondItem="Zb6-ry-Hy6" secondAttribute="leading" id="f4K-cq-djv"/>
+                            <constraint firstItem="rW8-k0-tyx" firstAttribute="height" secondItem="jNG-2i-B7H" secondAttribute="height" id="gGb-KK-gCe"/>
                             <constraint firstItem="z5K-q6-Djy" firstAttribute="top" secondItem="Zb6-ry-Hy6" secondAttribute="bottom" constant="7" id="gQD-xN-mJn"/>
-                            <constraint firstItem="jNG-2i-B7H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="61" id="hC5-sh-pyA"/>
+                            <constraint firstItem="4yI-Ws-h2f" firstAttribute="top" secondItem="rW8-k0-tyx" secondAttribute="bottom" constant="23" id="gnn-mq-NBc"/>
                             <constraint firstItem="nSX-SP-C1T" firstAttribute="centerX" secondItem="sUj-vo-wK3" secondAttribute="centerX" id="lCu-tf-zr6"/>
                             <constraint firstItem="Zb6-ry-Hy6" firstAttribute="leading" secondItem="4yI-Ws-h2f" secondAttribute="leading" id="p81-TI-UjQ"/>
+                            <constraint firstItem="rW8-k0-tyx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="7" id="ppC-LQ-mrr"/>
                             <constraint firstItem="nSX-SP-C1T" firstAttribute="trailing" secondItem="NF7-i7-XQi" secondAttribute="trailing" id="r75-oR-Iii"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="25g-b4-sWJ" secondAttribute="bottom" constant="12" id="tUm-4s-XL3"/>
+                            <constraint firstItem="jNG-2i-B7H" firstAttribute="top" secondItem="SZ2-BA-2Bl" secondAttribute="bottom" constant="54" id="thi-N1-R7n"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SCM-C0-QEN" secondAttribute="trailing" constant="-10" id="vFA-K7-oTb"/>
                             <constraint firstItem="nSX-SP-C1T" firstAttribute="top" secondItem="z5K-q6-Djy" secondAttribute="bottom" constant="4" id="vVZ-lx-SBu"/>
                             <constraint firstItem="nSX-SP-C1T" firstAttribute="leading" secondItem="z5K-q6-Djy" secondAttribute="leading" id="zHz-Rm-soc"/>
