@@ -21,7 +21,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet var uploadButton: UIButton!
     
-    var photoImageView = UIImageView(frame: CGRectMake(20, 127, 380, 220))
+    var photoImageView: UIImageView!
     
     var postsList: Array<Post> = [Post]()
     
@@ -37,9 +37,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         itemDesc!.layer.cornerRadius = 5
         itemDesc!.layer.borderColor = UIColor.grayColor().CGColor
         
+        self.photoImageView = UIImageView(frame: CGRectMake(10, 110, view.frame.size.width - 20, 220))
         self.photoImageView.backgroundColor = UIColor.lightGrayColor()
         //self.photoImageView.contentMode = .ScaleAspect
         self.view.addSubview(photoImageView)
+        
+        let horizontalConstraint = photoImageView.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor)
+        let verticalConstraint = photoImageView.centerYAnchor.constraintEqualToAnchor(view.centerYAnchor)
+        let widthConstraint = photoImageView.widthAnchor.constraintEqualToAnchor(nil, constant: view.frame.size.width)
+        let heightConstraint = photoImageView.heightAnchor.constraintEqualToAnchor(nil, constant: view.frame.size.width)
+        NSLayoutConstraint.activateConstraints([horizontalConstraint, verticalConstraint, widthConstraint, heightConstraint])
         
         let border = CALayer()
         let width = CGFloat(1.0)
@@ -48,7 +55,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         border.borderWidth = width
         itemName.layer.addSublayer(border)
-        itemName.layer.masksToBounds = true
+        itemName.layer.masksToBounds = true   
         
     }
     
