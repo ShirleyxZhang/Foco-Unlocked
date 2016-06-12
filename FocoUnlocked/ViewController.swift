@@ -27,7 +27,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     var imageData: NSData = NSData()
     
-    let usersRef = FIRDatabase.database().reference().child("users")
+    let usersRef = FIRDatabase.database().reference()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -166,7 +166,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     self.presentViewController(alertController, animated: true, completion: nil)
                     
                     
-                    usersRef.child(userEmail).observeEventType(FIRDataEventType.Value, withBlock: { snapshot in
+                    self.usersRef.child("users").child(userEmail).observeEventType(FIRDataEventType.Value, withBlock: { snapshot in
                         let postDict = snapshot.value as? [String : AnyObject]
                         if (postDict != nil) {
                             for object in postDict! {
@@ -181,7 +181,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                             }
                         }
                     })
-                    self.usersRef.child("\(userEmail)").child("Points").setValue(String(userPoints))
+                    self.usersRef.child("users").child("\(userEmail)").child("Points").setValue(String(userPoints))
                     
                 }
                 else if itemTags == nil {
