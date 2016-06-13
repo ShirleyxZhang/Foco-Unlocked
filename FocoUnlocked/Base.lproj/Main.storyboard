@@ -135,19 +135,20 @@
         <scene sceneID="rBm-m9-nbB">
             <objects>
                 <tableViewController title="Feed" id="ZZw-mG-EQ9" customClass="MealTableViewController" customModule="FocoUnlocked" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="253" sectionHeaderHeight="28" sectionFooterHeight="28" id="88J-hV-DnQ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="253" sectionHeaderHeight="28" sectionFooterHeight="28" id="88J-hV-DnQ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="0.99215686270000003" green="0.41960784309999999" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MealTableViewCell" rowHeight="253" id="Vao-lA-Rui" customClass="MealTableViewCell" customModule="FocoUnlocked" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="600" height="253"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vao-lA-Rui" id="Lx3-R1-mxm">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="252.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="253"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gaa-kf-utP">
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gaa-kf-utP">
                                             <rect key="frame" x="0.0" y="247" width="600" height="5"/>
                                             <color key="backgroundColor" red="0.93725490199999995" green="0.52156862749999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <state key="normal">
@@ -190,6 +191,10 @@
                                             <color key="textColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RfK-IZ-oYf">
+                                            <rect key="frame" x="0.0" y="247" width="600" height="5"/>
+                                            <color key="backgroundColor" red="0.99215686274509807" green="0.41960784313725491" blue="0.023529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="p4h-os-ekj" firstAttribute="leading" secondItem="Lx3-R1-mxm" secondAttribute="leadingMargin" id="8Yr-Ky-55e"/>
@@ -199,6 +204,8 @@
                                         <constraint firstItem="i1o-3O-hoV" firstAttribute="leading" secondItem="tdw-J5-yZ5" secondAttribute="trailing" constant="3" id="OSl-bx-MGK"/>
                                         <constraint firstItem="p4h-os-ekj" firstAttribute="trailing" secondItem="OhE-hR-Zoc" secondAttribute="trailing" id="UGh-tv-VGS"/>
                                         <constraint firstItem="OhE-hR-Zoc" firstAttribute="leading" secondItem="p4h-os-ekj" secondAttribute="leading" id="UaS-Ru-R2i"/>
+                                        <constraint firstItem="RfK-IZ-oYf" firstAttribute="bottom" secondItem="Gaa-kf-utP" secondAttribute="bottom" id="Xn3-4w-959"/>
+                                        <constraint firstItem="RfK-IZ-oYf" firstAttribute="top" secondItem="Gaa-kf-utP" secondAttribute="top" id="YAu-Zu-rgr"/>
                                         <constraint firstItem="i1o-3O-hoV" firstAttribute="top" secondItem="OhE-hR-Zoc" secondAttribute="bottom" constant="8" symbolic="YES" id="Ygd-zo-apw"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="tdw-J5-yZ5" secondAttribute="trailing" constant="40" id="ZqN-Sx-OC6"/>
                                         <constraint firstItem="p4h-os-ekj" firstAttribute="top" secondItem="Lx3-R1-mxm" secondAttribute="topMargin" id="bGL-0T-DmG"/>
@@ -207,8 +214,10 @@
                                         <constraint firstItem="p4h-os-ekj" firstAttribute="trailing" secondItem="Lx3-R1-mxm" secondAttribute="trailingMargin" id="coZ-MI-TGs"/>
                                         <constraint firstItem="Gaa-kf-utP" firstAttribute="centerX" secondItem="OhE-hR-Zoc" secondAttribute="centerX" id="gWM-8X-U6V"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="i1o-3O-hoV" secondAttribute="bottom" constant="5" id="lpi-rS-LAV"/>
+                                        <constraint firstItem="RfK-IZ-oYf" firstAttribute="trailing" secondItem="Gaa-kf-utP" secondAttribute="trailing" id="n9T-dX-niO"/>
                                         <constraint firstAttribute="bottom" secondItem="Gaa-kf-utP" secondAttribute="bottom" id="tY7-Ol-a6h"/>
                                         <constraint firstItem="Gaa-kf-utP" firstAttribute="top" secondItem="i1o-3O-hoV" secondAttribute="bottom" constant="8" id="uTp-MI-b7D"/>
+                                        <constraint firstItem="RfK-IZ-oYf" firstAttribute="leading" secondItem="Gaa-kf-utP" secondAttribute="leading" id="zGc-p5-GiZ"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="tdw-J5-yZ5" secondAttribute="bottom" constant="1" id="znj-NP-5s1"/>
                                     </constraints>
                                 </tableViewCellContentView>
