@@ -71,13 +71,21 @@ class MealTableViewCell: UITableViewCell {
                     let key = object.0
                     let obj = String(object.1)
                     if (obj == "true" && key == self.idString) {
-                        self.upvoteButton.setBackgroundImage(UIImage(named: "filled cookie.png"), forState: UIControlState.Normal)
+                        self.ref.child("posts").child("\(self.idString)").observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
+                            if (!(snapshot.value!.objectForKey("Bites Number") is NSNull)) {
+                                if (Int(snapshot.value!.objectForKey("Bites Number") as! String)! == 0) {
+                                    self.upvoteButton.setBackgroundImage(UIImage(named: "unfilled cookie.png"), forState: UIControlState.Normal)
+                                } else if (Int(snapshot.value!.objectForKey("Bites Number") as! String)! > 0) {
+                                    self.upvoteButton.setBackgroundImage(UIImage(named: "filled cookie.png"), forState: UIControlState.Normal)
+                                }
+                            }
+                        })
                     } else if ((obj == "false" && key == self.idString) || (postDict == nil && key == self.idString)) {
                         self.upvoteButton.setBackgroundImage(UIImage(named: "unfilled cookie.png"), forState: UIControlState.Normal)
                     }
                 }
             } else {
-                print(postDict)
+                print("postDict: \(postDict)")
                 self.upvoteButton.setBackgroundImage(UIImage(named: "unfilled cookie.png"), forState: UIControlState.Normal)
             }
             
@@ -128,7 +136,7 @@ class MealTableViewCell: UITableViewCell {
                                                 self.usersRef.child("users").child("\(userEmail)").child("Points").setValue(String(pointsNumberString!))
                                             }
                                         })
-                                        self.ref.child("posts").child(self.idString + "/Bites Number").setValue(String(bitesNumber) )
+                                        self.ref.child("posts").child(self.idString + "/Bites Number").setValue(String(bitesNumber))
                                     } else if (snapshot.value! as! String == "true" && click == true) {
                                         self.usersRef.child("users").child("\(userEmail)/\(self.idString)").setValue("false")
                                         click = false
@@ -146,7 +154,7 @@ class MealTableViewCell: UITableViewCell {
                                                 self.usersRef.child("users").child("\(userEmail)").child("Points").setValue(String(pointsNumberString!))
                                             }
                                         })
-                                        self.ref.child("posts").child(self.idString + "/Bites Number").setValue(String(bitesNumber) )
+                                        self.ref.child("posts").child(self.idString + "/Bites Number").setValue(String(bitesNumber))
                                     }
                                 } else {
                                     self.usersRef.child("users").child("\(userEmail)/\(self.idString)").setValue("true")
@@ -156,7 +164,14 @@ class MealTableViewCell: UITableViewCell {
                                     let bitesNumberString = value
                                     var bitesNumber:Int = Int(bitesNumberString as! String)!
                                     bitesNumber = bitesNumber + 1
-                                    self.ref.child("posts").child(self.idString + "/Bites Number").setValue(String(bitesNumber) )
+                                    self.usersRef.child("users").child("\(userEmail)").child("Points").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+                                        if (!(snapshot.value is NSNull)) {
+                                            var pointsNumberString = Int(snapshot.value! as! String)
+                                            pointsNumberString = pointsNumberString! + 1
+                                            self.usersRef.child("users").child("\(userEmail)").child("Points").setValue(String(pointsNumberString!))
+                                        }
+                                    })
+                                    self.ref.child("posts").child(self.idString + "/Bites Number").setValue(String(bitesNumber))
                                 }
                                 
                             })

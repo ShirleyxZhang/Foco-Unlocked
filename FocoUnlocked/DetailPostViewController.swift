@@ -28,8 +28,8 @@ class DetailPostViewController: UIViewController, UIImagePickerControllerDelegat
 
         postTitle.text = newTitle
         postDescription.text = newDescription
-        let ref = FIRDatabase.database().reference().child("posts")
-        ref.queryOrderedByChild("Title")
+        let ref = FIRDatabase.database().reference()
+        ref.child("posts").queryOrderedByChild("Title")
             .observeEventType(.ChildAdded, withBlock: { snapshot in
                 if (snapshot.value!.objectForKey("Title") as! String == self.newTitle) {
                 let base64EncodedString = snapshot.value!.objectForKey("Image")

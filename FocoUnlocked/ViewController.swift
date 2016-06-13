@@ -166,7 +166,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     self.presentViewController(alertController, animated: true, completion: nil)
                     
                     
-                    self.usersRef.child("users").child(userEmail).observeEventType(FIRDataEventType.Value, withBlock: { snapshot in
+                    /*self.usersRef.child("users").child(userEmail).observeEventType(FIRDataEventType.Value, withBlock: { snapshot in
                         let postDict = snapshot.value as? [String : AnyObject]
                         if (postDict != nil) {
                             for object in postDict! {
@@ -175,13 +175,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                                 if (key == "Points") {
                                     userPoints = Int(obj)!
                                     userPoints++
-                                    print(userPoints)
+                                    print("userPoints: \(userPoints)")
                                 } else if (key != "Points") {
                                 }
                             }
                         }
                     })
-                    self.usersRef.child("users").child("\(userEmail)").child("Points").setValue(String(userPoints))
+                    self.usersRef.child("users").child("\(userEmail)").child("Points").setValue(String(userPoints))*/
                     
                 }
                 else if itemTags == nil {

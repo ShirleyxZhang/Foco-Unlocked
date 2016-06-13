@@ -53,9 +53,16 @@ class SettingsController: UIViewController {
     }
     
     @IBAction func logout(sender: AnyObject) {
-        try! FIRAuth.auth()!.signOut()
-        self.performSegueWithIdentifier("logout", sender: self)
-        print("Logged out :)")
+        let logOut = { (action: UIAlertAction!) -> Void in
+            try! FIRAuth.auth()!.signOut()
+            self.performSegueWithIdentifier("logout", sender: self)
+            print("Logged out :)")
+        }
+        let alertController = UIAlertController(title: "Log out", message:
+            "Are your sure you want to log out?", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default, handler: logOut))
+        alertController.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
     
     
