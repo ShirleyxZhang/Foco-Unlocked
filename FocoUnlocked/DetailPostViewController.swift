@@ -66,6 +66,7 @@ class DetailPostViewController: UIViewController, UIImagePickerControllerDelegat
     
     // Pops the program to previous page
     @IBAction func backButton(sender: AnyObject) {
+        print("Step back")
         navigationController?.popViewControllerAnimated(true)
     }
     

@@ -111,7 +111,7 @@ class MealTableViewCell: UITableViewCell {
                             let user = FIRAuth.auth()?.currentUser
                             let email: String! = user!.email
                             let userEmail = email.componentsSeparatedByString(".")[0]
-                            self.usersRef.child("users").child("\(userEmail)/\(self.idString)").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+                            self.usersRef.child("users").child("\(userEmail)").child("\(self.idString)").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
                                 if (!(snapshot.value is NSNull)) {
                                     if ((snapshot.value! as! String == "false" && click == true) || (snapshot.value == nil && click == true)) {
                                         self.usersRef.child("users").child("\(userEmail)/\(self.idString)").setValue("true")
@@ -121,6 +121,13 @@ class MealTableViewCell: UITableViewCell {
                                         let bitesNumberString = value
                                         var bitesNumber:Int = Int(bitesNumberString as! String)!
                                         bitesNumber = bitesNumber + 1
+                                        self.usersRef.child("users").child("\(userEmail)").child("Points").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+                                            if (!(snapshot.value is NSNull)) {
+                                                var pointsNumberString = Int(snapshot.value! as! String)
+                                                pointsNumberString = pointsNumberString! + 1
+                                                self.usersRef.child("users").child("\(userEmail)").child("Points").setValue(String(pointsNumberString!))
+                                            }
+                                        })
                                         self.ref.child("posts").child(self.idString + "/Bites Number").setValue(String(bitesNumber) )
                                     } else if (snapshot.value! as! String == "true" && click == true) {
                                         self.usersRef.child("users").child("\(userEmail)/\(self.idString)").setValue("false")
@@ -130,6 +137,15 @@ class MealTableViewCell: UITableViewCell {
                                         let bitesNumberString = value
                                         var bitesNumber:Int = Int(bitesNumberString as! String)!
                                         bitesNumber = bitesNumber - 1
+                                        self.usersRef.child("users").child("\(userEmail)").child("Points").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+                                            if (!(snapshot.value is NSNull)) {
+                                                var pointsNumberString = Int(snapshot.value! as! String)
+                                                if (pointsNumberString > 0) {
+                                                    pointsNumberString = pointsNumberString! - 1
+                                                }
+                                                self.usersRef.child("users").child("\(userEmail)").child("Points").setValue(String(pointsNumberString!))
+                                            }
+                                        })
                                         self.ref.child("posts").child(self.idString + "/Bites Number").setValue(String(bitesNumber) )
                                     }
                                 } else {

@@ -21,6 +21,8 @@ class SettingsController: UIViewController {
     @IBOutlet weak var rankNumber: UILabel!
     @IBOutlet weak var pointsNumber: UILabel!
     
+    let usersRef = FIRDatabase.database().reference()
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -33,12 +35,20 @@ class SettingsController: UIViewController {
         
         let user = FIRAuth.auth()?.currentUser
         userEmail.text = user!.email
+        let usersEmail = user!.email
+        let email = usersEmail!.componentsSeparatedByString(".")[0]
         
         if (user?.photoURL == nil) {
             userImage.image = UIImage(named: "user.png")
         } else if (user?.photoURL == nil) {
             //userImage.image = user?.photoURL
         }
+        
+        self.usersRef.child("users").child("\(email)").child("Points").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+            if (!(snapshot.value is NSNull)) {
+                self.pointsNumber.text = snapshot.value! as? String
+            }
+        })
         
     }
     

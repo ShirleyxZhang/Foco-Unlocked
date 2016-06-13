@@ -224,7 +224,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // If the user did, then the program will double check before popping to previous page
     // I the user didn't, then the program will pop to the previous page
     @IBAction func cancelButton(sender: AnyObject) {
-        /*var title: Bool = false
+        var title: Bool = false
         var desc: Bool = false
         let itemNameCheck: String = itemName.text!
         let itemDescCheck: String = itemDesc.text!
@@ -238,14 +238,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         
         if title == true || desc == true {
+            
+        let discardView = { (action: UIAlertAction!) -> Void in
+            self.navigationController?.popViewControllerAnimated(true)
+        }
         let alertController = UIAlertController(title: "Discard Post", message:
         "Are your sure you want to give up on your creation?", preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default,handler: nil))
-        alertController.addAction(UIAlertAction(title: "Discard", style: UIAlertActionStyle.Default, handler: nil))
+        alertController.addAction(UIAlertAction(title: "Discard", style: UIAlertActionStyle.Default, handler: discardView))
         self.presentViewController(alertController, animated: true, completion: nil)
         
-        }*/
-        navigationController?.popViewControllerAnimated(true)
+        }
+        print("Step back")
         
     }
     
