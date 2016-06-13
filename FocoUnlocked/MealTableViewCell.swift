@@ -13,8 +13,9 @@ import Firebase
 
 class MealTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var username: UIButton!
     // Elements that show up on the Upload page
-    @IBOutlet weak var username: UILabel!
+    // @IBOutlet weak var username: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var bitesLabel: UILabel!
@@ -53,7 +54,7 @@ class MealTableViewCell: UITableViewCell {
         //cell.upvoteControl.upvote = meal.upvoted
         bitesCounter.text = meal.bites
         idString = meal.idString
-        username.text = meal.user
+        username.setTitle(meal.user, forState: .Normal)
         
         /*self.nameLabel.text = post.title
         self.bitesCounter.text = "\(post.bites)"*/
