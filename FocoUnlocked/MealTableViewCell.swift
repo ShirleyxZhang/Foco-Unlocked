@@ -126,52 +126,20 @@ class MealTableViewCell: UITableViewCell {
                                         click = false
                                         print("Button filled")
                                         self.upvoteButton.setBackgroundImage(UIImage(named: "filled cookie.png"), forState: UIControlState.Normal)
-                                        let bitesNumberString = value
-                                        var bitesNumber:Int = Int(bitesNumberString as! String)!
-                                        bitesNumber = bitesNumber + 1
-                                        self.usersRef.child("users").child("\(userEmail)").child("Points").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
-                                            if (!(snapshot.value is NSNull)) {
-                                                var pointsNumberString = Int(snapshot.value! as! String)
-                                                pointsNumberString = pointsNumberString! + 1
-                                                self.usersRef.child("users").child("\(userEmail)").child("Points").setValue(String(pointsNumberString!))
-                                            }
-                                        })
-                                        self.ref.child("posts").child(self.idString + "/Bites Number").setValue(String(bitesNumber))
+                                        self.addBite(value, userEmail: userEmail)
                                     } else if (snapshot.value! as! String == "true" && click == true) {
                                         self.usersRef.child("users").child("\(userEmail)/\(self.idString)").setValue("false")
                                         click = false
                                         print("Button unfilled")
                                         self.upvoteButton.setBackgroundImage(UIImage(named: "unfilled cookie.png"), forState: UIControlState.Normal)
-                                        let bitesNumberString = value
-                                        var bitesNumber:Int = Int(bitesNumberString as! String)!
-                                        bitesNumber = bitesNumber - 1
-                                        self.usersRef.child("users").child("\(userEmail)").child("Points").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
-                                            if (!(snapshot.value is NSNull)) {
-                                                var pointsNumberString = Int(snapshot.value! as! String)
-                                                if (pointsNumberString > 0) {
-                                                    pointsNumberString = pointsNumberString! - 1
-                                                }
-                                                self.usersRef.child("users").child("\(userEmail)").child("Points").setValue(String(pointsNumberString!))
-                                            }
-                                        })
-                                        self.ref.child("posts").child(self.idString + "/Bites Number").setValue(String(bitesNumber))
+                                        self.subBite(value, userEmail: userEmail)
                                     }
                                 } else {
                                     self.usersRef.child("users").child("\(userEmail)/\(self.idString)").setValue("true")
                                     self.upvoteButton.setBackgroundImage(UIImage(named: "filled cookie.png"), forState: UIControlState.Normal)
                                     click = false
                                     print("Button filled")
-                                    let bitesNumberString = value
-                                    var bitesNumber:Int = Int(bitesNumberString as! String)!
-                                    bitesNumber = bitesNumber + 1
-                                    self.usersRef.child("users").child("\(userEmail)").child("Points").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
-                                        if (!(snapshot.value is NSNull)) {
-                                            var pointsNumberString = Int(snapshot.value! as! String)
-                                            pointsNumberString = pointsNumberString! + 1
-                                            self.usersRef.child("users").child("\(userEmail)").child("Points").setValue(String(pointsNumberString!))
-                                        }
-                                    })
-                                    self.ref.child("posts").child(self.idString + "/Bites Number").setValue(String(bitesNumber))
+                                    self.addBite(value, userEmail: userEmail)
                                 }
                                 
                             })
@@ -180,6 +148,36 @@ class MealTableViewCell: UITableViewCell {
                 }
             }
         })
+    }
+    
+    func subBite(value: AnyObject, userEmail: String) -> Void {
+        let bitesNumberString = value
+        var bitesNumber:Int = Int(bitesNumberString as! String)!
+        bitesNumber = bitesNumber - 1
+        self.usersRef.child("users").child("\(userEmail)").child("Points").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+            if (!(snapshot.value is NSNull)) {
+                var pointsNumberString = Int(snapshot.value! as! String)
+                if (pointsNumberString > 0) {
+                    pointsNumberString = pointsNumberString! - 1
+                }
+                self.usersRef.child("users").child("\(userEmail)").child("Points").setValue(String(pointsNumberString!))
+            }
+        })
+        self.ref.child("posts").child(self.idString).child("Bites Number").setValue(String(bitesNumber))
+    }
+    
+    func addBite(value: AnyObject, userEmail: String) -> Void {
+        let bitesNumberString = value
+        var bitesNumber:Int = Int(bitesNumberString as! String)!
+        bitesNumber = bitesNumber + 1
+        self.usersRef.child("users").child("\(userEmail)").child("Points").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+            if (!(snapshot.value is NSNull)) {
+                var pointsNumberString = Int(snapshot.value! as! String)
+                pointsNumberString = pointsNumberString! + 1
+                self.usersRef.child("users").child("\(userEmail)").child("Points").setValue(String(pointsNumberString!))
+            }
+        })
+        self.ref.child("posts").child(self.idString).child("Bites Number").setValue(String(bitesNumber))
     }
     
     // Function that handles each cell upon selection
