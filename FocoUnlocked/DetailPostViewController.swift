@@ -13,6 +13,7 @@ import Firebase
 
 class DetailPostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    @IBOutlet weak var settingsButton: UIButton!
     // Elements that show up on the Upload page
     @IBOutlet weak var postTitle: UILabel!
     @IBOutlet weak var postImage: UIImageView!
@@ -25,6 +26,8 @@ class DetailPostViewController: UIViewController, UIImagePickerControllerDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        settingsButton.addTarget(self.revealViewController(), action: Selector("revealToggle:"), forControlEvents: .TouchUpInside)
 
         postTitle.text = newTitle
         postDescription.text = newDescription
