@@ -13,6 +13,8 @@ import Firebase
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     
+    
+    @IBOutlet weak var Open: UIBarButtonItem!
     // Elements that show up on the Upload page
     @IBOutlet var naviBar: UIView!
     @IBOutlet var itemName: UITextField!
@@ -31,6 +33,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        /*Open.target = self.revealViewController()
+        Open.action = Selector("revealToggle:")*/
         
         // Adding attributes to the item's description box
         itemDesc!.layer.borderWidth = 1

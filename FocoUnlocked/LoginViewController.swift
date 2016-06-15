@@ -13,6 +13,7 @@ import Firebase
 
 class LoginViewController: UIViewController {
     
+    @IBOutlet weak var Open: UIBarButtonItem!
     @IBOutlet weak var loginView: UIView!
     // All the variables that will be shown within the app
     @IBOutlet weak var emailTextField: UITextField!
@@ -21,6 +22,9 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        /*Open.target = self.revealViewController()
+        Open.action = Selector("revealToggle:")*/
     }
     
     override func viewDidAppear(animated: Bool) {

@@ -41,6 +41,7 @@
 		88C71FFA1D093586002E26C9 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C71FF91D093586002E26C9 /* user.png */; };
 		88F77B3B1D10EA2D003B88A2 /* screw.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F77B3A1D10EA2D003B88A2 /* screw.png */; };
 		88F77B3F1D10EA8B003B88A2 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F77B3E1D10EA8B003B88A2 /* SWRevealViewController.m */; };
+		88F77B411D110DFA003B88A2 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F77B401D110DFA003B88A2 /* FeedController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		88F77B3C1D10EA8A003B88A2 /* FocoUnlocked-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FocoUnlocked-Bridging-Header.h"; sourceTree = "<group>"; };
 		88F77B3D1D10EA8B003B88A2 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		88F77B3E1D10EA8B003B88A2 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		88F77B401D110DFA003B88A2 /* FeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedController.swift; path = ../FeedController.swift; sourceTree = "<group>"; };
 		C9502387C505A257A6A6C661 /* Pods-FocoUnlocked.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FocoUnlocked.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FocoUnlocked/Pods-FocoUnlocked.debug.xcconfig"; sourceTree = "<group>"; };
 		D45F42D79B0F6F27ADFF10DF /* libPods-FocoUnlocked.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FocoUnlocked.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -167,6 +169,7 @@
 		886286701CF693B9007D8C94 /* FocoUnlocked */ = {
 			isa = PBXGroup;
 			children = (
+				88F77B401D110DFA003B88A2 /* FeedController.swift */,
 				886286711CF693B9007D8C94 /* AppDelegate.swift */,
 				886286731CF693B9007D8C94 /* ViewController.swift */,
 				8862869F1CF693D4007D8C94 /* GoogleService-Info.plist */,
@@ -444,6 +447,7 @@
 				886286B91CF694F7007D8C94 /* CreateAccountViewController.swift in Sources */,
 				886286C81CF694F7007D8C94 /* UpvoteButton.swift in Sources */,
 				886286BB1CF694F7007D8C94 /* DetailPostViewController.swift in Sources */,
+				88F77B411D110DFA003B88A2 /* FeedController.swift in Sources */,
 				886286C31CF694F7007D8C94 /* Post.swift in Sources */,
 				886286741CF693B9007D8C94 /* ViewController.swift in Sources */,
 				886286C21CF694F7007D8C94 /* PhotoGalleryCropping.swift in Sources */,
