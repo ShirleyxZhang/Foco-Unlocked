@@ -13,6 +13,7 @@ import Firebase
 
 class LoginViewController: UIViewController {
     
+    @IBOutlet weak var loginView: UIView!
     // All the variables that will be shown within the app
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!

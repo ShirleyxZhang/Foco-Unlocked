@@ -20,6 +20,13 @@ class SettingsProfileController: UIViewController {
         
         super.viewDidAppear(animated)
         
+        profileImage!.layer.masksToBounds = false
+        profileImage!.layer.borderWidth = 1
+        profileImage!.layer.cornerRadius = profileImage.frame.size.width / 2
+        profileImage!.alpha = 0.3
+        //userImage!.backgroundColor = UIColor.lightGrayColor()
+        profileImage!.clipsToBounds = true
+        
     }
     
     @IBAction func changeProfileImage(sender: AnyObject) {

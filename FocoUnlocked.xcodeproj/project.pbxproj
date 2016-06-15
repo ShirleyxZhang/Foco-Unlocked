@@ -39,6 +39,8 @@
 		88C71FF61D092017002E26C9 /* SuggestionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C71FF51D092017002E26C9 /* SuggestionsController.swift */; };
 		88C71FF81D092861002E26C9 /* SettingsProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C71FF71D092861002E26C9 /* SettingsProfileController.swift */; };
 		88C71FFA1D093586002E26C9 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C71FF91D093586002E26C9 /* user.png */; };
+		88F77B3B1D10EA2D003B88A2 /* screw.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F77B3A1D10EA2D003B88A2 /* screw.png */; };
+		88F77B3F1D10EA8B003B88A2 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F77B3E1D10EA8B003B88A2 /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,10 @@
 		88C71FF51D092017002E26C9 /* SuggestionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionsController.swift; sourceTree = "<group>"; };
 		88C71FF71D092861002E26C9 /* SettingsProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsProfileController.swift; sourceTree = "<group>"; };
 		88C71FF91D093586002E26C9 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = user.png; path = FocoUnlocked/user.png; sourceTree = "<group>"; };
+		88F77B3A1D10EA2D003B88A2 /* screw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = screw.png; path = FocoUnlocked/screw.png; sourceTree = "<group>"; };
+		88F77B3C1D10EA8A003B88A2 /* FocoUnlocked-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FocoUnlocked-Bridging-Header.h"; sourceTree = "<group>"; };
+		88F77B3D1D10EA8B003B88A2 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		88F77B3E1D10EA8B003B88A2 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		C9502387C505A257A6A6C661 /* Pods-FocoUnlocked.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FocoUnlocked.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FocoUnlocked/Pods-FocoUnlocked.debug.xcconfig"; sourceTree = "<group>"; };
 		D45F42D79B0F6F27ADFF10DF /* libPods-FocoUnlocked.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FocoUnlocked.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -167,6 +173,8 @@
 				886286A11CF694A9007D8C94 /* Main.storyboard */,
 				88C71FF71D092861002E26C9 /* SettingsProfileController.swift */,
 				88C71FF51D092017002E26C9 /* SuggestionsController.swift */,
+				88F77B3D1D10EA8B003B88A2 /* SWRevealViewController.h */,
+				88F77B3E1D10EA8B003B88A2 /* SWRevealViewController.m */,
 				886286A41CF694F7007D8C94 /* BaseService.swift */,
 				886286A61CF694F7007D8C94 /* CreateAccountViewController.swift */,
 				886286A71CF694F7007D8C94 /* DataService.swift */,
@@ -184,6 +192,7 @@
 				886286781CF693B9007D8C94 /* Assets.xcassets */,
 				8862867A1CF693B9007D8C94 /* LaunchScreen.storyboard */,
 				8862867D1CF693B9007D8C94 /* Info.plist */,
+				88F77B3C1D10EA8A003B88A2 /* FocoUnlocked-Bridging-Header.h */,
 			);
 			path = FocoUnlocked;
 			sourceTree = "<group>";
@@ -212,6 +221,7 @@
 				88C71FF91D093586002E26C9 /* user.png */,
 				886286B41CF694F7007D8C94 /* unfilled cookie.png */,
 				88C71FE81D054BCD002E26C9 /* menu_dark.png */,
+				88F77B3A1D10EA2D003B88A2 /* screw.png */,
 				88C71FE91D054BCD002E26C9 /* menu.png */,
 				88C71FEA1D054BCD002E26C9 /* namefinal.png */,
 				88C71FEB1D054BCD002E26C9 /* settings.png */,
@@ -343,6 +353,7 @@
 				886286C71CF694F7007D8C94 /* unfilled cookie.png in Resources */,
 				88C71FFA1D093586002E26C9 /* user.png in Resources */,
 				88C71FED1D054BCD002E26C9 /* menu.png in Resources */,
+				88F77B3B1D10EA2D003B88A2 /* screw.png in Resources */,
 				886286A01CF693D4007D8C94 /* GoogleService-Info.plist in Resources */,
 				88C71FEF1D054BCD002E26C9 /* settings.png in Resources */,
 				88C71FEE1D054BCD002E26C9 /* namefinal.png in Resources */,
@@ -428,6 +439,7 @@
 				886286C01CF694F7007D8C94 /* MealTableViewCell.swift in Sources */,
 				886286C61CF694F7007D8C94 /* SettingsController.swift in Sources */,
 				886286BE1CF694F7007D8C94 /* LoginViewController.swift in Sources */,
+				88F77B3F1D10EA8B003B88A2 /* SWRevealViewController.m in Sources */,
 				88C71FF61D092017002E26C9 /* SuggestionsController.swift in Sources */,
 				886286B91CF694F7007D8C94 /* CreateAccountViewController.swift in Sources */,
 				886286C81CF694F7007D8C94 /* UpvoteButton.swift in Sources */,
@@ -582,10 +594,13 @@
 			baseConfigurationReference = C9502387C505A257A6A6C661 /* Pods-FocoUnlocked.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = FocoUnlocked/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ijemma.FocoUnlocked;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FocoUnlocked/FocoUnlocked-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -595,10 +610,12 @@
 			baseConfigurationReference = 4D53409A1FE30BFA33A17A95 /* Pods-FocoUnlocked.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = FocoUnlocked/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ijemma.FocoUnlocked;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FocoUnlocked/FocoUnlocked-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

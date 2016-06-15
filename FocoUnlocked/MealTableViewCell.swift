@@ -51,14 +51,9 @@ class MealTableViewCell: UITableViewCell {
         
         nameLabel.text = meal.name
         photoImageView.image = meal.photo
-        //cell.upvoteControl.upvote = meal.upvoted
         bitesCounter.text = meal.bites
         idString = meal.idString
         username.setTitle(meal.user, forState: .Normal)
-        
-        /*self.nameLabel.text = post.title
-        self.bitesCounter.text = "\(post.bites)"*/
-        //self.usernameLabel.text = joke.username
         
         /*********** MAKE SURE TO CHANGE WHEN USERNAMES ARE USED INSTEAD OF EMAILS **********/
         
