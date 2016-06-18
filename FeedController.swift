@@ -16,6 +16,8 @@ class FeedController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         
         settingsButton.addTarget(self.revealViewController(), action: Selector("revealToggle:"), forControlEvents: .TouchUpInside)
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        
     }
     
     override func didReceiveMemoryWarning() {

@@ -35,6 +35,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         
         settingsButton.addTarget(self.revealViewController(), action: Selector("revealToggle:"), forControlEvents: .TouchUpInside)
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+
         
         // Adding attributes to the item's description box
         itemDesc!.layer.borderWidth = 1

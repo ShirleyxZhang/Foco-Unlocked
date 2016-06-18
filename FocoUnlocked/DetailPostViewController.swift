@@ -28,7 +28,9 @@ class DetailPostViewController: UIViewController, UIImagePickerControllerDelegat
         super.viewDidLoad()
         
         settingsButton.addTarget(self.revealViewController(), action: Selector("revealToggle:"), forControlEvents: .TouchUpInside)
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
 
+        
         postTitle.text = newTitle
         postDescription.text = newDescription
         let ref = FIRDatabase.database().reference()
