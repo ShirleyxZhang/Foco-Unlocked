@@ -42,6 +42,7 @@
 		88F77B3B1D10EA2D003B88A2 /* screw.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F77B3A1D10EA2D003B88A2 /* screw.png */; };
 		88F77B3F1D10EA8B003B88A2 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F77B3E1D10EA8B003B88A2 /* SWRevealViewController.m */; };
 		88F77B411D110DFA003B88A2 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F77B401D110DFA003B88A2 /* FeedController.swift */; };
+		88F77B451D1619C7003B88A2 /* SidebarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F77B441D1619C7003B88A2 /* SidebarTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		88F77B3D1D10EA8B003B88A2 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		88F77B3E1D10EA8B003B88A2 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		88F77B401D110DFA003B88A2 /* FeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedController.swift; path = ../FeedController.swift; sourceTree = "<group>"; };
+		88F77B441D1619C7003B88A2 /* SidebarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarTableViewController.swift; sourceTree = "<group>"; };
 		C9502387C505A257A6A6C661 /* Pods-FocoUnlocked.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FocoUnlocked.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FocoUnlocked/Pods-FocoUnlocked.debug.xcconfig"; sourceTree = "<group>"; };
 		D45F42D79B0F6F27ADFF10DF /* libPods-FocoUnlocked.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FocoUnlocked.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -174,6 +176,7 @@
 				886286731CF693B9007D8C94 /* ViewController.swift */,
 				8862869F1CF693D4007D8C94 /* GoogleService-Info.plist */,
 				886286A11CF694A9007D8C94 /* Main.storyboard */,
+				88F77B441D1619C7003B88A2 /* SidebarTableViewController.swift */,
 				88C71FF71D092861002E26C9 /* SettingsProfileController.swift */,
 				88C71FF51D092017002E26C9 /* SuggestionsController.swift */,
 				88F77B3D1D10EA8B003B88A2 /* SWRevealViewController.h */,
@@ -441,6 +444,7 @@
 				886286C91CF694F7007D8C94 /* UpvoteControl.swift in Sources */,
 				886286C01CF694F7007D8C94 /* MealTableViewCell.swift in Sources */,
 				886286C61CF694F7007D8C94 /* SettingsController.swift in Sources */,
+				88F77B451D1619C7003B88A2 /* SidebarTableViewController.swift in Sources */,
 				886286BE1CF694F7007D8C94 /* LoginViewController.swift in Sources */,
 				88F77B3F1D10EA8B003B88A2 /* SWRevealViewController.m in Sources */,
 				88C71FF61D092017002E26C9 /* SuggestionsController.swift in Sources */,
