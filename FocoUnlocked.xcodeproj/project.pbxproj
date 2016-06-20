@@ -43,6 +43,9 @@
 		88F77B3F1D10EA8B003B88A2 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F77B3E1D10EA8B003B88A2 /* SWRevealViewController.m */; };
 		88F77B411D110DFA003B88A2 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F77B401D110DFA003B88A2 /* FeedController.swift */; };
 		88F77B451D1619C7003B88A2 /* SidebarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F77B441D1619C7003B88A2 /* SidebarTableViewController.swift */; };
+		88F77B471D1769F8003B88A2 /* first_user.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F77B461D1769F8003B88A2 /* first_user.png */; };
+		88F77B4B1D176B98003B88A2 /* feedback.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F77B4A1D176B98003B88A2 /* feedback.png */; };
+		88F77B4D1D176BEF003B88A2 /* feedback.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F77B4C1D176BEF003B88A2 /* feedback.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +110,9 @@
 		88F77B3E1D10EA8B003B88A2 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		88F77B401D110DFA003B88A2 /* FeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedController.swift; path = ../FeedController.swift; sourceTree = "<group>"; };
 		88F77B441D1619C7003B88A2 /* SidebarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarTableViewController.swift; sourceTree = "<group>"; };
+		88F77B461D1769F8003B88A2 /* first_user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = first_user.png; path = FocoUnlocked/first_user.png; sourceTree = "<group>"; };
+		88F77B4A1D176B98003B88A2 /* feedback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = feedback.png; path = FocoUnlocked/feedback.png; sourceTree = "<group>"; };
+		88F77B4C1D176BEF003B88A2 /* feedback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = feedback.png; path = FocoUnlocked/feedback.png; sourceTree = "<group>"; };
 		C9502387C505A257A6A6C661 /* Pods-FocoUnlocked.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FocoUnlocked.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FocoUnlocked/Pods-FocoUnlocked.debug.xcconfig"; sourceTree = "<group>"; };
 		D45F42D79B0F6F27ADFF10DF /* libPods-FocoUnlocked.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FocoUnlocked.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -224,8 +230,11 @@
 		88C71FF21D07470D002E26C9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				88F77B461D1769F8003B88A2 /* first_user.png */,
+				88F77B4A1D176B98003B88A2 /* feedback.png */,
 				88C71FF91D093586002E26C9 /* user.png */,
 				886286B41CF694F7007D8C94 /* unfilled cookie.png */,
+				88F77B4C1D176BEF003B88A2 /* feedback.png */,
 				88C71FE81D054BCD002E26C9 /* menu_dark.png */,
 				88F77B3A1D10EA2D003B88A2 /* screw.png */,
 				88C71FE91D054BCD002E26C9 /* menu.png */,
@@ -356,8 +365,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8862867C1CF693B9007D8C94 /* LaunchScreen.storyboard in Resources */,
+				88F77B471D1769F8003B88A2 /* first_user.png in Resources */,
 				886286C71CF694F7007D8C94 /* unfilled cookie.png in Resources */,
 				88C71FFA1D093586002E26C9 /* user.png in Resources */,
+				88F77B4D1D176BEF003B88A2 /* feedback.png in Resources */,
 				88C71FED1D054BCD002E26C9 /* menu.png in Resources */,
 				88F77B3B1D10EA2D003B88A2 /* screw.png in Resources */,
 				886286A01CF693D4007D8C94 /* GoogleService-Info.plist in Resources */,
@@ -367,6 +378,7 @@
 				886CA0811CF7D31800C58372 /* GoogleService-Info.plist in Resources */,
 				886286BC1CF694F7007D8C94 /* filled cookie.png in Resources */,
 				88C71FEC1D054BCD002E26C9 /* menu_dark.png in Resources */,
+				88F77B4B1D176B98003B88A2 /* feedback.png in Resources */,
 				886286A31CF694A9007D8C94 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
