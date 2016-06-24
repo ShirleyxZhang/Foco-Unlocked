@@ -138,26 +138,19 @@
         <scene sceneID="rBm-m9-nbB">
             <objects>
                 <tableViewController title="Feed" id="ZZw-mG-EQ9" customClass="MealTableViewController" customModule="FocoUnlocked" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="253" sectionHeaderHeight="28" sectionFooterHeight="28" id="88J-hV-DnQ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="489"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="397" sectionHeaderHeight="28" sectionFooterHeight="28" id="88J-hV-DnQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="550"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="separatorColor" red="0.99215686270000003" green="0.41960784309999999" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="separatorColor" red="1" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MealTableViewCell" rowHeight="253" id="Vao-lA-Rui" customClass="MealTableViewCell" customModule="FocoUnlocked" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="253"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MealTableViewCell" rowHeight="400" id="Vao-lA-Rui" customClass="MealTableViewCell" customModule="FocoUnlocked" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="400"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vao-lA-Rui" id="Lx3-R1-mxm">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="253"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gaa-kf-utP">
-                                            <rect key="frame" x="0.0" y="247" width="600" height="5"/>
-                                            <color key="backgroundColor" red="0.93725490199999995" green="0.52156862749999999" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <state key="normal">
-                                                <color key="titleShadowColor" red="0.99215686274509807" green="0.41960784313725491" blue="0.023529411764705882" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                        </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OhE-hR-Zoc">
                                             <rect key="frame" x="4" y="40" width="592" height="170"/>
                                         </imageView>
@@ -183,9 +176,9 @@
                                             </constraints>
                                             <state key="normal" backgroundImage="unfilled cookie.png"/>
                                         </button>
-                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RfK-IZ-oYf">
-                                            <rect key="frame" x="0.0" y="247" width="600" height="5"/>
-                                            <color key="backgroundColor" red="0.99215686274509807" green="0.41960784313725491" blue="0.023529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RfK-IZ-oYf">
+                                            <rect key="frame" x="0.0" y="394" width="600" height="5"/>
+                                            <color key="backgroundColor" red="1" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
                                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaQ-aj-Hnv">
                                             <rect key="frame" x="13" y="213" width="245" height="30"/>
@@ -200,29 +193,25 @@
                                         </button>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="RfK-IZ-oYf" firstAttribute="top" secondItem="Lx3-R1-mxm" secondAttribute="top" constant="394" id="3GA-gQ-L1u"/>
                                         <constraint firstItem="p4h-os-ekj" firstAttribute="leading" secondItem="Lx3-R1-mxm" secondAttribute="leadingMargin" id="8Yr-Ky-55e"/>
                                         <constraint firstItem="OhE-hR-Zoc" firstAttribute="top" secondItem="p4h-os-ekj" secondAttribute="bottom" constant="11" id="ILy-k2-RtU"/>
                                         <constraint firstItem="tdw-J5-yZ5" firstAttribute="top" secondItem="OhE-hR-Zoc" secondAttribute="bottom" constant="5" id="IzD-dJ-FVQ"/>
+                                        <constraint firstItem="RfK-IZ-oYf" firstAttribute="leading" secondItem="Lx3-R1-mxm" secondAttribute="leading" id="K7p-QL-A1I"/>
+                                        <constraint firstItem="RfK-IZ-oYf" firstAttribute="centerX" secondItem="OhE-hR-Zoc" secondAttribute="centerX" id="OKA-kY-lXg"/>
                                         <constraint firstItem="i1o-3O-hoV" firstAttribute="leading" secondItem="tdw-J5-yZ5" secondAttribute="trailing" constant="3" id="OSl-bx-MGK"/>
                                         <constraint firstItem="p4h-os-ekj" firstAttribute="trailing" secondItem="OhE-hR-Zoc" secondAttribute="trailing" constant="-4" id="UGh-tv-VGS"/>
                                         <constraint firstItem="OhE-hR-Zoc" firstAttribute="leading" secondItem="p4h-os-ekj" secondAttribute="leading" constant="-4" id="UaS-Ru-R2i"/>
-                                        <constraint firstItem="RfK-IZ-oYf" firstAttribute="bottom" secondItem="Gaa-kf-utP" secondAttribute="bottom" id="Xn3-4w-959"/>
                                         <constraint firstItem="AaQ-aj-Hnv" firstAttribute="leading" secondItem="Lx3-R1-mxm" secondAttribute="leadingMargin" constant="5" id="Y2D-1h-8OA"/>
-                                        <constraint firstItem="RfK-IZ-oYf" firstAttribute="top" secondItem="Gaa-kf-utP" secondAttribute="top" id="YAu-Zu-rgr"/>
                                         <constraint firstItem="i1o-3O-hoV" firstAttribute="top" secondItem="OhE-hR-Zoc" secondAttribute="bottom" constant="8" symbolic="YES" id="Ygd-zo-apw"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="tdw-J5-yZ5" secondAttribute="trailing" constant="40" id="ZqN-Sx-OC6"/>
                                         <constraint firstItem="AaQ-aj-Hnv" firstAttribute="centerY" secondItem="i1o-3O-hoV" secondAttribute="centerY" id="azc-q0-30v"/>
                                         <constraint firstItem="p4h-os-ekj" firstAttribute="top" secondItem="Lx3-R1-mxm" secondAttribute="topMargin" id="bGL-0T-DmG"/>
                                         <constraint firstItem="AaQ-aj-Hnv" firstAttribute="bottom" secondItem="tdw-J5-yZ5" secondAttribute="bottom" id="cK6-nH-qbT"/>
                                         <constraint firstItem="i1o-3O-hoV" firstAttribute="trailing" secondItem="OhE-hR-Zoc" secondAttribute="trailing" constant="-4" id="cKV-Jf-xC9"/>
-                                        <constraint firstItem="Gaa-kf-utP" firstAttribute="leading" secondItem="Lx3-R1-mxm" secondAttribute="leading" id="cLR-n7-Dch"/>
                                         <constraint firstItem="p4h-os-ekj" firstAttribute="trailing" secondItem="Lx3-R1-mxm" secondAttribute="trailingMargin" id="coZ-MI-TGs"/>
-                                        <constraint firstItem="Gaa-kf-utP" firstAttribute="centerX" secondItem="OhE-hR-Zoc" secondAttribute="centerX" id="gWM-8X-U6V"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="RfK-IZ-oYf" secondAttribute="bottom" constant="-7" id="eP1-0m-pZA"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="i1o-3O-hoV" secondAttribute="bottom" constant="5" id="lpi-rS-LAV"/>
-                                        <constraint firstItem="RfK-IZ-oYf" firstAttribute="trailing" secondItem="Gaa-kf-utP" secondAttribute="trailing" id="n9T-dX-niO"/>
-                                        <constraint firstAttribute="bottom" secondItem="Gaa-kf-utP" secondAttribute="bottom" id="tY7-Ol-a6h"/>
-                                        <constraint firstItem="Gaa-kf-utP" firstAttribute="top" secondItem="i1o-3O-hoV" secondAttribute="bottom" constant="8" id="uTp-MI-b7D"/>
-                                        <constraint firstItem="RfK-IZ-oYf" firstAttribute="leading" secondItem="Gaa-kf-utP" secondAttribute="leading" id="zGc-p5-GiZ"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="tdw-J5-yZ5" secondAttribute="bottom" constant="1" id="znj-NP-5s1"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -242,10 +231,12 @@
                             <outlet property="delegate" destination="ZZw-mG-EQ9" id="qG8-ze-eks"/>
                         </connections>
                     </tableView>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="550"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bg8-vO-d5w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2054" y="452"/>
+            <point key="canvasLocation" x="2054" y="451.5"/>
         </scene>
         <!--Suggestions Controller-->
         <scene sceneID="Xfk-tG-5Qv">
@@ -942,7 +933,7 @@
                                         <state key="normal" backgroundImage="menu.png"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="GOv-ac-had" firstAttribute="leading" secondItem="NFr-0G-tfF" secondAttribute="leading" constant="21" id="DzI-pZ-bQr"/>
                                     <constraint firstItem="npU-hs-5vK" firstAttribute="leading" secondItem="NFr-0G-tfF" secondAttribute="leading" constant="69" id="PAC-rD-8VM"/>

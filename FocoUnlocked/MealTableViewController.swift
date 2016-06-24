@@ -126,7 +126,7 @@ class MealTableViewController: UITableViewController {
         // Fetches the appropriate meal for the data source layout.
         let meal = meals[indexPath.row]
         
-        tableView.rowHeight = 300.00
+        
         
         // Table view cells are reused and should be dequeued using a cell identifier.
         let cellIdentifier = "MealTableViewCell"
@@ -134,7 +134,7 @@ class MealTableViewController: UITableViewController {
         
         if let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as? MealTableViewCell {
             cell.configureCell(meal)
-        
+            tableView.rowHeight = 400.00
         return cell
         } else {
             return MealTableViewCell()
