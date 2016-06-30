@@ -20,7 +20,18 @@ So far there are only two pages present:
       - A description the same length or longer than the title
       - An image
     Tags are optional, which will be later used for search functionalities
-
+**There are future pages**
+#### Chef's Page
+    This page will showcase:
+      - The user's creations
+      - The user's friends
+      - The user's likes
+#### Search Page
+    Users will have the capability to search for specific types of dishes or creations
+    This page will also have the functionality of:
+      - Filtering Dishes
+      - Search by username
+    
 ## Implementation
 - The Firebase SDK is used for this project
 - ArrayList of custom classes are used to hold a large amount of personalized information needed throughout the entire program
