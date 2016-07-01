@@ -45,7 +45,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         itemDesc!.layer.cornerRadius = 5
         itemDesc!.layer.borderColor = UIColor.grayColor().CGColor
         
-        self.photoImageView = UIImageView(frame: CGRectMake(10, 110, view.frame.size.width - 20, 200))
+        self.photoImageView = UIImageView(frame: CGRectMake(0, 110, view.frame.size.width, 200))
         self.photoImageView.backgroundColor = UIColor.lightGrayColor()
         //self.photoImageView.contentMode = .ScaleAspect
         self.view.addSubview(photoImageView)

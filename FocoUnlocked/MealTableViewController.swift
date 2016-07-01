@@ -134,7 +134,9 @@ class MealTableViewController: UITableViewController {
         
         if let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as? MealTableViewCell {
             cell.configureCell(meal)
-            tableView.rowHeight = 400.00
+            cell.contentView.backgroundColor = UIColor.whiteColor()
+            tableView.rowHeight = 407.00
+            self.view.backgroundColor = UIColor(red: 1, green: 127.0/255.0, blue: 0, alpha: 1.0)
         return cell
         } else {
             return MealTableViewCell()
