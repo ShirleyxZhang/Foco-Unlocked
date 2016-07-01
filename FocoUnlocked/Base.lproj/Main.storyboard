@@ -960,10 +960,10 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mse-uj-FrJ">
-                                <rect key="frame" x="0.0" y="563" width="600" height="37"/>
+                                <rect key="frame" x="0.0" y="561" width="600" height="39"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="RO6-v0-2M8"/>
+                                    <constraint firstAttribute="height" constant="39" id="RO6-v0-2M8"/>
                                     <constraint firstAttribute="width" constant="600" id="b0G-XW-kAA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="15"/>
@@ -989,7 +989,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="mse-uj-FrJ" firstAttribute="top" secondItem="FaA-IV-94x" secondAttribute="bottom" id="1Nh-j4-J2y"/>
+                            <constraint firstItem="mse-uj-FrJ" firstAttribute="top" secondItem="FaA-IV-94x" secondAttribute="bottom" constant="-2" id="1Nh-j4-J2y"/>
                             <constraint firstItem="FaA-IV-94x" firstAttribute="leading" secondItem="Qpw-Up-iqj" secondAttribute="leading" id="5bp-n0-VUZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mse-uj-FrJ" secondAttribute="trailing" constant="-20" id="Ays-BJ-mop"/>
                             <constraint firstItem="FaA-IV-94x" firstAttribute="top" secondItem="NFr-0G-tfF" secondAttribute="bottom" id="Bbf-SV-rsv"/>
@@ -1321,7 +1321,7 @@
         <image name="unfilled cookie.png" width="1200" height="1200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dM0-zC-EEB"/>
         <segue reference="dJg-QI-aDM"/>
+        <segue reference="dM0-zC-EEB"/>
     </inferredMetricsTieBreakers>
 </document>
