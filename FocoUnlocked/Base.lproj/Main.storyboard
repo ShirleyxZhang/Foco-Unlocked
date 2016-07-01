@@ -169,9 +169,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OhE-hR-Zoc">
-                                            <rect key="frame" x="4" y="40" width="592" height="170"/>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4h-os-ekj">
                                             <rect key="frame" x="8" y="8" width="584" height="21"/>
                                             <constraints>
@@ -209,6 +206,9 @@
                                                 <color key="titleColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                         </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OhE-hR-Zoc">
+                                            <rect key="frame" x="0.0" y="40" width="600" height="170"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="RfK-IZ-oYf" firstAttribute="top" secondItem="Lx3-R1-mxm" secondAttribute="top" constant="395" id="3GA-gQ-L1u"/>
@@ -218,15 +218,15 @@
                                         <constraint firstItem="RfK-IZ-oYf" firstAttribute="leading" secondItem="Lx3-R1-mxm" secondAttribute="leading" id="K7p-QL-A1I"/>
                                         <constraint firstItem="RfK-IZ-oYf" firstAttribute="centerX" secondItem="OhE-hR-Zoc" secondAttribute="centerX" id="OKA-kY-lXg"/>
                                         <constraint firstItem="i1o-3O-hoV" firstAttribute="leading" secondItem="tdw-J5-yZ5" secondAttribute="trailing" constant="3" id="OSl-bx-MGK"/>
-                                        <constraint firstItem="p4h-os-ekj" firstAttribute="trailing" secondItem="OhE-hR-Zoc" secondAttribute="trailing" constant="-4" id="UGh-tv-VGS"/>
-                                        <constraint firstItem="OhE-hR-Zoc" firstAttribute="leading" secondItem="p4h-os-ekj" secondAttribute="leading" constant="-4" id="UaS-Ru-R2i"/>
+                                        <constraint firstItem="p4h-os-ekj" firstAttribute="trailing" secondItem="OhE-hR-Zoc" secondAttribute="trailing" constant="-8" id="UGh-tv-VGS"/>
+                                        <constraint firstItem="OhE-hR-Zoc" firstAttribute="leading" secondItem="p4h-os-ekj" secondAttribute="leading" constant="-8" id="UaS-Ru-R2i"/>
                                         <constraint firstItem="AaQ-aj-Hnv" firstAttribute="leading" secondItem="Lx3-R1-mxm" secondAttribute="leadingMargin" constant="5" id="Y2D-1h-8OA"/>
                                         <constraint firstItem="i1o-3O-hoV" firstAttribute="top" secondItem="OhE-hR-Zoc" secondAttribute="bottom" constant="8" symbolic="YES" id="Ygd-zo-apw"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="tdw-J5-yZ5" secondAttribute="trailing" constant="40" id="ZqN-Sx-OC6"/>
                                         <constraint firstItem="AaQ-aj-Hnv" firstAttribute="centerY" secondItem="i1o-3O-hoV" secondAttribute="centerY" id="azc-q0-30v"/>
                                         <constraint firstItem="p4h-os-ekj" firstAttribute="top" secondItem="Lx3-R1-mxm" secondAttribute="topMargin" id="bGL-0T-DmG"/>
                                         <constraint firstItem="AaQ-aj-Hnv" firstAttribute="bottom" secondItem="tdw-J5-yZ5" secondAttribute="bottom" id="cK6-nH-qbT"/>
-                                        <constraint firstItem="i1o-3O-hoV" firstAttribute="trailing" secondItem="OhE-hR-Zoc" secondAttribute="trailing" constant="-4" id="cKV-Jf-xC9"/>
+                                        <constraint firstItem="i1o-3O-hoV" firstAttribute="trailing" secondItem="OhE-hR-Zoc" secondAttribute="trailing" constant="-8" id="cKV-Jf-xC9"/>
                                         <constraint firstItem="p4h-os-ekj" firstAttribute="trailing" secondItem="Lx3-R1-mxm" secondAttribute="trailingMargin" id="coZ-MI-TGs"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="RfK-IZ-oYf" secondAttribute="bottom" constant="-8" id="eP1-0m-pZA"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="i1o-3O-hoV" secondAttribute="bottom" constant="5" id="lpi-rS-LAV"/>
@@ -254,7 +254,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bg8-vO-d5w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2054" y="451.5"/>
+            <point key="canvasLocation" x="2054" y="451"/>
         </scene>
         <!--Suggestions Controller-->
         <scene sceneID="Xfk-tG-5Qv">
