@@ -13,6 +13,7 @@ import Firebase
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     
+    @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var settingsButton: UIButton!
     // Elements that show up on the Upload page
     @IBOutlet var naviBar: UIView!
@@ -22,7 +23,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet var uploadButton: UIButton!
     
-    var photoImageView: UIImageView!
+    //var photoImageView: UIImageView!
     
     var postsList: Array<Post> = [Post]()
     
@@ -43,18 +44,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         itemDesc!.layer.borderWidth = 1
         itemDesc!.layer.borderColor = UIColor.grayColor().CGColor
         
-        self.photoImageView = UIImageView(frame: CGRectMake(0, 111, view.frame.size.width, view.frame.size.height / 3.7))
+        /*self.photoImageView = UIImageView(frame: CGRectMake(0, 111, view.frame.size.width, view.frame.size.height / 3.7))*/
         self.photoImageView.backgroundColor = UIColor.lightGrayColor()
         //self.photoImageView.contentMode = .ScaleAspect
-        self.view.addSubview(photoImageView)
+        //self.view.addSubview(photoImageView)
         
-        itemDesc!.frame.size.height = 900
-        
-        let horizontalConstraint = photoImageView.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor)
+        /*let horizontalConstraint = photoImageView.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor)
         let verticalConstraint = photoImageView.centerYAnchor.constraintEqualToAnchor(view.centerYAnchor)
         let widthConstraint = photoImageView.widthAnchor.constraintEqualToAnchor(nil, constant: view.frame.size.width)
         let heightConstraint = photoImageView.heightAnchor.constraintEqualToAnchor(nil, constant: view.frame.size.width)
-        NSLayoutConstraint.activateConstraints([horizontalConstraint, verticalConstraint, widthConstraint, heightConstraint])
+        NSLayoutConstraint.activateConstraints([horizontalConstraint, verticalConstraint, widthConstraint, heightConstraint])*/
         
         let border = CALayer()
         let width = CGFloat(1.0)
