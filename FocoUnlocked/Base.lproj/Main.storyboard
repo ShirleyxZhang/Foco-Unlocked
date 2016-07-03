@@ -726,15 +726,19 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNG-2i-B7H">
-                                <rect key="frame" x="79" y="316" width="54" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNG-2i-B7H">
+                                <rect key="frame" x="79" y="316" width="63" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="tintColor" red="1" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Camera"/>
                                 <connections>
                                     <action selector="openCameraButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Mz-O1-qvd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rW8-k0-tyx">
-                                <rect key="frame" x="455" y="316" width="48" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rW8-k0-tyx">
+                                <rect key="frame" x="455" y="316" width="53" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="tintColor" red="1" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Gallery"/>
                                 <connections>
                                     <action selector="openPhotoLibraryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jg9-5h-Zmd"/>
@@ -757,7 +761,7 @@
                             <constraint firstItem="z5K-q6-Djy" firstAttribute="centerX" secondItem="sUj-vo-wK3" secondAttribute="centerX" id="SRl-aO-7ka"/>
                             <constraint firstItem="25g-b4-sWJ" firstAttribute="baseline" secondItem="NF7-i7-XQi" secondAttribute="baseline" id="UQU-jL-WL2"/>
                             <constraint firstItem="Zb6-ry-Hy6" firstAttribute="centerX" secondItem="sUj-vo-wK3" secondAttribute="centerX" id="URv-2e-Zyk"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rW8-k0-tyx" secondAttribute="trailing" constant="77" id="XaB-H7-V3F"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rW8-k0-tyx" secondAttribute="trailing" constant="72" id="XaB-H7-V3F"/>
                             <constraint firstItem="SZ2-BA-2Bl" firstAttribute="top" secondItem="SCM-C0-QEN" secondAttribute="bottom" constant="8" symbolic="YES" id="Zbk-N1-L8Y"/>
                             <constraint firstItem="SZ2-BA-2Bl" firstAttribute="leading" secondItem="SCM-C0-QEN" secondAttribute="leading" id="aDL-MK-rfv"/>
                             <constraint firstItem="SCM-C0-QEN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aJe-Yj-5n9"/>
@@ -1262,7 +1266,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceHorizontal="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Re4-4Y-UBJ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Re4-4Y-UBJ">
                                 <rect key="frame" x="11" y="337" width="390" height="168"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
