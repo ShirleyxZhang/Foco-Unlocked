@@ -13,7 +13,6 @@ import Firebase
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     
-    
     @IBOutlet weak var settingsButton: UIButton!
     // Elements that show up on the Upload page
     @IBOutlet var naviBar: UIView!
@@ -42,13 +41,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         // Adding attributes to the item's description box
         itemDesc!.layer.borderWidth = 1
-        itemDesc!.layer.cornerRadius = 5
         itemDesc!.layer.borderColor = UIColor.grayColor().CGColor
         
-        self.photoImageView = UIImageView(frame: CGRectMake(10, 110, view.frame.size.width - 20, 200))
+        self.photoImageView = UIImageView(frame: CGRectMake(0, 111, view.frame.size.width, view.frame.size.height / 3.7))
         self.photoImageView.backgroundColor = UIColor.lightGrayColor()
         //self.photoImageView.contentMode = .ScaleAspect
         self.view.addSubview(photoImageView)
+        
+        itemDesc!.frame.size.height = 900
         
         let horizontalConstraint = photoImageView.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor)
         let verticalConstraint = photoImageView.centerYAnchor.constraintEqualToAnchor(view.centerYAnchor)
