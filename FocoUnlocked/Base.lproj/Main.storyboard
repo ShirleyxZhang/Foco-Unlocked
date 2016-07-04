@@ -1204,7 +1204,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ingredient Tags" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVP-mk-Qji">
-                                <rect key="frame" x="11" y="503" width="578" height="29"/>
+                                <rect key="frame" x="11" y="500" width="578" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="578" id="gyU-8W-VZA"/>
                                 </constraints>
@@ -1268,7 +1268,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="No tags" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAY-Tx-yvD">
-                                <rect key="frame" x="11" y="534" width="578" height="21"/>
+                                <rect key="frame" x="16" y="531" width="578" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="578" id="35f-vF-4Y6"/>
                                 </constraints>
@@ -1282,8 +1282,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Re4-4Y-UBJ">
-                                <rect key="frame" x="11" y="337" width="576" height="168"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Re4-4Y-UBJ">
+                                <rect key="frame" x="11" y="337" width="576" height="158"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1297,17 +1297,18 @@
                             <constraint firstItem="JAY-Tx-yvD" firstAttribute="top" secondItem="RVP-mk-Qji" secondAttribute="bottom" constant="2" id="AHB-Pe-S7x"/>
                             <constraint firstItem="MiK-fG-1gH" firstAttribute="leading" secondItem="bwI-Md-47g" secondAttribute="leading" constant="-11" id="EBQ-cK-a49"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Re4-4Y-UBJ" secondAttribute="trailing" constant="-7" id="EvU-48-Ape"/>
-                            <constraint firstItem="JAY-Tx-yvD" firstAttribute="centerX" secondItem="gWo-Ar-dda" secondAttribute="centerX" id="FUD-i2-LsA"/>
+                            <constraint firstItem="JAY-Tx-yvD" firstAttribute="centerX" secondItem="gWo-Ar-dda" secondAttribute="centerX" constant="5" id="FUD-i2-LsA"/>
                             <constraint firstItem="RVP-mk-Qji" firstAttribute="leading" secondItem="gWo-Ar-dda" secondAttribute="leadingMargin" constant="-9" id="GfQ-RS-Jx8"/>
                             <constraint firstItem="hVF-sh-Tnt" firstAttribute="top" secondItem="umf-6k-rCs" secondAttribute="bottom" constant="8" id="KXu-em-HRs"/>
                             <constraint firstItem="RVP-mk-Qji" firstAttribute="centerX" secondItem="gWo-Ar-dda" secondAttribute="centerX" id="QpK-9H-NHF"/>
                             <constraint firstItem="MiK-fG-1gH" firstAttribute="top" secondItem="gWo-Ar-dda" secondAttribute="top" constant="106" id="Qsd-v9-ub1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="JAY-Tx-yvD" secondAttribute="trailing" constant="-9" id="VLD-Pu-rkW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JAY-Tx-yvD" secondAttribute="trailing" constant="-14" id="VLD-Pu-rkW"/>
                             <constraint firstItem="umf-6k-rCs" firstAttribute="top" secondItem="gWo-Ar-dda" secondAttribute="topMargin" id="Yrz-CA-5Aj"/>
-                            <constraint firstItem="JAY-Tx-yvD" firstAttribute="leading" secondItem="gWo-Ar-dda" secondAttribute="leadingMargin" constant="-9" id="aHZ-gn-xGQ"/>
-                            <constraint firstItem="2Mp-iz-bAu" firstAttribute="top" secondItem="JAY-Tx-yvD" secondAttribute="bottom" constant="4" id="bhw-MK-qbU"/>
+                            <constraint firstItem="JAY-Tx-yvD" firstAttribute="leading" secondItem="gWo-Ar-dda" secondAttribute="leadingMargin" constant="-4" id="aHZ-gn-xGQ"/>
+                            <constraint firstItem="2Mp-iz-bAu" firstAttribute="top" secondItem="JAY-Tx-yvD" secondAttribute="bottom" constant="7" id="bhw-MK-qbU"/>
                             <constraint firstItem="MiK-fG-1gH" firstAttribute="trailing" secondItem="bwI-Md-47g" secondAttribute="trailing" constant="13" id="cUk-8k-v5r"/>
                             <constraint firstItem="Re4-4Y-UBJ" firstAttribute="top" secondItem="bwI-Md-47g" secondAttribute="bottom" constant="4" id="d67-D5-tte"/>
+                            <constraint firstItem="JAY-Tx-yvD" firstAttribute="top" secondItem="Re4-4Y-UBJ" secondAttribute="bottom" constant="36" id="efC-vI-FXa"/>
                             <constraint firstItem="umf-6k-rCs" firstAttribute="leading" secondItem="gWo-Ar-dda" secondAttribute="leadingMargin" constant="-20" id="mZE-PG-2Yb"/>
                             <constraint firstItem="c5L-Zh-liv" firstAttribute="top" secondItem="2Mp-iz-bAu" secondAttribute="bottom" constant="8" symbolic="YES" id="nZA-LC-SH9"/>
                             <constraint firstItem="Re4-4Y-UBJ" firstAttribute="leading" secondItem="gWo-Ar-dda" secondAttribute="leadingMargin" constant="-9" id="p2d-5s-LIv"/>
