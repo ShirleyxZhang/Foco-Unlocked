@@ -298,7 +298,9 @@
                                     <constraint firstAttribute="width" secondItem="X4E-6K-f17" secondAttribute="height" multiplier="47:10" id="7Qi-9h-g7h"/>
                                     <constraint firstAttribute="width" constant="141" id="CVW-nX-dtZ"/>
                                 </constraints>
-                                <state key="normal" title="Send Suggestion"/>
+                                <state key="normal" title="Send Suggestion">
+                                    <color key="titleColor" red="1" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="sendSuggestion:" destination="9aV-Tg-4ki" eventType="touchUpInside" id="p03-MO-rRU"/>
                                 </connections>
@@ -357,22 +359,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes" returnKeyType="done"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vXZ-Sg-m6e">
-                                <rect key="frame" x="43" y="547" width="177" height="33"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="vXZ-Sg-m6e" secondAttribute="height" multiplier="59:11" id="5bp-OV-X0u"/>
-                                    <constraint firstAttribute="width" constant="177" id="DkX-cf-18u"/>
-                                    <constraint firstAttribute="height" constant="33" id="wnz-Bf-vPr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="cancelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nel-pi-XfZ"/>
-                                    <action selector="goBack:" destination="9aV-Tg-4ki" eventType="touchUpInside" id="gd8-5C-6yD"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -404,7 +390,6 @@
                             <constraint firstItem="t6G-zQ-TuC" firstAttribute="top" secondItem="vfQ-XR-g9u" secondAttribute="top" constant="180" id="tan-Ti-YGj"/>
                             <constraint firstItem="Hjh-Uj-ih4" firstAttribute="centerY" secondItem="CTd-7M-iq7" secondAttribute="centerY" constant="41.5" id="uPD-27-0XU"/>
                             <constraint firstItem="EQA-uQ-YEt" firstAttribute="centerY" secondItem="CTd-7M-iq7" secondAttribute="centerY" constant="-180.5" id="xVN-JS-sen"/>
-                            <constraint firstItem="Wkh-jZ-2tW" firstAttribute="top" secondItem="vXZ-Sg-m6e" secondAttribute="bottom" constant="20" id="yJV-UQ-xAS"/>
                             <constraint firstItem="EQA-uQ-YEt" firstAttribute="top" secondItem="vfQ-XR-g9u" secondAttribute="top" constant="81" id="yK1-hV-raJ"/>
                             <constraint firstItem="GX8-KB-nXn" firstAttribute="centerY" secondItem="CTd-7M-iq7" secondAttribute="centerY" constant="-110.5" id="z1w-cA-FGe"/>
                         </constraints>
@@ -506,7 +491,7 @@
                                     <color key="titleColor" red="0.50196081399917603" green="0.50196081399917603" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="9aV-Tg-4ki" kind="show" id="VJI-Ga-8ZA"/>
+                                    <segue destination="9aV-Tg-4ki" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSeguePushController" id="HOR-Bs-VYB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jW3-aK-JgP">
