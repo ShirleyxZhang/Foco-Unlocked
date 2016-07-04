@@ -510,20 +510,6 @@
                                     <segue destination="9aV-Tg-4ki" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSeguePushController" id="HOR-Bs-VYB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jW3-aK-JgP">
-                                <rect key="frame" x="227" y="475" width="73" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="IXI-Zc-zP1"/>
-                                    <constraint firstAttribute="width" constant="73" id="SbX-Wc-RZZ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
-                                <state key="normal" title="Settings">
-                                    <color key="titleColor" red="0.50196081399917603" green="0.50196081399917603" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="ClM-e9-U1p" kind="show" id="XkJ-Nq-0a2"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmy-fG-rz0">
                                 <rect key="frame" x="227" y="409" width="127" height="30"/>
                                 <constraints>
@@ -578,6 +564,20 @@
                                 </state>
                                 <connections>
                                     <segue destination="mCP-2e-2eL" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSeguePushController" id="amt-TL-jZq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jW3-aK-JgP">
+                                <rect key="frame" x="227" y="475" width="73" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="IXI-Zc-zP1"/>
+                                    <constraint firstAttribute="width" constant="73" id="SbX-Wc-RZZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="Settings">
+                                    <color key="titleColor" red="0.50196081399917603" green="0.50196081399917603" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ClM-e9-U1p" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSeguePushController" id="c8n-fu-glP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -639,7 +639,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="98K-cz-vEz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-642" y="72"/>
+            <point key="canvasLocation" x="356" y="-553"/>
         </scene>
         <!--Upload-->
         <scene sceneID="tne-QT-ifu">
@@ -934,6 +934,14 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="He6-NQ-8g2">
+                                <rect key="frame" x="57" y="363" width="55" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="6cz-Pl-5TJ"/>
+                                    <constraint firstAttribute="height" constant="50" id="rDg-Lb-l0C"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="menu_dark.png"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -959,11 +967,12 @@
                     </view>
                     <connections>
                         <outlet property="profileImage" destination="Rw6-wh-Vcy" id="Nhz-65-eLX"/>
+                        <outlet property="settingsButton" destination="He6-NQ-8g2" id="NDe-GM-86q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ii0-6l-OZN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1380" y="-787"/>
+            <point key="canvasLocation" x="1032" y="-553"/>
         </scene>
         <!--Feed Controller-->
         <scene sceneID="F1x-hg-0R8">
@@ -1374,8 +1383,8 @@
         <image name="unfilled cookie.png" width="1200" height="1200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iPE-Ci-ocB"/>
-        <segue reference="dJg-QI-aDM"/>
+        <segue reference="amt-TL-jZq"/>
         <segue reference="dXu-No-kpM"/>
+        <segue reference="dJg-QI-aDM"/>
     </inferredMetricsTieBreakers>
 </document>
