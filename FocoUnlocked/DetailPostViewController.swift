@@ -81,7 +81,6 @@ class DetailPostViewController: UIViewController, UIImagePickerControllerDelegat
         /********* THIS MIGHT CAUSE ERRORS ***********/
         
         navigationController?.popViewControllerAnimated(true)
-        self.dismissViewControllerAnimated(true, completion: {})
     }
     
     // Helper function to get the title to print out

@@ -272,90 +272,125 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vfQ-XR-g9u">
-                                <rect key="frame" x="0.0" y="38" width="600" height="83"/>
+                                <rect key="frame" x="0.0" y="83" width="600" height="83"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Foco Unlocked was created by three Dartmouth '19s to provide a platform for people to share their creative, unique and fun ways of dining.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Leave any suggestions below!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hjh-Uj-ih4">
-                                <rect key="frame" x="11" y="356" width="578" height="31"/>
+                                <rect key="frame" x="11" y="386" width="578" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="When would you use this app?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GX8-KB-nXn">
-                                <rect key="frame" x="11" y="204" width="578" height="21"/>
+                                <rect key="frame" x="11" y="234" width="578" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="t6G-zQ-TuC">
-                                <rect key="frame" x="11" y="233" width="578" height="118"/>
+                                <rect key="frame" x="11" y="263" width="578" height="118"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="1" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes" returnKeyType="done"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="How often to do you eat at Foco?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQA-uQ-YEt">
-                                <rect key="frame" x="0.0" y="124" width="600" height="21"/>
+                                <rect key="frame" x="0.0" y="169" width="600" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="w9j-V2-qDp">
-                                <rect key="frame" x="11" y="153" width="578" height="48"/>
+                                <rect key="frame" x="11" y="198" width="578" height="33"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="1" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes" returnKeyType="done"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tZa-2a-p6j">
+                                <rect key="frame" x="11" y="425" width="578" height="104"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="1" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes" returnKeyType="done"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4E-6K-f17">
-                                <rect key="frame" x="227" y="542" width="141" height="30"/>
+                                <rect key="frame" x="177" y="536" width="130" height="33"/>
+                                <color key="backgroundColor" red="1" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="P48-Vf-q6h"/>
+                                    <constraint firstAttribute="height" constant="33" id="Rof-P1-Qux"/>
+                                    <constraint firstAttribute="width" constant="130" id="ygg-1d-u5t"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="Send Suggestion">
-                                    <color key="titleColor" red="1" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="0.99980474961351651" blue="0.99519192445935789" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendSuggestion:" destination="9aV-Tg-4ki" eventType="touchUpInside" id="p03-MO-rRU"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tZa-2a-p6j">
-                                <rect key="frame" x="11" y="395" width="578" height="104"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" red="1" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes" returnKeyType="done"/>
-                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Let Us Hear Your Feedback" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRw-MI-UJq">
+                                <rect key="frame" x="0.0" y="47" width="600" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Xu-u6-MBa">
+                                <rect key="frame" x="20" y="536" width="75" height="33"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.98431372549999996" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="1pA-jS-iBT"/>
+                                    <constraint firstAttribute="height" constant="33" id="cxy-8g-ZOi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="cancelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Llb-d3-76g"/>
+                                    <action selector="goBack:" destination="9aV-Tg-4ki" eventType="touchUpInside" id="Z4p-fC-AqN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="vfQ-XR-g9u" secondAttribute="trailing" constant="-20" id="0pw-gr-ocV"/>
                             <constraint firstItem="vfQ-XR-g9u" firstAttribute="leading" secondItem="CTd-7M-iq7" secondAttribute="leadingMargin" constant="-20" id="2pE-Ss-fgB"/>
                             <constraint firstItem="Hjh-Uj-ih4" firstAttribute="top" secondItem="t6G-zQ-TuC" secondAttribute="bottom" constant="5" id="3dc-tj-5DC"/>
-                            <constraint firstItem="X4E-6K-f17" firstAttribute="leading" secondItem="CTd-7M-iq7" secondAttribute="leadingMargin" constant="207" id="6rS-44-x1y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="w9j-V2-qDp" secondAttribute="trailing" constant="-9" id="Aeu-aa-gyZ"/>
                             <constraint firstItem="w9j-V2-qDp" firstAttribute="leading" secondItem="CTd-7M-iq7" secondAttribute="leadingMargin" constant="-9" id="Dc3-DD-G9X"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Hjh-Uj-ih4" secondAttribute="trailing" constant="-9" id="FBq-Jb-xeL"/>
                             <constraint firstItem="w9j-V2-qDp" firstAttribute="top" secondItem="EQA-uQ-YEt" secondAttribute="bottom" constant="8" id="Fid-ZC-Mjp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GX8-KB-nXn" secondAttribute="trailing" constant="-9" id="Ocm-1X-UKC"/>
                             <constraint firstItem="GX8-KB-nXn" firstAttribute="leading" secondItem="CTd-7M-iq7" secondAttribute="leadingMargin" constant="-9" id="RLv-iS-3Pb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rRw-MI-UJq" secondAttribute="trailing" constant="-20" id="S4O-Ig-hfA"/>
                             <constraint firstItem="t6G-zQ-TuC" firstAttribute="top" secondItem="GX8-KB-nXn" secondAttribute="bottom" constant="8" id="Uaf-cq-ZA0"/>
                             <constraint firstItem="t6G-zQ-TuC" firstAttribute="leading" secondItem="CTd-7M-iq7" secondAttribute="leadingMargin" constant="-9" id="XtI-Ts-tIc"/>
                             <constraint firstItem="tZa-2a-p6j" firstAttribute="top" secondItem="Hjh-Uj-ih4" secondAttribute="bottom" constant="8" id="aKF-Yb-6V8"/>
                             <constraint firstItem="tZa-2a-p6j" firstAttribute="leading" secondItem="CTd-7M-iq7" secondAttribute="leadingMargin" constant="-9" id="e4S-yo-fqT"/>
                             <constraint firstItem="GX8-KB-nXn" firstAttribute="top" secondItem="w9j-V2-qDp" secondAttribute="bottom" constant="3" id="er7-gm-Hom"/>
-                            <constraint firstItem="vfQ-XR-g9u" firstAttribute="top" secondItem="ria-84-OKW" secondAttribute="bottom" constant="18" id="ihi-Em-7xJ"/>
+                            <constraint firstItem="vfQ-XR-g9u" firstAttribute="top" secondItem="ria-84-OKW" secondAttribute="bottom" constant="63" id="ihi-Em-7xJ"/>
+                            <constraint firstItem="rRw-MI-UJq" firstAttribute="top" secondItem="ria-84-OKW" secondAttribute="bottom" constant="27" id="ikn-GJ-7yQ"/>
                             <constraint firstItem="EQA-uQ-YEt" firstAttribute="top" secondItem="vfQ-XR-g9u" secondAttribute="bottom" constant="3" id="kj0-Tb-6Bb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tZa-2a-p6j" secondAttribute="trailing" constant="-9" id="kl3-7m-eqS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EQA-uQ-YEt" secondAttribute="trailing" constant="-20" id="m51-HM-tQR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="t6G-zQ-TuC" secondAttribute="trailing" constant="-9" id="maD-d8-uO0"/>
-                            <constraint firstItem="X4E-6K-f17" firstAttribute="top" secondItem="tZa-2a-p6j" secondAttribute="bottom" constant="43" id="pNd-0v-eOW"/>
                             <constraint firstItem="Hjh-Uj-ih4" firstAttribute="leading" secondItem="CTd-7M-iq7" secondAttribute="leadingMargin" constant="-9" id="qSm-1l-cvv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="X4E-6K-f17" secondAttribute="trailing" constant="212" id="sH2-Ul-Kt2"/>
                             <constraint firstItem="EQA-uQ-YEt" firstAttribute="leading" secondItem="CTd-7M-iq7" secondAttribute="leadingMargin" constant="-20" id="xcu-In-y12"/>
+                            <constraint firstItem="rRw-MI-UJq" firstAttribute="leading" secondItem="CTd-7M-iq7" secondAttribute="leadingMargin" constant="-20" id="xqV-Hr-Jag"/>
                         </constraints>
                     </view>
                     <connections>
@@ -656,15 +691,21 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25g-b4-sWJ">
-                                <rect key="frame" x="11" y="560" width="164" height="33"/>
+                                <rect key="frame" x="11" y="560" width="150" height="33"/>
+                                <color key="backgroundColor" red="0.98431372549019602" green="0.98431372549019602" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="164" id="52o-uZ-Y19"/>
+                                    <constraint firstAttribute="width" constant="150" id="52o-uZ-Y19"/>
                                     <constraint firstAttribute="height" constant="33" id="Ci6-Wq-5b0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="cancelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pqe-w2-QIq"/>
                                 </connections>
@@ -1228,20 +1269,6 @@
                                     <constraint firstAttribute="height" constant="198" id="bsj-sa-cn2"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Mp-iz-bAu">
-                                <rect key="frame" x="11" y="559" width="177" height="33"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="177" id="PdS-ad-x8R"/>
-                                    <constraint firstAttribute="height" constant="33" id="fev-1A-noP"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="backButton:" destination="fCO-We-bK2" eventType="touchUpInside" id="sLf-gb-FTe"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVF-sh-Tnt">
                                 <rect key="frame" x="20" y="73" width="567" height="30"/>
                                 <color key="tintColor" red="1" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1272,6 +1299,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Mp-iz-bAu">
+                                <rect key="frame" x="11" y="559" width="164" height="33"/>
+                                <color key="backgroundColor" red="0.98431372549019602" green="0.98431372549019602" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="164" id="PdS-ad-x8R"/>
+                                    <constraint firstAttribute="height" constant="33" id="fev-1A-noP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="backButton:" destination="fCO-We-bK2" eventType="touchUpInside" id="sLf-gb-FTe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>

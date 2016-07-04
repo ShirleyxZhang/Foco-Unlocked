@@ -253,12 +253,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             alertController.addAction(UIAlertAction(title: "Discard", style: UIAlertActionStyle.Default, handler: discardView))
             alertController.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default,handler: nil))
         self.presentViewController(alertController, animated: true, completion: nil)
-            self.dismissViewControllerAnimated(true, completion: {})
             print("Step back")
         
         } else {
             self.navigationController?.popViewControllerAnimated(true)
-            self.dismissViewControllerAnimated(true, completion: {})
             print("Step back")
         }
         
