@@ -239,12 +239,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if itemNameCheck.characters.count >= 1 {
         title = true
         }
-        if itemDescCheck.characters.count >= itemNameCheck.characters.count {
+        if itemDescCheck.characters.count >= itemNameCheck.characters.count && itemDescCheck.characters.count != 0 {
         desc = true
         }
         
-        
-        if title == true || desc == true {
+        if (title == true || desc == true) {
             
         let discardView = { (action: UIAlertAction!) -> Void in
             self.navigationController?.popViewControllerAnimated(true)
@@ -254,9 +253,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             alertController.addAction(UIAlertAction(title: "Discard", style: UIAlertActionStyle.Default, handler: discardView))
             alertController.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default,handler: nil))
         self.presentViewController(alertController, animated: true, completion: nil)
+            print("Step back")
         
+        } else {
+            self.navigationController?.popViewControllerAnimated(true)
+            print("Step back")
         }
-        print("Step back")
         
     }
     
