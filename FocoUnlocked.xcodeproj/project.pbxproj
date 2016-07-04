@@ -40,6 +40,7 @@
 		88C71FF81D092861002E26C9 /* SettingsProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C71FF71D092861002E26C9 /* SettingsProfileController.swift */; };
 		88C71FFA1D093586002E26C9 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C71FF91D093586002E26C9 /* user.png */; };
 		88D174ED1D29F4F2006284A7 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 88D174EC1D29F4F2006284A7 /* home.png */; };
+		88D174EF1D2A39C8006284A7 /* edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 88D174EE1D2A39C8006284A7 /* edit.png */; };
 		88F77B3B1D10EA2D003B88A2 /* screw.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F77B3A1D10EA2D003B88A2 /* screw.png */; };
 		88F77B3F1D10EA8B003B88A2 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F77B3E1D10EA8B003B88A2 /* SWRevealViewController.m */; };
 		88F77B411D110DFA003B88A2 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F77B401D110DFA003B88A2 /* FeedController.swift */; };
@@ -106,6 +107,7 @@
 		88C71FF71D092861002E26C9 /* SettingsProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsProfileController.swift; sourceTree = "<group>"; };
 		88C71FF91D093586002E26C9 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = user.png; path = FocoUnlocked/user.png; sourceTree = "<group>"; };
 		88D174EC1D29F4F2006284A7 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = FocoUnlocked/home.png; sourceTree = "<group>"; };
+		88D174EE1D2A39C8006284A7 /* edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = edit.png; path = FocoUnlocked/edit.png; sourceTree = "<group>"; };
 		88F77B3A1D10EA2D003B88A2 /* screw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = screw.png; path = FocoUnlocked/screw.png; sourceTree = "<group>"; };
 		88F77B3C1D10EA8A003B88A2 /* FocoUnlocked-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FocoUnlocked-Bridging-Header.h"; sourceTree = "<group>"; };
 		88F77B3D1D10EA8B003B88A2 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				88C71FE91D054BCD002E26C9 /* menu.png */,
 				88C71FEA1D054BCD002E26C9 /* namefinal.png */,
 				88C71FEB1D054BCD002E26C9 /* settings.png */,
+				88D174EE1D2A39C8006284A7 /* edit.png */,
 				886286A91CF694F7007D8C94 /* filled cookie.png */,
 			);
 			name = Images;
@@ -378,6 +381,7 @@
 				886286A01CF693D4007D8C94 /* GoogleService-Info.plist in Resources */,
 				88C71FEF1D054BCD002E26C9 /* settings.png in Resources */,
 				88C71FEE1D054BCD002E26C9 /* namefinal.png in Resources */,
+				88D174EF1D2A39C8006284A7 /* edit.png in Resources */,
 				886286791CF693B9007D8C94 /* Assets.xcassets in Resources */,
 				886CA0811CF7D31800C58372 /* GoogleService-Info.plist in Resources */,
 				886286BC1CF694F7007D8C94 /* filled cookie.png in Resources */,

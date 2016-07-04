@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Firebase
 
-class SettingsProfileController: UIViewController {
+class SettingsProfileController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var profileImage: UIImageView!
@@ -55,9 +55,43 @@ class SettingsProfileController: UIViewController {
     
     }
     
+    
+    // Function to change the profile of the user
     @IBAction func changeProfileImage(sender: AnyObject) {
+            let cameraSelect = { (action: UIAlertAction!) -> Void in
+                if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+                    let imagePicker = UIImagePickerController()
+                    imagePicker.delegate = self
+                    imagePicker.sourceType = UIImagePickerControllerSourceType.Camera;
+                    imagePicker.allowsEditing = false
+                    self.presentViewController(imagePicker, animated: true, completion: nil)
+                }
+            }
+        let gallerySelect = { (action: UIAlertAction!) -> Void in
+            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
+                let imagePicker = UIImagePickerController()
+                imagePicker.delegate = self
+                imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+                imagePicker.allowsEditing = true
+                self.presentViewController(imagePicker, animated: true, completion: nil)
+            }
+        }
+            let alertController = UIAlertController(title: "Profile Image", message:
+                "How do you want to grab your profile picture?", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Camera", style: UIAlertActionStyle.Default, handler: cameraSelect))
+            alertController.addAction(UIAlertAction(title: "Gallery", style: UIAlertActionStyle.Default,handler: gallerySelect))
+            self.presentViewController(alertController, animated: true, completion: nil)
+            print("Step back")
+
     }
     
+    // Function to choose an image from the Photo Library
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        profileImage.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        self.dismissViewControllerAnimated(false, completion: nil)
+    }
+    
+    // Function to take the user back to the previous page
     @IBAction func goBack(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil);
     }

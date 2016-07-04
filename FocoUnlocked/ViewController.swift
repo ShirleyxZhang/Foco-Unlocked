@@ -112,7 +112,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let itemNameCheck: String = itemName.text!
         let itemDescCheck: String = itemDesc.text!
         
-        var userPoints: Int = 0
+        /*var userPoints: Int = 0*/
         
         if itemNameCheck.characters.count >= 4 {
             title = true
