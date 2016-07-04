@@ -49,7 +49,10 @@ class DetailPostViewController: UIViewController, UIImagePickerControllerDelegat
                      
                 //var bitesNum = (snapshot.value.objectForKey("Bites Number") as! NSString)
                 //var username = (snapshot.value.objectForKey("") as! NSString)
-                let tags = snapshot.value!.objectForKey("Tags") as! NSString
+                var tags = snapshot.value!.objectForKey("Tags") as! NSString
+                    if (tags == "" || tags.length == 0) {
+                        tags = "No tags"
+                    }
                 var tempString: String = "";
                     self.postTags.text = tags as String;
                     for i in self.postTags.text!.characters {
