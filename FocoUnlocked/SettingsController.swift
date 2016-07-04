@@ -34,6 +34,7 @@ class SettingsController: UIViewController {
         userImage!.clipsToBounds = true
         
         let user = FIRAuth.auth()?.currentUser
+        if (user != nil) {
         userEmail.text = user!.email
         let usersEmail = user!.email
         let email = usersEmail!.componentsSeparatedByString(".")[0]
@@ -49,6 +50,7 @@ class SettingsController: UIViewController {
                 self.pointsNumber.text = snapshot.value! as? String
             }
         })
+        }
         
     }
     

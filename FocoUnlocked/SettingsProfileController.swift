@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 class SettingsProfileController: UIViewController {
     
@@ -16,6 +17,8 @@ class SettingsProfileController: UIViewController {
     @IBOutlet weak var pointsNumber: UILabel!
     @IBOutlet weak var changeUserEmail: UIButton!
     @IBOutlet weak var userEmail: UILabel!
+    
+    let usersRef = FIRDatabase.database().reference()
     
     override func viewDidAppear(animated: Bool) {
         
@@ -33,6 +36,23 @@ class SettingsProfileController: UIViewController {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
+        let user = FIRAuth.auth()?.currentUser
+        userEmail.text = user!.email!
+        let usersEmail = user!.email!
+        let email = usersEmail.componentsSeparatedByString(".")[0]
+        
+        if (user?.photoURL == nil) {
+            profileImage.image = UIImage(named: "user.png")
+        } else if (user?.photoURL == nil) {
+            //profileImage.image = user?.photoURL
+        }
+        
+        self.usersRef.child("users").child("\(email)").child("Points").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+            if (!(snapshot.value is NSNull)) {
+                self.pointsNumber.text = snapshot.value! as? String
+            }
+        })
+    
     }
     
     @IBAction func changeProfileImage(sender: AnyObject) {
