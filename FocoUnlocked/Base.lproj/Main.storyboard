@@ -553,8 +553,12 @@
                                     <constraint firstAttribute="width" constant="30" id="oeY-co-e73"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="home.png" translatesAutoresizingMaskIntoConstraints="NO" id="WgV-5f-i8g">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home.png" translatesAutoresizingMaskIntoConstraints="NO" id="WgV-5f-i8g">
                                 <rect key="frame" x="163" y="271" width="34" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="34" id="TpA-UQ-4L5"/>
+                                    <constraint firstAttribute="height" constant="35" id="WGK-ob-tM2"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXw-bc-dhW">
                                 <rect key="frame" x="105" y="101" width="435" height="29"/>
