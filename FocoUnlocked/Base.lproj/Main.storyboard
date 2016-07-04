@@ -639,7 +639,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="98K-cz-vEz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-312" y="304"/>
+            <point key="canvasLocation" x="-642" y="72"/>
         </scene>
         <!--Upload-->
         <scene sceneID="tne-QT-ifu">
@@ -1374,8 +1374,8 @@
         <image name="unfilled cookie.png" width="1200" height="1200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="amt-TL-jZq"/>
-        <segue reference="dXu-No-kpM"/>
+        <segue reference="iPE-Ci-ocB"/>
         <segue reference="dJg-QI-aDM"/>
+        <segue reference="dXu-No-kpM"/>
     </inferredMetricsTieBreakers>
 </document>
