@@ -19,6 +19,7 @@ class SettingsProfileController: UIViewController, UIImagePickerControllerDelega
     @IBOutlet weak var userEmail: UILabel!
     
     let usersRef = FIRDatabase.database().reference()
+    let user = FIRAuth.auth()?.currentUser
     
     override func viewDidAppear(animated: Bool) {
         
@@ -36,7 +37,6 @@ class SettingsProfileController: UIViewController, UIImagePickerControllerDelega
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
-        let user = FIRAuth.auth()?.currentUser
         userEmail.text = user!.email!
         let usersEmail = user!.email!
         let email = usersEmail.componentsSeparatedByString(".")[0]
@@ -44,7 +44,7 @@ class SettingsProfileController: UIViewController, UIImagePickerControllerDelega
         if (user?.photoURL == nil) {
             profileImage.image = UIImage(named: "user.png")
         } else if (user?.photoURL == nil) {
-            //profileImage.image = user?.photoURL
+            //profileImage.image = UIImage(data: NSData(contentsOfURL: (user?.photoURL)!)!)!
         }
         
         self.usersRef.child("users").child("\(email)").child("Points").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
