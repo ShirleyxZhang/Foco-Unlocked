@@ -12,6 +12,7 @@ import Firebase
 
 class SuggestionsController: UIViewController {
 
+@IBOutlet weak var settingsButton: UIButton!
 @IBOutlet weak var focoFreq: UITextView!
 @IBOutlet weak var usingApp: UITextView!
 @IBOutlet weak var suggestions: UITextView!
@@ -29,6 +30,11 @@ class SuggestionsController: UIViewController {
         usingApp!.layer.borderWidth = 1
         usingApp!.layer.cornerRadius = 5
         usingApp!.layer.borderColor = UIColor.grayColor().CGColor
+        
+        if (self.revealViewController() != nil) {
+            settingsButton.addTarget(self.revealViewController(), action: Selector("revealToggle:"), forControlEvents: .TouchUpInside)
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
     }
     
     @IBAction func sendSuggestion(sender: AnyObject) {
