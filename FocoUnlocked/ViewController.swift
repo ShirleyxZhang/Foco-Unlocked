@@ -62,19 +62,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // Function to open the Camera Button
     @IBAction func openCameraButton(sender: AnyObject) {
         let croppingEnabled = true
-        let cameraViewController = CameraViewController(croppingEnabled: croppingEnabled) { image in
-            // Do something with your image here.
-            // If cropping is enabled this image will be the cropped version
+        let cameraViewController = CameraViewController(croppingEnabled: croppingEnabled) { newImage in
+                self.dismissViewControllerAnimated(true, completion: nil)
         }
-        
         presentViewController(cameraViewController, animated: true, completion: nil)
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera;
-            imagePicker.allowsEditing = false
-            self.presentViewController(imagePicker, animated: true, completion: nil)
-        }
     }
     
     // Function to open the Photo Library
