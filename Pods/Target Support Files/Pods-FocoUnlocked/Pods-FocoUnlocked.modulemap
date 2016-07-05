@@ -1,0 +1,6 @@
+framework module Pods_FocoUnlocked {
+  umbrella header "Pods-FocoUnlocked-umbrella.h"
+
+  export *
+  module * { export * }
+}
