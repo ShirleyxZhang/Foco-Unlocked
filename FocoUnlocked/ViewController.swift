@@ -63,7 +63,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func openCameraButton(sender: AnyObject) {
         let croppingEnabled = true
         let cameraViewController = CameraViewController(croppingEnabled: croppingEnabled) { newImage in
-                self.dismissViewControllerAnimated(true, completion: nil)
+                self.dismissViewControllerAnimated(true, completion: nil) 
         }
         presentViewController(cameraViewController, animated: true, completion: nil)
     }
