@@ -10,6 +10,7 @@
 
 import UIKit
 import Firebase
+import ALCameraViewController
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     
@@ -46,14 +47,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         /*self.photoImageView = UIImageView(frame: CGRectMake(0, 111, view.frame.size.width, view.frame.size.height / 3.7))*/
         self.photoImageView.backgroundColor = UIColor.lightGrayColor()
-        //self.photoImageView.contentMode = .ScaleAspect
-        //self.view.addSubview(photoImageView)
-        
-        /*let horizontalConstraint = photoImageView.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor)
-        let verticalConstraint = photoImageView.centerYAnchor.constraintEqualToAnchor(view.centerYAnchor)
-        let widthConstraint = photoImageView.widthAnchor.constraintEqualToAnchor(nil, constant: view.frame.size.width)
-        let heightConstraint = photoImageView.heightAnchor.constraintEqualToAnchor(nil, constant: view.frame.size.width)
-        NSLayoutConstraint.activateConstraints([horizontalConstraint, verticalConstraint, widthConstraint, heightConstraint])*/
         
         let border = CALayer()
         let width = CGFloat(1.0)
@@ -68,6 +61,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // Function to open the Camera Button
     @IBAction func openCameraButton(sender: AnyObject) {
+        let croppingEnabled = true
+        let cameraViewController = CameraViewController(croppingEnabled: croppingEnabled) { image in
+            // Do something with your image here.
+            // If cropping is enabled this image will be the cropped version
+        }
+        
+        presentViewController(cameraViewController, animated: true, completion: nil)
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
