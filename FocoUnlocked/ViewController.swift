@@ -36,7 +36,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         
         if (self.revealViewController() != nil) {
-        settingsButton.addTarget(self.revealViewController(), action: Selector("revealToggle:"), forControlEvents: .TouchUpInside)
+        settingsButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), forControlEvents: .TouchUpInside)
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
 
@@ -61,11 +61,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // Function to open the Camera Button
     @IBAction func openCameraButton(sender: AnyObject) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
         let croppingEnabled = true
         let cameraViewController = CameraViewController(croppingEnabled: croppingEnabled) { newImage in
-                self.dismissViewControllerAnimated(true, completion: nil) 
+            
+            //self.dismissViewControllerAnimated(true, completion: nil)
         }
         presentViewController(cameraViewController, animated: true, completion: nil)
+        }
     }
     
     // Function to open the Photo Library

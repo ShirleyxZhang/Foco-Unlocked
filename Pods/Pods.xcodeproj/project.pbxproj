@@ -54,7 +54,7 @@
 
 /* Begin PBXFileReference section */
 		0067CFF37F404CC2B06213EE8AA2DB60 /* SingleImageSaver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SingleImageSaver.swift; path = ALCameraViewController/Utilities/SingleImageSaver.swift; sourceTree = "<group>"; };
-		039D3BBE3948682095D0ED8FE053B989 /* ConfirmViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = ConfirmViewController.xib; path = ALCameraViewController/ViewController/ConfirmViewController.xib; sourceTree = "<group>"; };
+		039D3BBE3948682095D0ED8FE053B989 /* ConfirmViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = ConfirmViewController.xib; path = ALCameraViewController/ALCameraViewController/ViewController/ConfirmViewController.xib; sourceTree = SOURCE_ROOT; };
 		0638757564AAE81C46716FB9751A3292 /* CameraView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraView.swift; path = ALCameraViewController/Views/CameraView.swift; sourceTree = "<group>"; };
 		082DCA22D32A875A8ADFB072395BA7F3 /* ALCameraViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ALCameraViewController-dummy.m"; sourceTree = "<group>"; };
 		08B7AD40CAB4ACED98C190D7C4C436C6 /* Pods-FocoUnlockedUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FocoUnlockedUITests-umbrella.h"; sourceTree = "<group>"; };
