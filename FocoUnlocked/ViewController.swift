@@ -10,7 +10,6 @@
 
 import UIKit
 import Firebase
-import ALCameraViewController
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     
@@ -61,13 +60,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // Function to open the Camera Button
     @IBAction func openCameraButton(sender: AnyObject) {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
-        let croppingEnabled = true
-        let cameraViewController = CameraViewController(croppingEnabled: croppingEnabled) { newImage in
-            
-            //self.dismissViewControllerAnimated(true, completion: nil)
-        }
-        presentViewController(cameraViewController, animated: true, completion: nil)
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera;
+            imagePicker.allowsEditing = true
+            self.presentViewController(imagePicker, animated: true, completion: nil)
         }
     }
     
@@ -76,19 +74,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
-            imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+            imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary;
             imagePicker.allowsEditing = true
             self.presentViewController(imagePicker, animated: true, completion: nil)
         }
     }
     
     // Function to choose an image from the Photo Library
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        photoImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+    /*func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        //photoImageView.image = UIImageJPEGRepresentation(imagePicked.image, 0.6)
+        //photoImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         self.dismissViewControllerAnimated(false, completion: nil)
+    }*/
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        photoImageView.image = image
+        self.dismissViewControllerAnimated(true, completion: nil);
     }
-    
-    
     
     // Keyboard goes away after you tap somewhere else
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){

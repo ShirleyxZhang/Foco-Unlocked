@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ALCameraViewController.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-FocoUnlocked.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,7 +22,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4995FD233E5B5985A754B81931082087</key>
+		<key>31D32C21ADCE3CB47437CEDB1034964B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -38,11 +33,6 @@
 			<true/>
 		</dict>
 		<key>B3DC273DEEACDE77D642B4EECB37F7DC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DAEFE5845A9A47287B43BE713DFD4B08</key>
 		<dict>
 			<key>primary</key>
 			<true/>

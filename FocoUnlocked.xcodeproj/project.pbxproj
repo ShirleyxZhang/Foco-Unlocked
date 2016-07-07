@@ -352,7 +352,7 @@
 				TargetAttributes = {
 					8862866D1CF693B9007D8C94 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 7SNLCB4JQ2;
+						DevelopmentTeam = FS2L42NVCT;
 					};
 					886286811CF693BA007D8C94 = {
 						CreatedOnToolsVersion = 7.2;
@@ -719,10 +719,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FocoUnlocked/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Ijemma.FocoUnlocked;
+				PRODUCT_BUNDLE_IDENTIFIER = Ijemma.FocoUnlocked.App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "FocoUnlocked/FocoUnlocked-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -735,10 +738,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FocoUnlocked/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Ijemma.FocoUnlocked;
+				PRODUCT_BUNDLE_IDENTIFIER = Ijemma.FocoUnlocked.App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "FocoUnlocked/FocoUnlocked-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
