@@ -9,8 +9,9 @@
 import Foundation
 import UIKit
 import Firebase
+import ImagePicker
 
-class SettingsProfileController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
+class SettingsProfileController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate, ImagePickerDelegate {
     
     @IBOutlet weak var numberOfPosts: UILabel!
     @IBOutlet weak var numberOfLikes: UILabel!
@@ -35,7 +36,7 @@ class SettingsProfileController: UIViewController, UIImagePickerControllerDelega
         profileImage!.clipsToBounds = true
         
         if (self.revealViewController() != nil) {
-            settingsButton.addTarget(self.revealViewController(), action: Selector("revealToggle:"), forControlEvents: .TouchUpInside)
+            settingsButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), forControlEvents: .TouchUpInside)
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
@@ -49,6 +50,7 @@ class SettingsProfileController: UIViewController, UIImagePickerControllerDelega
             //profileImage.image = UIImage(data: NSData(contentsOfURL: (user?.photoURL)!)!)!
         }
         
+        // Pulls up the number of Points the user has
         self.usersRef.child("users").child("\(email)").child("Points").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
             if (!(snapshot.value is NSNull)) {
                 self.pointsNumber.text = snapshot.value! as? String
@@ -57,11 +59,21 @@ class SettingsProfileController: UIViewController, UIImagePickerControllerDelega
             }
         })
         
+        // Pulls up the number of Posts the user has
         self.usersRef.child("users").child("\(email)").child("Posts").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
             if (!(snapshot.value is NSNull)) {
                 self.numberOfPosts.text = "Number of Posts: \(snapshot.value! as! String)"
             } else {
                 self.numberOfPosts.text = "Number of Posts: 0"
+            }
+        })
+        
+        // Pulls up the number of Liked Posts the user has
+        self.usersRef.child("users").child("\(email)").child("Likes").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+            if (!(snapshot.value is NSNull)) {
+                self.numberOfPosts.text = "Liked Posts: \(snapshot.value! as! String)"
+            } else {
+                self.numberOfPosts.text = "Liked Posts: 0"
             }
         })
     
@@ -70,37 +82,31 @@ class SettingsProfileController: UIViewController, UIImagePickerControllerDelega
     
     // Function to change the profile of the user
     @IBAction func changeProfileImage(sender: AnyObject) {
-            let cameraSelect = { (action: UIAlertAction!) -> Void in
-                if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
-                    let imagePicker = UIImagePickerController()
-                    imagePicker.delegate = self
-                    imagePicker.sourceType = UIImagePickerControllerSourceType.Camera;
-                    imagePicker.allowsEditing = false
-                    self.presentViewController(imagePicker, animated: true, completion: nil)
-                }
-            }
-        let gallerySelect = { (action: UIAlertAction!) -> Void in
-            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
-                let imagePicker = UIImagePickerController()
-                imagePicker.delegate = self
-                imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-                imagePicker.allowsEditing = true
-                self.presentViewController(imagePicker, animated: true, completion: nil)
-            }
-        }
-            let alertController = UIAlertController(title: "Profile Image", message:
-                "How do you want to grab your profile picture?", preferredStyle: UIAlertControllerStyle.Alert)
-            alertController.addAction(UIAlertAction(title: "Camera", style: UIAlertActionStyle.Default, handler: cameraSelect))
-            alertController.addAction(UIAlertAction(title: "Gallery", style: UIAlertActionStyle.Default,handler: gallerySelect))
-            self.presentViewController(alertController, animated: true, completion: nil)
-            print("Step back")
-
+        let imagePickerController = ImagePickerController()
+        imagePickerController.imageLimit = 1
+        Configuration.doneButtonTitle = "Done"
+        Configuration.noImagesTitle = "Sorry! There are no images here!"
+        imagePickerController.delegate = self
+        presentViewController(imagePickerController, animated: true, completion: nil)
     }
     
-    // Function to choose an image from the Photo Library
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        profileImage.image = info[UIImagePickerControllerOriginalImage] as? UIImage
-        self.dismissViewControllerAnimated(false, completion: nil)
+    // Function called when user selects wrapper image
+    func wrapperDidPress( images: [UIImage]) {
+        print("Wrapper Did Press")
+    }
+    
+    // Function called when user selects the done button
+    func doneButtonDidPress(images: [UIImage]) {
+        print("Done Button Did Press")
+        // Might not have the images
+        profileImage.image = images[0]
+        dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+    
+    // Function called when the suer selects the cancel button
+    func cancelButtonDidPress() {
+        print("Cancel Button Did Press")
     }
     
     // Function to take the user back to the previous page

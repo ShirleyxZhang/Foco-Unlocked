@@ -921,8 +921,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Likes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5v-OO-8Oz">
-                                <rect key="frame" x="20" y="329" width="130" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liked Posts:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5v-OO-8Oz">
+                                <rect key="frame" x="60" y="329" width="93" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -957,10 +957,10 @@
                             <constraint firstItem="6Yc-2j-Sjw" firstAttribute="top" secondItem="6E6-3h-PC0" secondAttribute="bottom" constant="53" id="XO1-Ks-4HC"/>
                             <constraint firstItem="WDJ-mx-RJ9" firstAttribute="top" secondItem="H5v-OO-8Oz" secondAttribute="bottom" constant="24" id="ZCf-gB-c0E"/>
                             <constraint firstItem="JHD-DW-Tkb" firstAttribute="top" secondItem="Rw6-wh-Vcy" secondAttribute="bottom" constant="8" id="gjC-XQ-Mrp"/>
-                            <constraint firstItem="H5v-OO-8Oz" firstAttribute="centerX" secondItem="Rw6-wh-Vcy" secondAttribute="centerX" id="h2X-YP-9BI"/>
+                            <constraint firstItem="H5v-OO-8Oz" firstAttribute="centerX" secondItem="Rw6-wh-Vcy" secondAttribute="centerX" constant="22" id="h2X-YP-9BI"/>
                             <constraint firstItem="Rw6-wh-Vcy" firstAttribute="top" secondItem="dr4-6V-Iqn" secondAttribute="bottom" constant="8" id="jSz-Ea-wGw"/>
                             <constraint firstItem="JSE-zX-ywP" firstAttribute="top" secondItem="LYW-oY-txW" secondAttribute="bottom" constant="7" id="nVU-by-DgJ"/>
-                            <constraint firstItem="6Yc-2j-Sjw" firstAttribute="leading" secondItem="H5v-OO-8Oz" secondAttribute="leading" id="qxh-s5-XCN"/>
+                            <constraint firstItem="6Yc-2j-Sjw" firstAttribute="leading" secondItem="H5v-OO-8Oz" secondAttribute="leading" constant="-40" id="qxh-s5-XCN"/>
                             <constraint firstItem="Rw6-wh-Vcy" firstAttribute="leading" secondItem="net-sN-u4R" secondAttribute="leadingMargin" constant="8" id="rtg-np-6rr"/>
                             <constraint firstItem="LYW-oY-txW" firstAttribute="leading" secondItem="Rw6-wh-Vcy" secondAttribute="trailing" constant="8" id="xGR-Gi-i0P"/>
                         </constraints>
