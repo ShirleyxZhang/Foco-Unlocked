@@ -7,72 +7,156 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		060864D2A7732E951A02C663538EBBF5 /* ImagePicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 409B633B90CE9C5788008E0F3796E79D /* ImagePicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E618E51E0DE43A78252D09E9B091CF7 /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8023DA3DCA90F759D751DAAD3FAFFA7B /* StackView.swift */; };
+		0EA57C60A30C23191BCE41556ACB3A54 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE7D13C362E7251386EBC10F9D2364 /* CameraView.swift */; };
+		1EA6B1CDF30B44736630F0298975EA6E /* ImageGalleryViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CD0437E43253E7778CEA9534F9B277 /* ImageGalleryViewDataSource.swift */; };
+		26717F7117B534AE1EEB09E1D57C9F5D /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A7337EB5E845B0E95C678F1929ABA2 /* Configuration.swift */; };
+		284F9E461543D796BC913BAB6D5871DC /* AUTO@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF3F676199D2B15EFEE807D40FB16DA3 /* AUTO@3x.png */; };
+		28AB80ED69A04E88C91D8CCBE62A735A /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3907169D771E01245E5DC2822ADFCAF /* Photos.swift */; };
+		2997DAF7F84F8956DDEE4EDD66FC7CFC /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04188B3789F5A5C4FD5485B19F33BF4C /* TopView.swift */; };
+		2F5772A876F2058C2076DE6C90ACF551 /* ConstraintsSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81350938BF8DE9A4BF9A50E46C3167D8 /* ConstraintsSetup.swift */; };
+		30A8BF338E6A3EAC42CAE9186FA9B456 /* focusIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0291A5D070A8C4773B40296FADE5E718 /* focusIcon@3x.png */; };
 		3FC132C9552B92F4C4839FB2259BEBBE /* Pods-FocoUnlockedUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D91406999A2B1316D117172F5D35E370 /* Pods-FocoUnlockedUITests-dummy.m */; };
-		49EA72FF2FD7D32C0A9C16DF0AB8AB35 /* Pods-FocoUnlocked-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CF2CA54B08A3542EB921683576CFAA7C /* Pods-FocoUnlocked-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		94B82A5CDD15B5C2F1B0531A3E29B5BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		4A8201D7847ACD63C06188EC4D480106 /* Pods-FocoUnlocked-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3DA054C909CBF3225829A9D7A6DEE3 /* Pods-FocoUnlocked-dummy.m */; };
+		4F1C602737AE81A2558D9B176AB122B7 /* ImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53DA520DB4BBBAABE6AAF55CDD4132 /* ImagePickerController.swift */; };
+		535167608BAE835E5A79D5865ABB841B /* selectedImageGallery@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 966D21333D51D02E64E8C4FB1999E6F2 /* selectedImageGallery@3x.png */; };
+		6945E579797448565C6F3425CA9273D8 /* ON@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C671233B991E87086B462B26C5C74628 /* ON@3x.png */; };
+		6C7711ED29864698EA27F30045B2BD88 /* ImagePicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6006623CB148A12392D08740B6808562 /* ImagePicker-dummy.m */; };
+		7BFB0E10EA29D2892238CB519870C900 /* BottomContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E9CBC9EFD9260502C745C396E1A654 /* BottomContainerView.swift */; };
+		8ED4DC45170F6EEC8FF3DED8B4EA72D0 /* cameraIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54EAD9895B9A72F74A9C431EBF5FAA28 /* cameraIcon@3x.png */; };
 		976EE9C79EA44CA608E55833AE0D78EE /* Pods-FocoUnlockedUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 08B7AD40CAB4ACED98C190D7C4C436C6 /* Pods-FocoUnlockedUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		999B7FF43BA1F02B354AECB5F3B5791A /* Pods-FocoUnlocked-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3DA054C909CBF3225829A9D7A6DEE3 /* Pods-FocoUnlocked-dummy.m */; };
+		99B7BED7D36C125ACA3F5412B492AEAC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 283836EF5A0AA5CDF757AD35B494F1FA /* AVFoundation.framework */; };
+		9F15B34051C090598ED3BEFAD32446E6 /* OFF@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 693EF9372671391CEC16F99D41D36B3D /* OFF@3x.png */; };
+		A0078EBB196D3EF781E1ACED990D67D8 /* ImagePicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ABB3F671C0097BA9D963A23E111DE23C /* ImagePicker.bundle */; };
+		A1F03EB504299A5CA2F0F9F91F686159 /* ImageStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC351F22AF2704BF81DF7A67F386E4C /* ImageStack.swift */; };
 		A4243BF812E35344B657AD33C5B1F434 /* Pods-FocoUnlockedTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9779B02BE475D895F8B7BF0A43806F6A /* Pods-FocoUnlockedTests-dummy.m */; };
-		B0FF9B399B4CA283FD4251121A02E5B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		CCDC74C0097207E8C4311D7F5B870005 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		B0FF9B399B4CA283FD4251121A02E5B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A99E1ED6492F91E6807B16994861C5 /* Foundation.framework */; };
+		B802929FDFA52938E3EDC3B8B80BE11C /* AssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DDD5446E3AA8B80870D888F39E065E /* AssetManager.swift */; };
+		C2E2155964135338AD1560A1B0468301 /* Pods-FocoUnlocked-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CF2CA54B08A3542EB921683576CFAA7C /* Pods-FocoUnlocked-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C69998D040E60D367649395E290B09B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A99E1ED6492F91E6807B16994861C5 /* Foundation.framework */; };
+		CAA0D0A98092E29889098023B9344886 /* ButtonPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA34FBE3EBC69F6846186AF65A7CBDF8 /* ButtonPicker.swift */; };
+		CCDC74C0097207E8C4311D7F5B870005 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A99E1ED6492F91E6807B16994861C5 /* Foundation.framework */; };
+		DB433C97942067D20B96FAB0843D71D0 /* ImageGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB35BAFEC23EE57EE863360EFA06F062 /* ImageGalleryView.swift */; };
+		ECA1D2FC59A06E454AF758F131E6821D /* ImageGalleryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2EF8DB35AE5FFDFF9C430D1389E62D /* ImageGalleryViewCell.swift */; };
 		EE7A0A617AE4670841D5DB62B0A673AC /* Pods-FocoUnlockedTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7059C2F789D72387EF389EE320FB59C6 /* Pods-FocoUnlockedTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F5647B9582A971AE7A1B02E39B1271EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A99E1ED6492F91E6807B16994861C5 /* Foundation.framework */; };
+		F618BC1003236B67EAC2EE9312DCA0F8 /* CameraMan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78715BF29A433B98D9A2F348C3493EFD /* CameraMan.swift */; };
+		FB5D1DDD54A3B0DCD4CA5F967F7A9EAA /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B7FF004643DA9E9E418A9764EAB79 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1C49BDB4EC9846A9992F0C4262198015 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F0C00D382F5E8DDCDB2C3728E9E677E;
+			remoteInfo = ImagePicker;
+		};
+		75FCE1ADEB61DCEFE1AFED460EBA8467 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2330A8237B9F93884A5FC77CE29B114;
+			remoteInfo = "ImagePicker-ImagePicker";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		012C860C878E6DDA29E3E53FF2BB3B98 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		0291A5D070A8C4773B40296FADE5E718 /* focusIcon@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "focusIcon@3x.png"; path = "Images/focusIcon@3x.png"; sourceTree = "<group>"; };
+		04188B3789F5A5C4FD5485B19F33BF4C /* TopView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TopView.swift; path = Source/TopView/TopView.swift; sourceTree = "<group>"; };
 		08B7AD40CAB4ACED98C190D7C4C436C6 /* Pods-FocoUnlockedUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FocoUnlockedUITests-umbrella.h"; sourceTree = "<group>"; };
-		0AD1568E830A0DBD6CA6DCD4EEB8261D /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
 		0FB87E8C3E879A829E538D4D0B966572 /* Pods-FocoUnlockedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FocoUnlockedTests.debug.xcconfig"; sourceTree = "<group>"; };
+		11B79AB23A187DEE80602882FFF43CB7 /* ImagePicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ImagePicker.xcconfig; sourceTree = "<group>"; };
+		1521DD6C12D7D288BD8032FC4FAE20DA /* Pods_FocoUnlockedUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FocoUnlockedUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19A6C6B2EBCB36DF948D6173D0796BE2 /* Pods-FocoUnlockedUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FocoUnlockedUITests-resources.sh"; sourceTree = "<group>"; };
-		25571B851F6D36AD575E982AC0B964F5 /* Pods_FocoUnlockedUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FocoUnlockedUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BC351F22AF2704BF81DF7A67F386E4C /* ImageStack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageStack.swift; path = Source/BottomView/ImageStack.swift; sourceTree = "<group>"; };
 		26EE62948FE818341B3126B58444E5A9 /* Pods-FocoUnlocked.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FocoUnlocked.modulemap"; sourceTree = "<group>"; };
-		35E175B5673FE4D2E0C1F76826E42F7C /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Headers/Firebase.h; sourceTree = "<group>"; };
-		37E7AEDDB7925A9E39351B87EB4A27CE /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleNetworkingUtilities.framework; path = Frameworks/GoogleNetworkingUtilities.framework; sourceTree = "<group>"; };
+		283836EF5A0AA5CDF757AD35B494F1FA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		2E53DA520DB4BBBAABE6AAF55CDD4132 /* ImagePickerController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePickerController.swift; path = Source/ImagePickerController.swift; sourceTree = "<group>"; };
+		35266D3A70485A97D00ABFDD0D4527A0 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
+		3DAE9A31B70EF15B9DE4A78E48F1C984 /* ResourceBundle-ImagePicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-ImagePicker-Info.plist"; sourceTree = "<group>"; };
+		409B633B90CE9C5788008E0F3796E79D /* ImagePicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ImagePicker-umbrella.h"; sourceTree = "<group>"; };
 		4E6DD5AF5763DF51A179B6B794F9A983 /* Pods-FocoUnlockedUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FocoUnlockedUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		4F16B761D7DC4F94E9A21717C1A38F45 /* Pods-FocoUnlocked.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FocoUnlocked.release.xcconfig"; sourceTree = "<group>"; };
+		52F5051AFDECCF247A3A93560AAFE242 /* Pods_FocoUnlocked.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FocoUnlocked.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54EAD9895B9A72F74A9C431EBF5FAA28 /* cameraIcon@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "cameraIcon@3x.png"; path = "Images/cameraIcon@3x.png"; sourceTree = "<group>"; };
 		59935DBC9F1B2DD059BA278E366225EC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6578BADED2B493E0997BE47F9D945842 /* Pods_FocoUnlockedTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FocoUnlockedTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		662BF7D9F557AC9425935F9A211470AD /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		5BE987A5F3CA4C94CF715D4CDFF8318E /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		6006623CB148A12392D08740B6808562 /* ImagePicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ImagePicker-dummy.m"; sourceTree = "<group>"; };
+		61722BB16205D7327C4AA20734A6AE2E /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
+		64EAD9E5401EFA5D20693F3AFD94816E /* ImagePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImagePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6836C35EA406BC80F796330817991F61 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		693EF9372671391CEC16F99D41D36B3D /* OFF@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "OFF@3x.png"; path = "Images/OFF@3x.png"; sourceTree = "<group>"; };
+		6B95932204E885ABA404FE4D5C378F5F /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
 		7059C2F789D72387EF389EE320FB59C6 /* Pods-FocoUnlockedTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FocoUnlockedTests-umbrella.h"; sourceTree = "<group>"; };
+		71DDD5446E3AA8B80870D888F39E065E /* AssetManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssetManager.swift; path = Source/AssetManager.swift; sourceTree = "<group>"; };
+		72A7337EB5E845B0E95C678F1929ABA2 /* Configuration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = Source/Configuration.swift; sourceTree = "<group>"; };
 		757951953613B766B52F8B905E799EFD /* Pods-FocoUnlockedUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FocoUnlockedUITests-frameworks.sh"; sourceTree = "<group>"; };
 		759C31C81BBA8CF06BE6B540ECB2A168 /* Pods-FocoUnlockedTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FocoUnlockedTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		78715BF29A433B98D9A2F348C3493EFD /* CameraMan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraMan.swift; path = Source/CameraView/CameraMan.swift; sourceTree = "<group>"; };
 		7A9E5D44EDFE49062DF0F41E74BEE51C /* Pods-FocoUnlocked-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FocoUnlocked-frameworks.sh"; sourceTree = "<group>"; };
 		7F6899933197EB3A02589EDA0754DFAB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FDBEFD419257DA277A8C22C122BF286 /* Pods_FocoUnlockedTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FocoUnlockedTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8023DA3DCA90F759D751DAAD3FAFFA7B /* StackView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StackView.swift; path = Source/BottomView/StackView.swift; sourceTree = "<group>"; };
+		8030DB7C06B0AAE816C93B391FCE97CB /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Headers/Firebase.h; sourceTree = "<group>"; };
+		81350938BF8DE9A4BF9A50E46C3167D8 /* ConstraintsSetup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintsSetup.swift; path = Source/Extensions/ConstraintsSetup.swift; sourceTree = "<group>"; };
 		83419E5D5754AFBCAEC93C47C2617BBC /* Pods-FocoUnlocked.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FocoUnlocked.debug.xcconfig"; sourceTree = "<group>"; };
-		85A726589F1C1B9DC08D00894A4A8D38 /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Headers/Public/FIRInstanceID.h; sourceTree = "<group>"; };
+		840B7FF004643DA9E9E418A9764EAB79 /* LocationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = Source/LocationManager.swift; sourceTree = "<group>"; };
 		89AE4C26CAF185171C3D80744A90A69E /* Pods-FocoUnlockedTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FocoUnlockedTests.modulemap"; sourceTree = "<group>"; };
 		931D613DDAA1DD9E1F1B20273935731D /* Pods-FocoUnlockedUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FocoUnlockedUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		938DA745E950EE4ADA6710FF1B41625B /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleNetworkingUtilities.framework; path = Frameworks/GoogleNetworkingUtilities.framework; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9655B9A8A0F40AD128DF4CBCA02C90B1 /* GoogleParsingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleParsingUtilities.framework; path = Frameworks/GoogleParsingUtilities.framework; sourceTree = "<group>"; };
+		966D21333D51D02E64E8C4FB1999E6F2 /* selectedImageGallery@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "selectedImageGallery@3x.png"; path = "Images/selectedImageGallery@3x.png"; sourceTree = "<group>"; };
+		96A99E1ED6492F91E6807B16994861C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		9779B02BE475D895F8B7BF0A43806F6A /* Pods-FocoUnlockedTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FocoUnlockedTests-dummy.m"; sourceTree = "<group>"; };
 		98CF952D95E1917A74C74DACF487F412 /* Pods-FocoUnlockedTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FocoUnlockedTests-frameworks.sh"; sourceTree = "<group>"; };
+		998F3C4429513E5F2E23ECE59BBE6F25 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		99EE7D13C362E7251386EBC10F9D2364 /* CameraView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraView.swift; path = Source/CameraView/CameraView.swift; sourceTree = "<group>"; };
 		9A9824F10226210900F04E6E80B9270A /* Pods-FocoUnlockedUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FocoUnlockedUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A4963A3BBD6174851C8D0E77989904E7 /* Pods-FocoUnlockedTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FocoUnlockedTests-resources.sh"; sourceTree = "<group>"; };
+		A50E1FBA7F448A1403088EA947C41C54 /* ImagePicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ImagePicker.modulemap; sourceTree = "<group>"; };
 		A5512797DF3A9BA1BB63D8CEAE0815B7 /* Pods-FocoUnlockedUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FocoUnlockedUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A5CD0437E43253E7778CEA9534F9B277 /* ImageGalleryViewDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageGalleryViewDataSource.swift; path = Source/ImageGallery/ImageGalleryViewDataSource.swift; sourceTree = "<group>"; };
+		ABB3F671C0097BA9D963A23E111DE23C /* ImagePicker.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImagePicker.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38CC16D8234DF7AB1EBC2AC925DB788 /* Pods-FocoUnlockedTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FocoUnlockedTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		BAB05FE6805B940E6C6EA24B46DAD16A /* Pods-FocoUnlocked-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FocoUnlocked-acknowledgements.plist"; sourceTree = "<group>"; };
 		BB43B54ACF0F4CD7B21248280F838FCD /* Pods-FocoUnlockedUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FocoUnlockedUITests.modulemap"; sourceTree = "<group>"; };
-		BBC6F2FB2556C157DF5EE716018726B6 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
 		BF3DA054C909CBF3225829A9D7A6DEE3 /* Pods-FocoUnlocked-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FocoUnlocked-dummy.m"; sourceTree = "<group>"; };
-		C15F99FE1CD1C2F7CACD029F566331B5 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
-		C5FD6B0D0FADFE345EE4C12522AEE235 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		BF3F676199D2B15EFEE807D40FB16DA3 /* AUTO@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "AUTO@3x.png"; path = "Images/AUTO@3x.png"; sourceTree = "<group>"; };
+		C671233B991E87086B462B26C5C74628 /* ON@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ON@3x.png"; path = "Images/ON@3x.png"; sourceTree = "<group>"; };
+		CA34FBE3EBC69F6846186AF65A7CBDF8 /* ButtonPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonPicker.swift; path = Source/BottomView/ButtonPicker.swift; sourceTree = "<group>"; };
 		CC28EAC59D1DE73C3CDDEE1BA9B097CB /* Pods-FocoUnlocked-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FocoUnlocked-resources.sh"; sourceTree = "<group>"; };
-		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CF076052C96C253D926C0AFBBEECF308 /* Pods-FocoUnlockedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FocoUnlockedTests.release.xcconfig"; sourceTree = "<group>"; };
 		CF2CA54B08A3542EB921683576CFAA7C /* Pods-FocoUnlocked-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FocoUnlocked-umbrella.h"; sourceTree = "<group>"; };
-		CFC88F8BA183B9A72A06815A179404B0 /* Pods_FocoUnlocked.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FocoUnlocked.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D49AD3BD1591E1FAC6A468B095EBFCA6 /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAuth.framework; path = Frameworks/frameworks/FirebaseAuth.framework; sourceTree = "<group>"; };
 		D91406999A2B1316D117172F5D35E370 /* Pods-FocoUnlockedUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FocoUnlockedUITests-dummy.m"; sourceTree = "<group>"; };
+		DB35BAFEC23EE57EE863360EFA06F062 /* ImageGalleryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageGalleryView.swift; path = Source/ImageGallery/ImageGalleryView.swift; sourceTree = "<group>"; };
+		DF2EF8DB35AE5FFDFF9C430D1389E62D /* ImageGalleryViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageGalleryViewCell.swift; path = Source/ImageGallery/ImageGalleryViewCell.swift; sourceTree = "<group>"; };
 		DF8CB1A169CEC2961B45F5684E0B711E /* Pods-FocoUnlocked-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FocoUnlocked-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DFCB403588A82287E0E6D97E6BEE8F60 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		E001B3B620474E4B64C7F1EEBC33704A /* GoogleParsingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleParsingUtilities.framework; path = Frameworks/GoogleParsingUtilities.framework; sourceTree = "<group>"; };
+		E3907169D771E01245E5DC2822ADFCAF /* Photos.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Photos.swift; path = Source/Photos.swift; sourceTree = "<group>"; };
+		E73344D0775601A5A01C78E021D28387 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E863B178C88FAD1547248B85982C72E4 /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAuth.framework; path = Frameworks/frameworks/FirebaseAuth.framework; sourceTree = "<group>"; };
+		E8E9CBC9EFD9260502C745C396E1A654 /* BottomContainerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BottomContainerView.swift; path = Source/BottomView/BottomContainerView.swift; sourceTree = "<group>"; };
+		F16E5A153BCCFDF8ED74E5DA93C87D58 /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Headers/Public/FIRInstanceID.h; sourceTree = "<group>"; };
+		F373D110BEF56B07FF862246B8936AF9 /* ImagePicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ImagePicker-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0753EBDF5CDB0D88EAAA431B0977BA66 /* Frameworks */ = {
+		54EB1BD60A909A51B72683E3BD35CE50 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94B82A5CDD15B5C2F1B0531A3E29B5BA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		847051A1FB3A0934A31E19B6EE94CE5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99B7BED7D36C125ACA3F5412B492AEAC /* AVFoundation.framework in Frameworks */,
+				C69998D040E60D367649395E290B09B3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,80 +176,92 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FA42EA464C824667788D6A80D58FB268 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5647B9582A971AE7A1B02E39B1271EE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0890A1688208A28DD9B7369FC1633AC1 /* FirebaseInstanceID */ = {
+		07403F0731A9C2986E7EB8FDC7DAC003 /* GoogleUtilities */ = {
 			isa = PBXGroup;
 			children = (
-				85A726589F1C1B9DC08D00894A4A8D38 /* FIRInstanceID.h */,
-				F6DFF932C5710D959872647F8D2E7670 /* Frameworks */,
-			);
-			path = FirebaseInstanceID;
-			sourceTree = "<group>";
-		};
-		1546ED4A2B55C0A278488955D7688CDA /* FirebaseAnalytics */ = {
-			isa = PBXGroup;
-			children = (
-				F5D95B9F58DFC78F78E36B6302656AAF /* Frameworks */,
-			);
-			path = FirebaseAnalytics;
-			sourceTree = "<group>";
-		};
-		1CB6890C5928A0ABD9DF237DB4D6E4BC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				37E7AEDDB7925A9E39351B87EB4A27CE /* GoogleNetworkingUtilities.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		21682BA27A4EBB2926BB5210B6780883 /* Analytics */ = {
-			isa = PBXGroup;
-			children = (
-				35E175B5673FE4D2E0C1F76826E42F7C /* Firebase.h */,
-			);
-			name = Analytics;
-			sourceTree = "<group>";
-		};
-		21A2C8BC661C678B137E3A3D2B8BD254 /* GoogleUtilities */ = {
-			isa = PBXGroup;
-			children = (
-				E74246C4A74C8411630C6ECF322475BD /* Frameworks */,
+				FC4AF349D475AED7BB965C6E7C308558 /* Frameworks */,
 			);
 			path = GoogleUtilities;
 			sourceTree = "<group>";
 		};
-		254CC2549EC5EFDA48F0A788DA320609 /* GoogleNetworkingUtilities */ = {
+		165DB8839D899EA44F98216DB7ADBD06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1CB6890C5928A0ABD9DF237DB4D6E4BC /* Frameworks */,
-			);
-			path = GoogleNetworkingUtilities;
-			sourceTree = "<group>";
-		};
-		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		4CE51720A521314D5E46F1780D087B05 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C5FD6B0D0FADFE345EE4C12522AEE235 /* GoogleInterchangeUtilities.framework */,
+				998F3C4429513E5F2E23ECE59BBE6F25 /* GoogleSymbolUtilities.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5010F559BAF4B581A2D0BBAD609AC228 /* Firebase */ = {
+		1C0FB75FEB1EE93B08FFF47B051C7980 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				21682BA27A4EBB2926BB5210B6780883 /* Analytics */,
+				DFCB403588A82287E0E6D97E6BEE8F60 /* FirebaseAnalytics.framework */,
 			);
-			path = Firebase;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2AFE5C267D6AA8CCBE117A3C7D8079B1 /* FirebaseAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				1C0FB75FEB1EE93B08FFF47B051C7980 /* Frameworks */,
+			);
+			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		3A3831ED803C263C58D8CC888542DCEA /* FirebaseDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				41B27407F633E710C475E6561401EBBD /* Frameworks */,
+			);
+			path = FirebaseDatabase;
+			sourceTree = "<group>";
+		};
+		41B27407F633E710C475E6561401EBBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				35266D3A70485A97D00ABFDD0D4527A0 /* FirebaseDatabase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A40AF8D79D4382828A0EEAD80AB26358 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		48C229EEE5B84D1349CED48105119A04 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BF3F676199D2B15EFEE807D40FB16DA3 /* AUTO@3x.png */,
+				54EAD9895B9A72F74A9C431EBF5FAA28 /* cameraIcon@3x.png */,
+				0291A5D070A8C4773B40296FADE5E718 /* focusIcon@3x.png */,
+				693EF9372671391CEC16F99D41D36B3D /* OFF@3x.png */,
+				C671233B991E87086B462B26C5C74628 /* ON@3x.png */,
+				966D21333D51D02E64E8C4FB1999E6F2 /* selectedImageGallery@3x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5EF4CFDD077FD0FEB34A8117DB1EB51F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E001B3B620474E4B64C7F1EEBC33704A /* GoogleParsingUtilities.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		5F3928A42EC909D9116AB0A620360D7C /* Pods-FocoUnlocked */ = {
@@ -184,6 +280,15 @@
 			);
 			name = "Pods-FocoUnlocked";
 			path = "Target Support Files/Pods-FocoUnlocked";
+			sourceTree = "<group>";
+		};
+		639D5A35753B5F898BF1B310F624BF36 /* FirebaseInstanceID */ = {
+			isa = PBXGroup;
+			children = (
+				F16E5A153BCCFDF8ED74E5DA93C87D58 /* FIRInstanceID.h */,
+				DECDF87EF11EAA0EAF9D22C26188524E /* Frameworks */,
+			);
+			path = FirebaseInstanceID;
 			sourceTree = "<group>";
 		};
 		678898AE0E3EB708AD35507F2B8F7A0B /* Targets Support Files */ = {
@@ -214,55 +319,63 @@
 			path = "Target Support Files/Pods-FocoUnlockedUITests";
 			sourceTree = "<group>";
 		};
-		6EBA67C730923027B77F6CC4FEE999B3 /* Frameworks */ = {
+		6DE4047AD38095724CBE729406A6EF08 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				0AD1568E830A0DBD6CA6DCD4EEB8261D /* FirebaseDatabase.framework */,
+				972749085C39E13346657CC336561A86 /* Analytics */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		781D65C58BA4A782254188D24FA36AC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				938DA745E950EE4ADA6710FF1B41625B /* GoogleNetworkingUtilities.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		732B7AC4B7BF5A35D30561E0DC7F356E /* FirebaseDatabase */ = {
+		788E424D9E729B5C150AD0B7E0C346C4 /* GoogleParsingUtilities */ = {
 			isa = PBXGroup;
 			children = (
-				6EBA67C730923027B77F6CC4FEE999B3 /* Frameworks */,
+				5EF4CFDD077FD0FEB34A8117DB1EB51F /* Frameworks */,
 			);
-			path = FirebaseDatabase;
+			path = GoogleParsingUtilities;
 			sourceTree = "<group>";
 		};
-		7AFEFA9CAC2E0695A643A6FE109745CB /* FirebaseAuth */ = {
+		7B3C7EAE741A779EF9AB8B04D1BDEE1B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CB440934A214E7B1A28A640A5178B5CF /* Frameworks */,
+				E863B178C88FAD1547248B85982C72E4 /* FirebaseAuth.framework */,
 			);
-			path = FirebaseAuth;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				DFAEE58E41FEB79E2A095B402D1F99FA /* Pods */,
-				D79DE52721B86BCA013F9EE31B76CFF0 /* Products */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				C2C2606AEF8716B4944D03BE57B19194 /* Pods */,
+				AC549FE6378E88F7E377F12BFD137D08 /* Products */,
 				678898AE0E3EB708AD35507F2B8F7A0B /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8CE86DD4F8BA2FDE545816D21D94DC79 /* GoogleParsingUtilities */ = {
+		944BC15A20C5F07BF80ABD99A2D30D11 /* GoogleSymbolUtilities */ = {
 			isa = PBXGroup;
 			children = (
-				A3F18049928ABBBC6BB92196EFADD047 /* Frameworks */,
+				165DB8839D899EA44F98216DB7ADBD06 /* Frameworks */,
 			);
-			path = GoogleParsingUtilities;
+			path = GoogleSymbolUtilities;
 			sourceTree = "<group>";
 		};
-		99809E3440D851732861B083AEE89981 /* Frameworks */ = {
+		972749085C39E13346657CC336561A86 /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
-				662BF7D9F557AC9425935F9A211470AD /* GoogleSymbolUtilities.framework */,
+				8030DB7C06B0AAE816C93B391FCE97CB /* Firebase.h */,
 			);
-			name = Frameworks;
+			name = Analytics;
 			sourceTree = "<group>";
 		};
 		A1DE81C407CDA5116D512E5D544B1CAD /* Pods-FocoUnlockedTests */ = {
@@ -283,93 +396,129 @@
 			path = "Target Support Files/Pods-FocoUnlockedTests";
 			sourceTree = "<group>";
 		};
-		A33177A3F1C140BB331FE267B0360B55 /* GoogleInterchangeUtilities */ = {
+		A40AF8D79D4382828A0EEAD80AB26358 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				4CE51720A521314D5E46F1780D087B05 /* Frameworks */,
+				283836EF5A0AA5CDF757AD35B494F1FA /* AVFoundation.framework */,
+				96A99E1ED6492F91E6807B16994861C5 /* Foundation.framework */,
 			);
-			path = GoogleInterchangeUtilities;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		A3F18049928ABBBC6BB92196EFADD047 /* Frameworks */ = {
+		AC549FE6378E88F7E377F12BFD137D08 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9655B9A8A0F40AD128DF4CBCA02C90B1 /* GoogleParsingUtilities.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CB440934A214E7B1A28A640A5178B5CF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D49AD3BD1591E1FAC6A468B095EBFCA6 /* FirebaseAuth.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D38544B74C25B9DD6F972E44B6D2B347 /* GoogleSymbolUtilities */ = {
-			isa = PBXGroup;
-			children = (
-				99809E3440D851732861B083AEE89981 /* Frameworks */,
-			);
-			path = GoogleSymbolUtilities;
-			sourceTree = "<group>";
-		};
-		D79DE52721B86BCA013F9EE31B76CFF0 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CFC88F8BA183B9A72A06815A179404B0 /* Pods_FocoUnlocked.framework */,
-				6578BADED2B493E0997BE47F9D945842 /* Pods_FocoUnlockedTests.framework */,
-				25571B851F6D36AD575E982AC0B964F5 /* Pods_FocoUnlockedUITests.framework */,
+				ABB3F671C0097BA9D963A23E111DE23C /* ImagePicker.bundle */,
+				64EAD9E5401EFA5D20693F3AFD94816E /* ImagePicker.framework */,
+				52F5051AFDECCF247A3A93560AAFE242 /* Pods_FocoUnlocked.framework */,
+				7FDBEFD419257DA277A8C22C122BF286 /* Pods_FocoUnlockedTests.framework */,
+				1521DD6C12D7D288BD8032FC4FAE20DA /* Pods_FocoUnlockedUITests.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DFAEE58E41FEB79E2A095B402D1F99FA /* Pods */ = {
+		C2C2606AEF8716B4944D03BE57B19194 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5010F559BAF4B581A2D0BBAD609AC228 /* Firebase */,
-				1546ED4A2B55C0A278488955D7688CDA /* FirebaseAnalytics */,
-				7AFEFA9CAC2E0695A643A6FE109745CB /* FirebaseAuth */,
-				732B7AC4B7BF5A35D30561E0DC7F356E /* FirebaseDatabase */,
-				0890A1688208A28DD9B7369FC1633AC1 /* FirebaseInstanceID */,
-				A33177A3F1C140BB331FE267B0360B55 /* GoogleInterchangeUtilities */,
-				254CC2549EC5EFDA48F0A788DA320609 /* GoogleNetworkingUtilities */,
-				8CE86DD4F8BA2FDE545816D21D94DC79 /* GoogleParsingUtilities */,
-				D38544B74C25B9DD6F972E44B6D2B347 /* GoogleSymbolUtilities */,
-				21A2C8BC661C678B137E3A3D2B8BD254 /* GoogleUtilities */,
+				6DE4047AD38095724CBE729406A6EF08 /* Firebase */,
+				2AFE5C267D6AA8CCBE117A3C7D8079B1 /* FirebaseAnalytics */,
+				C8217FA77965BA6E2503285C1B497B5A /* FirebaseAuth */,
+				3A3831ED803C263C58D8CC888542DCEA /* FirebaseDatabase */,
+				639D5A35753B5F898BF1B310F624BF36 /* FirebaseInstanceID */,
+				F03814193283FB095AAD85AD295F92E6 /* GoogleInterchangeUtilities */,
+				E194182BFE822BDB006F0839365E57A8 /* GoogleNetworkingUtilities */,
+				788E424D9E729B5C150AD0B7E0C346C4 /* GoogleParsingUtilities */,
+				944BC15A20C5F07BF80ABD99A2D30D11 /* GoogleSymbolUtilities */,
+				07403F0731A9C2986E7EB8FDC7DAC003 /* GoogleUtilities */,
+				E2180CBE121AABFEAF71480A6F22F645 /* ImagePicker */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		E74246C4A74C8411630C6ECF322475BD /* Frameworks */ = {
+		C8217FA77965BA6E2503285C1B497B5A /* FirebaseAuth */ = {
 			isa = PBXGroup;
 			children = (
-				C15F99FE1CD1C2F7CACD029F566331B5 /* GoogleUtilities.framework */,
+				7B3C7EAE741A779EF9AB8B04D1BDEE1B /* Frameworks */,
+			);
+			path = FirebaseAuth;
+			sourceTree = "<group>";
+		};
+		CE7B9FAC7C154BE440F727019245CEC0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A50E1FBA7F448A1403088EA947C41C54 /* ImagePicker.modulemap */,
+				11B79AB23A187DEE80602882FFF43CB7 /* ImagePicker.xcconfig */,
+				6006623CB148A12392D08740B6808562 /* ImagePicker-dummy.m */,
+				F373D110BEF56B07FF862246B8936AF9 /* ImagePicker-prefix.pch */,
+				409B633B90CE9C5788008E0F3796E79D /* ImagePicker-umbrella.h */,
+				E73344D0775601A5A01C78E021D28387 /* Info.plist */,
+				3DAE9A31B70EF15B9DE4A78E48F1C984 /* ResourceBundle-ImagePicker-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ImagePicker";
+			sourceTree = "<group>";
+		};
+		DB845F4283E30C825827A1FA325AB785 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B95932204E885ABA404FE4D5C378F5F /* GoogleInterchangeUtilities.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F5D95B9F58DFC78F78E36B6302656AAF /* Frameworks */ = {
+		DECDF87EF11EAA0EAF9D22C26188524E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BBC6F2FB2556C157DF5EE716018726B6 /* FirebaseAnalytics.framework */,
+				5BE987A5F3CA4C94CF715D4CDFF8318E /* FirebaseInstanceID.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F6DFF932C5710D959872647F8D2E7670 /* Frameworks */ = {
+		E194182BFE822BDB006F0839365E57A8 /* GoogleNetworkingUtilities */ = {
 			isa = PBXGroup;
 			children = (
-				012C860C878E6DDA29E3E53FF2BB3B98 /* FirebaseInstanceID.framework */,
+				781D65C58BA4A782254188D24FA36AC4 /* Frameworks */,
+			);
+			path = GoogleNetworkingUtilities;
+			sourceTree = "<group>";
+		};
+		E2180CBE121AABFEAF71480A6F22F645 /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				71DDD5446E3AA8B80870D888F39E065E /* AssetManager.swift */,
+				E8E9CBC9EFD9260502C745C396E1A654 /* BottomContainerView.swift */,
+				CA34FBE3EBC69F6846186AF65A7CBDF8 /* ButtonPicker.swift */,
+				78715BF29A433B98D9A2F348C3493EFD /* CameraMan.swift */,
+				99EE7D13C362E7251386EBC10F9D2364 /* CameraView.swift */,
+				72A7337EB5E845B0E95C678F1929ABA2 /* Configuration.swift */,
+				81350938BF8DE9A4BF9A50E46C3167D8 /* ConstraintsSetup.swift */,
+				DB35BAFEC23EE57EE863360EFA06F062 /* ImageGalleryView.swift */,
+				DF2EF8DB35AE5FFDFF9C430D1389E62D /* ImageGalleryViewCell.swift */,
+				A5CD0437E43253E7778CEA9534F9B277 /* ImageGalleryViewDataSource.swift */,
+				2E53DA520DB4BBBAABE6AAF55CDD4132 /* ImagePickerController.swift */,
+				1BC351F22AF2704BF81DF7A67F386E4C /* ImageStack.swift */,
+				840B7FF004643DA9E9E418A9764EAB79 /* LocationManager.swift */,
+				E3907169D771E01245E5DC2822ADFCAF /* Photos.swift */,
+				8023DA3DCA90F759D751DAAD3FAFFA7B /* StackView.swift */,
+				04188B3789F5A5C4FD5485B19F33BF4C /* TopView.swift */,
+				48C229EEE5B84D1349CED48105119A04 /* Resources */,
+				CE7B9FAC7C154BE440F727019245CEC0 /* Support Files */,
+			);
+			path = ImagePicker;
+			sourceTree = "<group>";
+		};
+		F03814193283FB095AAD85AD295F92E6 /* GoogleInterchangeUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				DB845F4283E30C825827A1FA325AB785 /* Frameworks */,
+			);
+			path = GoogleInterchangeUtilities;
+			sourceTree = "<group>";
+		};
+		FC4AF349D475AED7BB965C6E7C308558 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61722BB16205D7327C4AA20734A6AE2E /* GoogleUtilities.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -377,11 +526,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		609D3204587B4E9E56983D14B5A859A8 /* Headers */ = {
+		71721D18C85513A946191DF1A4F8C051 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49EA72FF2FD7D32C0A9C16DF0AB8AB35 /* Pods-FocoUnlocked-umbrella.h in Headers */,
+				C2E2155964135338AD1560A1B0468301 /* Pods-FocoUnlocked-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADFA583CCEAA7886CBCD43AC841C5D40 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				060864D2A7732E951A02C663538EBBF5 /* ImagePicker-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,22 +561,59 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		31D32C21ADCE3CB47437CEDB1034964B /* Pods-FocoUnlocked */ = {
+		43D58F729069751B692E8180CEE7611A /* Pods-FocoUnlocked */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AD7F19C8C8751953DD6E3EFA0792F130 /* Build configuration list for PBXNativeTarget "Pods-FocoUnlocked" */;
+			buildConfigurationList = 68333773F603A29749D3FBA7BC0C95E5 /* Build configuration list for PBXNativeTarget "Pods-FocoUnlocked" */;
 			buildPhases = (
-				EFE50DC71955C3F235290D2198479B8A /* Sources */,
-				0753EBDF5CDB0D88EAAA431B0977BA66 /* Frameworks */,
-				609D3204587B4E9E56983D14B5A859A8 /* Headers */,
+				EAA500D0EE7EA62CE238752BEEC1081A /* Sources */,
+				FA42EA464C824667788D6A80D58FB268 /* Frameworks */,
+				71721D18C85513A946191DF1A4F8C051 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23A6EA61CDE8987558E94B411B1E9218 /* PBXTargetDependency */,
+			);
+			name = "Pods-FocoUnlocked";
+			productName = "Pods-FocoUnlocked";
+			productReference = 52F5051AFDECCF247A3A93560AAFE242 /* Pods_FocoUnlocked.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9F0C00D382F5E8DDCDB2C3728E9E677E /* ImagePicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0C531062AD962A0D8889A3CDB70A855 /* Build configuration list for PBXNativeTarget "ImagePicker" */;
+			buildPhases = (
+				97BCF24D17EABF47EB0D2D37D5EFD2C7 /* Sources */,
+				847051A1FB3A0934A31E19B6EE94CE5E /* Frameworks */,
+				1F8C0155ACD2DBA2728FCB8631FC57E0 /* Resources */,
+				ADFA583CCEAA7886CBCD43AC841C5D40 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA4A75FDC1AC0C4B1C43F3F242F17F8C /* PBXTargetDependency */,
+			);
+			name = ImagePicker;
+			productName = ImagePicker;
+			productReference = 64EAD9E5401EFA5D20693F3AFD94816E /* ImagePicker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A2330A8237B9F93884A5FC77CE29B114 /* ImagePicker-ImagePicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF2DB27D1C123303411CD6BEA758947C /* Build configuration list for PBXNativeTarget "ImagePicker-ImagePicker" */;
+			buildPhases = (
+				90194B09F164919F1ACA3811F5A53A81 /* Sources */,
+				54EB1BD60A909A51B72683E3BD35CE50 /* Frameworks */,
+				78305F20F41E5BD7A761C558223F91AD /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-FocoUnlocked";
-			productName = "Pods-FocoUnlocked";
-			productReference = CFC88F8BA183B9A72A06815A179404B0 /* Pods_FocoUnlocked.framework */;
-			productType = "com.apple.product-type.framework";
+			name = "ImagePicker-ImagePicker";
+			productName = "ImagePicker-ImagePicker";
+			productReference = ABB3F671C0097BA9D963A23E111DE23C /* ImagePicker.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 		A5CA57C31FEFFB822F175876B5FEA9CE /* Pods-FocoUnlockedUITests */ = {
 			isa = PBXNativeTarget;
@@ -435,7 +629,7 @@
 			);
 			name = "Pods-FocoUnlockedUITests";
 			productName = "Pods-FocoUnlockedUITests";
-			productReference = 25571B851F6D36AD575E982AC0B964F5 /* Pods_FocoUnlockedUITests.framework */;
+			productReference = 1521DD6C12D7D288BD8032FC4FAE20DA /* Pods_FocoUnlockedUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B3DC273DEEACDE77D642B4EECB37F7DC /* Pods-FocoUnlockedTests */ = {
@@ -452,7 +646,7 @@
 			);
 			name = "Pods-FocoUnlockedTests";
 			productName = "Pods-FocoUnlockedTests";
-			productReference = 6578BADED2B493E0997BE47F9D945842 /* Pods_FocoUnlockedTests.framework */;
+			productReference = 7FDBEFD419257DA277A8C22C122BF286 /* Pods_FocoUnlockedTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -472,16 +666,42 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = D79DE52721B86BCA013F9EE31B76CFF0 /* Products */;
+			productRefGroup = AC549FE6378E88F7E377F12BFD137D08 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				31D32C21ADCE3CB47437CEDB1034964B /* Pods-FocoUnlocked */,
+				9F0C00D382F5E8DDCDB2C3728E9E677E /* ImagePicker */,
+				A2330A8237B9F93884A5FC77CE29B114 /* ImagePicker-ImagePicker */,
+				43D58F729069751B692E8180CEE7611A /* Pods-FocoUnlocked */,
 				B3DC273DEEACDE77D642B4EECB37F7DC /* Pods-FocoUnlockedTests */,
 				A5CA57C31FEFFB822F175876B5FEA9CE /* Pods-FocoUnlockedUITests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F8C0155ACD2DBA2728FCB8631FC57E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0078EBB196D3EF781E1ACED990D67D8 /* ImagePicker.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78305F20F41E5BD7A761C558223F91AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				284F9E461543D796BC913BAB6D5871DC /* AUTO@3x.png in Resources */,
+				8ED4DC45170F6EEC8FF3DED8B4EA72D0 /* cameraIcon@3x.png in Resources */,
+				30A8BF338E6A3EAC42CAE9186FA9B456 /* focusIcon@3x.png in Resources */,
+				9F15B34051C090598ED3BEFAD32446E6 /* OFF@3x.png in Resources */,
+				6945E579797448565C6F3425CA9273D8 /* ON@3x.png in Resources */,
+				535167608BAE835E5A79D5865ABB841B /* selectedImageGallery@3x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3A3E1E3BF9836847571FB98C18F207F7 /* Sources */ = {
@@ -492,11 +712,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EFE50DC71955C3F235290D2198479B8A /* Sources */ = {
+		90194B09F164919F1ACA3811F5A53A81 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				999B7FF43BA1F02B354AECB5F3B5791A /* Pods-FocoUnlocked-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97BCF24D17EABF47EB0D2D37D5EFD2C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B802929FDFA52938E3EDC3B8B80BE11C /* AssetManager.swift in Sources */,
+				7BFB0E10EA29D2892238CB519870C900 /* BottomContainerView.swift in Sources */,
+				CAA0D0A98092E29889098023B9344886 /* ButtonPicker.swift in Sources */,
+				F618BC1003236B67EAC2EE9312DCA0F8 /* CameraMan.swift in Sources */,
+				0EA57C60A30C23191BCE41556ACB3A54 /* CameraView.swift in Sources */,
+				26717F7117B534AE1EEB09E1D57C9F5D /* Configuration.swift in Sources */,
+				2F5772A876F2058C2076DE6C90ACF551 /* ConstraintsSetup.swift in Sources */,
+				DB433C97942067D20B96FAB0843D71D0 /* ImageGalleryView.swift in Sources */,
+				ECA1D2FC59A06E454AF758F131E6821D /* ImageGalleryViewCell.swift in Sources */,
+				1EA6B1CDF30B44736630F0298975EA6E /* ImageGalleryViewDataSource.swift in Sources */,
+				6C7711ED29864698EA27F30045B2BD88 /* ImagePicker-dummy.m in Sources */,
+				4F1C602737AE81A2558D9B176AB122B7 /* ImagePickerController.swift in Sources */,
+				A1F03EB504299A5CA2F0F9F91F686159 /* ImageStack.swift in Sources */,
+				FB5D1DDD54A3B0DCD4CA5F967F7A9EAA /* LocationManager.swift in Sources */,
+				28AB80ED69A04E88C91D8CCBE62A735A /* Photos.swift in Sources */,
+				0E618E51E0DE43A78252D09E9B091CF7 /* StackView.swift in Sources */,
+				2997DAF7F84F8956DDEE4EDD66FC7CFC /* TopView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAA500D0EE7EA62CE238752BEEC1081A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A8201D7847ACD63C06188EC4D480106 /* Pods-FocoUnlocked-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,7 +761,55 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		23A6EA61CDE8987558E94B411B1E9218 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ImagePicker;
+			target = 9F0C00D382F5E8DDCDB2C3728E9E677E /* ImagePicker */;
+			targetProxy = 1C49BDB4EC9846A9992F0C4262198015 /* PBXContainerItemProxy */;
+		};
+		FA4A75FDC1AC0C4B1C43F3F242F17F8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ImagePicker-ImagePicker";
+			target = A2330A8237B9F93884A5FC77CE29B114 /* ImagePicker-ImagePicker */;
+			targetProxy = 75FCE1ADEB61DCEFE1AFED460EBA8467 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		115B0EB2CE41458E738C8B45B17BBE8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F16B761D7DC4F94E9A21717C1A38F45 /* Pods-FocoUnlocked.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FocoUnlocked/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FocoUnlocked/Pods-FocoUnlocked.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FocoUnlocked;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		1786D85C2B7A3293CE8CE7E482430378 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0FB87E8C3E879A829E538D4D0B966572 /* Pods-FocoUnlockedTests.debug.xcconfig */;
@@ -544,6 +843,35 @@
 			};
 			name = Debug;
 		};
+		344C83789BBBA58501B3CFB47A1EC8CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11B79AB23A187DEE80602882FFF43CB7 /* ImagePicker.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ImagePicker/ImagePicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ImagePicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ImagePicker/ImagePicker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ImagePicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		422124CFC68CDEFDB1080D54160B0E7B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9A9824F10226210900F04E6E80B9270A /* Pods-FocoUnlockedUITests.debug.xcconfig */;
@@ -574,6 +902,23 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		42E8D0C730792A0602A83D970A37437F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11B79AB23A187DEE80602882FFF43CB7 /* ImagePicker.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ImagePicker";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/ImagePicker/ResourceBundle-ImagePicker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = ImagePicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
@@ -652,7 +997,37 @@
 			};
 			name = Debug;
 		};
-		AE7DA73AC70B339C0DC6136648402012 /* Debug */ = {
+		AE2E17C87F02F103BC6B8BCDE5738D4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11B79AB23A187DEE80602882FFF43CB7 /* ImagePicker.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ImagePicker/ImagePicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ImagePicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ImagePicker/ImagePicker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ImagePicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C2A09BE4897A920903F9B48F82CDD1E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 83419E5D5754AFBCAEC93C47C2617BBC /* Pods-FocoUnlocked.debug.xcconfig */;
 			buildSettings = {
@@ -679,6 +1054,7 @@
 				PRODUCT_NAME = Pods_FocoUnlocked;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -718,36 +1094,20 @@
 			};
 			name = Release;
 		};
-		EBAF11BDFC26AEB1CA285B23DDDFF2CB /* Release */ = {
+		E1723186626589FDF3C90C424ABC079C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F16B761D7DC4F94E9A21717C1A38F45 /* Pods-FocoUnlocked.release.xcconfig */;
+			baseConfigurationReference = 11B79AB23A187DEE80602882FFF43CB7 /* ImagePicker.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ImagePicker";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-FocoUnlocked/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-FocoUnlocked/Pods-FocoUnlocked.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_FocoUnlocked;
+				INFOPLIST_FILE = "Target Support Files/ImagePicker/ResourceBundle-ImagePicker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = ImagePicker;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -801,6 +1161,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		68333773F603A29749D3FBA7BC0C95E5 /* Build configuration list for PBXNativeTarget "Pods-FocoUnlocked" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2A09BE4897A920903F9B48F82CDD1E2 /* Debug */,
+				115B0EB2CE41458E738C8B45B17BBE8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A4611278403D9C16B697B581AAE3BB92 /* Build configuration list for PBXNativeTarget "Pods-FocoUnlockedUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -810,11 +1179,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AD7F19C8C8751953DD6E3EFA0792F130 /* Build configuration list for PBXNativeTarget "Pods-FocoUnlocked" */ = {
+		BF2DB27D1C123303411CD6BEA758947C /* Build configuration list for PBXNativeTarget "ImagePicker-ImagePicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AE7DA73AC70B339C0DC6136648402012 /* Debug */,
-				EBAF11BDFC26AEB1CA285B23DDDFF2CB /* Release */,
+				42E8D0C730792A0602A83D970A37437F /* Debug */,
+				E1723186626589FDF3C90C424ABC079C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0C531062AD962A0D8889A3CDB70A855 /* Build configuration list for PBXNativeTarget "ImagePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE2E17C87F02F103BC6B8BCDE5738D4C /* Debug */,
+				344C83789BBBA58501B3CFB47A1EC8CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

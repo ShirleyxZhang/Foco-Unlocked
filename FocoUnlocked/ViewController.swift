@@ -10,8 +10,9 @@
 
 import UIKit
 import Firebase
+import ImagePicker
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate, ImagePickerDelegate{
     
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var settingsButton: UIButton!
@@ -91,36 +92,31 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // Function to open the Camera Button
     @IBAction func openCameraButton(sender: AnyObject) {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera;
-            imagePicker.allowsEditing = true
-            self.presentViewController(imagePicker, animated: true, completion: nil)
-        }
+        let imagePickerController = ImagePickerController()
+        imagePickerController.imageLimit = 1
+        Configuration.doneButtonTitle = "Done"
+        Configuration.noImagesTitle = "Sorry! There are no images here!"
+        imagePickerController.delegate = self
+        presentViewController(imagePickerController, animated: true, completion: nil)
     }
     
-    // Function to open the Photo Library
-    @IBAction func openPhotoLibraryButton(sender: AnyObject) {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary;
-            imagePicker.allowsEditing = true
-            self.presentViewController(imagePicker, animated: true, completion: nil)
-        }
+    // Function called when user selects wrapper image
+    func wrapperDidPress( images: [UIImage]) {
+        print("Wrapper Did Press")
     }
     
-    // Function to choose an image from the Photo Library
-    /*func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        //photoImageView.image = UIImageJPEGRepresentation(imagePicked.image, 0.6)
-        //photoImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
-        self.dismissViewControllerAnimated(false, completion: nil)
-    }*/
+    // Function called when user selects the done button
+    func doneButtonDidPress(images: [UIImage]) {
+        print("Done Button Did Press")
+        // Might not have the images
+        photoImageView.image = images[0]
+        dismissViewControllerAnimated(true, completion: nil)
+        
+    }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
-        photoImageView.image = image
-        self.dismissViewControllerAnimated(true, completion: nil);
+    // Function called when the suer selects the cancel button
+    func cancelButtonDidPress() {
+        print("Cancel Button Did Press")
     }
     
     // Keyboard goes away after you tap somewhere else

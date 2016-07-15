@@ -159,7 +159,7 @@
         <scene sceneID="rBm-m9-nbB">
             <objects>
                 <tableViewController title="Feed" id="ZZw-mG-EQ9" customClass="MealTableViewController" customModule="FocoUnlocked" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="397" sectionHeaderHeight="28" sectionFooterHeight="28" id="88J-hV-DnQ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="397" sectionHeaderHeight="28" sectionFooterHeight="28" id="88J-hV-DnQ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="550"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -255,6 +255,9 @@
                     </tableView>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="550"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="ffA-Kj-s5T">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bg8-vO-d5w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -753,22 +756,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNG-2i-B7H">
-                                <rect key="frame" x="49" y="325" width="63" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNG-2i-B7H">
+                                <rect key="frame" x="462" y="325" width="80" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <color key="tintColor" red="1" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Camera"/>
+                                <state key="normal" title="New Image"/>
                                 <connections>
                                     <action selector="openCameraButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Mz-O1-qvd"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rW8-k0-tyx">
-                                <rect key="frame" x="485" y="325" width="53" height="30"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <color key="tintColor" red="1" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Gallery"/>
-                                <connections>
-                                    <action selector="openPhotoLibraryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jg9-5h-Zmd"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Item Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SCM-C0-QEN">
@@ -785,7 +779,7 @@
                         <constraints>
                             <constraint firstItem="SZ2-BA-2Bl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="100" id="1Px-73-5h9"/>
                             <constraint firstItem="z5K-q6-Djy" firstAttribute="top" secondItem="Zb6-ry-Hy6" secondAttribute="bottom" constant="8" id="2Le-iX-svt"/>
-                            <constraint firstItem="rW8-k0-tyx" firstAttribute="baseline" secondItem="jNG-2i-B7H" secondAttribute="baseline" id="E7y-5w-L9o"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jNG-2i-B7H" secondAttribute="trailing" constant="38" id="2gR-x5-TOo"/>
                             <constraint firstItem="SCM-C0-QEN" firstAttribute="top" secondItem="sUj-vo-wK3" secondAttribute="bottom" constant="2" id="Fja-e2-FPs"/>
                             <constraint firstItem="25g-b4-sWJ" firstAttribute="top" secondItem="nSX-SP-C1T" secondAttribute="bottom" constant="4" id="HMZ-cx-Xjj"/>
                             <constraint firstItem="Zb6-ry-Hy6" firstAttribute="top" secondItem="4yI-Ws-h2f" secondAttribute="bottom" constant="1" id="JB1-HX-0Gs"/>
@@ -796,7 +790,6 @@
                             <constraint firstItem="jNG-2i-B7H" firstAttribute="top" secondItem="SZ2-BA-2Bl" secondAttribute="bottom" constant="3" id="RTK-Vg-8yk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nSX-SP-C1T" secondAttribute="trailing" constant="-10" id="SmL-ez-hLG"/>
                             <constraint firstItem="Zb6-ry-Hy6" firstAttribute="centerX" secondItem="sUj-vo-wK3" secondAttribute="centerX" id="URv-2e-Zyk"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rW8-k0-tyx" secondAttribute="trailing" constant="42" id="XaB-H7-V3F"/>
                             <constraint firstItem="25g-b4-sWJ" firstAttribute="top" secondItem="z5K-q6-Djy" secondAttribute="bottom" constant="23" id="Xzv-3Z-IVr"/>
                             <constraint firstItem="SZ2-BA-2Bl" firstAttribute="top" secondItem="SCM-C0-QEN" secondAttribute="bottom" constant="3" id="Zbk-N1-L8Y"/>
                             <constraint firstItem="SZ2-BA-2Bl" firstAttribute="leading" secondItem="SCM-C0-QEN" secondAttribute="leading" constant="-11" id="aDL-MK-rfv"/>
@@ -812,7 +805,6 @@
                             <constraint firstItem="Zb6-ry-Hy6" firstAttribute="leading" secondItem="4yI-Ws-h2f" secondAttribute="leading" id="u0F-2p-IbA"/>
                             <constraint firstItem="z5K-q6-Djy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-9" id="vXX-kg-kvF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NF7-i7-XQi" secondAttribute="trailing" constant="-10" id="vbQ-Zd-Q3S"/>
-                            <constraint firstItem="jNG-2i-B7H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="29" id="zAb-I4-exb"/>
                         </constraints>
                     </view>
                     <connections>

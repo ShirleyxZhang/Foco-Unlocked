@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ImagePicker-ImagePicker.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ImagePicker.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-FocoUnlocked.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,7 +32,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>31D32C21ADCE3CB47437CEDB1034964B</key>
+		<key>43D58F729069751B692E8180CEE7611A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9F0C00D382F5E8DDCDB2C3728E9E677E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A2330A8237B9F93884A5FC77CE29B114</key>
 		<dict>
 			<key>primary</key>
 			<true/>

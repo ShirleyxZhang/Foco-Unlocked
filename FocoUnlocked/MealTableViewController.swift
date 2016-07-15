@@ -31,7 +31,19 @@ class MealTableViewController: UITableViewController {
         super.viewDidLoad()
         
         // Loads all the posts from the database
+        self.refreshControl?.addTarget(self, action: "handleRefresh:", forControlEvents: UIControlEvents.ValueChanged)
         loadMeals()
+    }
+    
+    func handleRefresh(refreshControl: UIRefreshControl) {
+        // Do some reloading of data and update the table view's data source
+        // Fetch more objects from a web service, for example...
+        
+        // Simply adding an object to the data source for this example
+        loadMeals()
+        
+        self.tableView.reloadData()
+        refreshControl.endRefreshing()
     }
     
     // Loads all the posts from the database
