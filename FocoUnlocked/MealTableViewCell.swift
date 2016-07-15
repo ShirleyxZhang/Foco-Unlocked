@@ -150,13 +150,13 @@ class MealTableViewCell: UITableViewCell {
         let bitesNumberString = value
         var bitesNumber:Int = Int(bitesNumberString as! String)!
         bitesNumber = bitesNumber - 1
-        self.usersRef.child("users").child("\(userEmail)").child("Points").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+        self.usersRef.child("users").child("\(userEmail)").child("Likes").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
             if (!(snapshot.value is NSNull)) {
                 var pointsNumberString = Int(snapshot.value! as! String)
                 if (pointsNumberString > 0) {
                     pointsNumberString = pointsNumberString! - 1
                 }
-                self.usersRef.child("users").child("\(userEmail)").child("Points").setValue(String(pointsNumberString!))
+                self.usersRef.child("users").child("\(userEmail)").child("Likes").setValue(String(pointsNumberString!))
             }
         })
         self.ref.child("posts").child(self.idString).child("Bites Number").setValue(String(bitesNumber))
@@ -166,11 +166,11 @@ class MealTableViewCell: UITableViewCell {
         let bitesNumberString = value
         var bitesNumber:Int = Int(bitesNumberString as! String)!
         bitesNumber = bitesNumber + 1
-        self.usersRef.child("users").child("\(userEmail)").child("Points").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+        self.usersRef.child("users").child("\(userEmail)").child("Likes").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
             if (!(snapshot.value is NSNull)) {
                 var pointsNumberString = Int(snapshot.value! as! String)
                 pointsNumberString = pointsNumberString! + 1
-                self.usersRef.child("users").child("\(userEmail)").child("Points").setValue(String(pointsNumberString!))
+                self.usersRef.child("users").child("\(userEmail)").child("Likes").setValue(String(pointsNumberString!))
             }
         })
         self.ref.child("posts").child(self.idString).child("Bites Number").setValue(String(bitesNumber))

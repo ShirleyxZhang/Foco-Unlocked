@@ -51,7 +51,6 @@
 		88F77B411D110DFA003B88A2 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F77B401D110DFA003B88A2 /* FeedController.swift */; };
 		88F77B451D1619C7003B88A2 /* SidebarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F77B441D1619C7003B88A2 /* SidebarTableViewController.swift */; };
 		88F77B471D1769F8003B88A2 /* first_user.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F77B461D1769F8003B88A2 /* first_user.png */; };
-		88F77B4B1D176B98003B88A2 /* feedback.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F77B4A1D176B98003B88A2 /* feedback.png */; };
 		88F77B4D1D176BEF003B88A2 /* feedback.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F77B4C1D176BEF003B88A2 /* feedback.png */; };
 /* End PBXBuildFile section */
 
@@ -357,7 +356,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Sudikoff Lab iMac";
 				TargetAttributes = {
 					8862866D1CF693B9007D8C94 = {
@@ -419,7 +418,6 @@
 				886CA0811CF7D31800C58372 /* GoogleService-Info.plist in Resources */,
 				886286BC1CF694F7007D8C94 /* filled cookie.png in Resources */,
 				88C71FEC1D054BCD002E26C9 /* menu_dark.png in Resources */,
-				88F77B4B1D176B98003B88A2 /* feedback.png in Resources */,
 				886286A31CF694A9007D8C94 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
