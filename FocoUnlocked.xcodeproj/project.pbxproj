@@ -34,6 +34,7 @@
 		886286C81CF694F7007D8C94 /* UpvoteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286B51CF694F7007D8C94 /* UpvoteButton.swift */; };
 		886286C91CF694F7007D8C94 /* UpvoteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286B61CF694F7007D8C94 /* UpvoteControl.swift */; };
 		886CA0811CF7D31800C58372 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 886CA0801CF7D31800C58372 /* GoogleService-Info.plist */; };
+		88A334E21D3887BC0043C556 /* RefreshContents.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88A334E11D3887BC0043C556 /* RefreshContents.xib */; };
 		88C71FEC1D054BCD002E26C9 /* menu_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C71FE81D054BCD002E26C9 /* menu_dark.png */; };
 		88C71FED1D054BCD002E26C9 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C71FE91D054BCD002E26C9 /* menu.png */; };
 		88C71FEE1D054BCD002E26C9 /* namefinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C71FEA1D054BCD002E26C9 /* namefinal.png */; };
@@ -104,6 +105,7 @@
 		886286B51CF694F7007D8C94 /* UpvoteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpvoteButton.swift; sourceTree = "<group>"; };
 		886286B61CF694F7007D8C94 /* UpvoteControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpvoteControl.swift; sourceTree = "<group>"; };
 		886CA0801CF7D31800C58372 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		88A334E11D3887BC0043C556 /* RefreshContents.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RefreshContents.xib; path = ../Pods/RefreshContents.xib; sourceTree = "<group>"; };
 		88C71FE81D054BCD002E26C9 /* menu_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_dark.png; sourceTree = "<group>"; };
 		88C71FE91D054BCD002E26C9 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		88C71FEA1D054BCD002E26C9 /* namefinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = namefinal.png; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				886286B51CF694F7007D8C94 /* UpvoteButton.swift */,
 				886286B61CF694F7007D8C94 /* UpvoteControl.swift */,
 				886286781CF693B9007D8C94 /* Assets.xcassets */,
+				88A334E11D3887BC0043C556 /* RefreshContents.xib */,
 				8862867A1CF693B9007D8C94 /* LaunchScreen.storyboard */,
 				8862867D1CF693B9007D8C94 /* Info.plist */,
 				88F77B3C1D10EA8A003B88A2 /* FocoUnlocked-Bridging-Header.h */,
@@ -391,6 +394,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88A334E21D3887BC0043C556 /* RefreshContents.xib in Resources */,
 				8862867C1CF693B9007D8C94 /* LaunchScreen.storyboard in Resources */,
 				88F77B471D1769F8003B88A2 /* first_user.png in Resources */,
 				886286C71CF694F7007D8C94 /* unfilled cookie.png in Resources */,

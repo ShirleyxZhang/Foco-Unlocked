@@ -14,6 +14,10 @@ import Firebase
 class MealTableViewController: UITableViewController {
     
     @IBOutlet weak var upvoteButton: UpvoteButton!
+    
+    var customView: UIView!
+    
+    var timer: NSTimer!
 
     var meals = [Meal]()
     var titles = [String]()
@@ -45,6 +49,7 @@ class MealTableViewController: UITableViewController {
         self.tableView.reloadData()
         refreshControl.endRefreshing()
     }
+    
     
     // Loads all the posts from the database
     func loadMeals() {
