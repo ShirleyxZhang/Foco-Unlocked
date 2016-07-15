@@ -36,6 +36,7 @@
 		886CA0811CF7D31800C58372 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 886CA0801CF7D31800C58372 /* GoogleService-Info.plist */; };
 		88A334E21D3887BC0043C556 /* RefreshContents.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88A334E11D3887BC0043C556 /* RefreshContents.xib */; };
 		88A334E41D389D0D0043C556 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A334E31D389D0D0043C556 /* MapKit.framework */; };
+		88A334EA1D39656E0043C556 /* ios in Resources */ = {isa = PBXBuildFile; fileRef = 88A334E91D39656E0043C556 /* ios */; };
 		88C71FEC1D054BCD002E26C9 /* menu_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C71FE81D054BCD002E26C9 /* menu_dark.png */; };
 		88C71FED1D054BCD002E26C9 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C71FE91D054BCD002E26C9 /* menu.png */; };
 		88C71FEE1D054BCD002E26C9 /* namefinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C71FEA1D054BCD002E26C9 /* namefinal.png */; };
@@ -108,6 +109,7 @@
 		886CA0801CF7D31800C58372 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		88A334E11D3887BC0043C556 /* RefreshContents.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RefreshContents.xib; path = ../Pods/RefreshContents.xib; sourceTree = "<group>"; };
 		88A334E31D389D0D0043C556 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		88A334E91D39656E0043C556 /* ios */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ios; sourceTree = "<group>"; };
 		88C71FE81D054BCD002E26C9 /* menu_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_dark.png; sourceTree = "<group>"; };
 		88C71FE91D054BCD002E26C9 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		88C71FEA1D054BCD002E26C9 /* namefinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = namefinal.png; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 		88C71FF21D07470D002E26C9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				88A334E91D39656E0043C556 /* ios */,
 				88F77B461D1769F8003B88A2 /* first_user.png */,
 				88F77B4A1D176B98003B88A2 /* feedback.png */,
 				88C71FF91D093586002E26C9 /* user.png */,
@@ -412,6 +415,7 @@
 				88C71FEE1D054BCD002E26C9 /* namefinal.png in Resources */,
 				88D174EF1D2A39C8006284A7 /* edit.png in Resources */,
 				886286791CF693B9007D8C94 /* Assets.xcassets in Resources */,
+				88A334EA1D39656E0043C556 /* ios in Resources */,
 				886CA0811CF7D31800C58372 /* GoogleService-Info.plist in Resources */,
 				886286BC1CF694F7007D8C94 /* filled cookie.png in Resources */,
 				88C71FEC1D054BCD002E26C9 /* menu_dark.png in Resources */,
