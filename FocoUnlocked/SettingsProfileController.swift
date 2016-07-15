@@ -21,6 +21,10 @@ class SettingsProfileController: UIViewController, UIImagePickerControllerDelega
     @IBOutlet weak var changeUserEmail: UIButton!
     @IBOutlet weak var userEmail: UILabel!
     
+    var imageData: NSData = NSData()
+    var decodeImageData: NSData = NSData()
+    var decodedImage: UIImage = UIImage()
+    
     let usersRef = FIRDatabase.database().reference()
     let user = FIRAuth.auth()?.currentUser
     
@@ -28,26 +32,34 @@ class SettingsProfileController: UIViewController, UIImagePickerControllerDelega
         
         super.viewDidAppear(animated)
         
-        profileImage!.layer.masksToBounds = false
-        profileImage!.layer.borderWidth = 1
-        profileImage!.layer.cornerRadius = profileImage.frame.size.width / 2
-        profileImage!.alpha = 0.3
-        //userImage!.backgroundColor = UIColor.lightGrayColor()
-        profileImage!.clipsToBounds = true
-        
-        if (self.revealViewController() != nil) {
-            settingsButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), forControlEvents: .TouchUpInside)
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
-        
         userEmail.text = user!.email!
         let usersEmail = user!.email!
         let email = usersEmail.componentsSeparatedByString(".")[0]
         
-        if (user?.photoURL == nil) {
-            profileImage.image = UIImage(named: "user.png")
-        } else if (user?.photoURL == nil) {
-            //profileImage.image = UIImage(data: NSData(contentsOfURL: (user?.photoURL)!)!)!
+        // Pulls up the profile image the user has
+        self.usersRef.child("users").child("\(email)").child("ProfileImage").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+            if (!(snapshot.value is NSNull)) {
+                self.profileImage!.layer.masksToBounds = false
+                self.profileImage!.layer.borderWidth = 1
+                self.profileImage!.layer.cornerRadius = self.profileImage.frame.size.width / 2
+                self.profileImage!.clipsToBounds = true
+                self.decodeImageData = NSData(base64EncodedString: snapshot.value as! String, options: NSDataBase64DecodingOptions.IgnoreUnknownCharacters)!
+                self.decodedImage = UIImage(data: self.decodeImageData)!
+                self.profileImage!.image = self.decodedImage
+            } else {
+                self.profileImage!.layer.masksToBounds = false
+                self.profileImage!.layer.borderWidth = 1
+                self.profileImage!.layer.cornerRadius = self.profileImage.frame.size.width / 2
+                self.profileImage!.alpha = 0.3
+                //userImage!.backgroundColor = UIColor.lightGrayColor()
+                self.profileImage!.clipsToBounds = true
+                self.profileImage.image = UIImage(named: "user.png")
+            }
+        })
+        
+        if (self.revealViewController() != nil) {
+            settingsButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), forControlEvents: .TouchUpInside)
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
         // Pulls up the number of Points the user has
@@ -98,7 +110,23 @@ class SettingsProfileController: UIViewController, UIImagePickerControllerDelega
     // Function called when user selects the done button
     func doneButtonDidPress(images: [UIImage]) {
         print("Done Button Did Press")
-        // Might not have the images
+        
+        let user = FIRAuth.auth()?.currentUser
+        
+        let usersEmail = user!.email!
+        let email = usersEmail.componentsSeparatedByString(".")[0]
+
+        self.imageData = UIImageJPEGRepresentation(images[0], 0.1)!
+        let base64String = imageData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength)
+        
+        self.usersRef.child("users").child("\(email)").child("ProfileImage").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+            if (!(snapshot.value is NSNull)) {
+                self.usersRef.child("users").child("\(email)").child("ProfileImage").setValue(String(base64String))
+            } else {
+                self.usersRef.child("users").child("\(email)").child("ProfileImage").setValue(String(base64String))
+            }
+        })
+        
         profileImage.image = images[0]
         dismissViewControllerAnimated(true, completion: nil)
         
@@ -107,6 +135,31 @@ class SettingsProfileController: UIViewController, UIImagePickerControllerDelega
     // Function called when the suer selects the cancel button
     func cancelButtonDidPress() {
         print("Cancel Button Did Press")
+    }
+    
+    @IBAction func deleteAccount(sender: AnyObject) {
+        var user = FIRAuth.auth()?.currentUser
+        
+        let deleteAccount = { (action: UIAlertAction!) -> Void in
+            user?.deleteWithCompletion { error in
+                if let error = error {
+                    let alertController = UIAlertController(title: "Error Occured", message:
+                        "Not able to delete the account", preferredStyle: UIAlertControllerStyle.Alert)
+                    alertController.addAction(UIAlertAction(title: "Ok", style: .Cancel, handler: nil))
+                } else {
+                    let alertController = UIAlertController(title: "Deletion Successful", message:
+                        "You account has been deleted", preferredStyle: UIAlertControllerStyle.Alert)
+                    alertController.addAction(UIAlertAction(title: "Ok", style: .Cancel, handler: nil))
+                }
+            }
+        }
+        let alertController = UIAlertController(title: "Delete Account", message:
+            "Are your sure you want to delete your account?", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "No", style: .Cancel, handler: nil))
+        alertController.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default, handler: deleteAccount))
+        self.presentViewController(alertController, animated: true, completion: nil)
+        print("Step back")
+        
     }
     
     // Function to take the user back to the previous page
