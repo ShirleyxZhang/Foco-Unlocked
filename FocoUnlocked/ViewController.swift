@@ -273,8 +273,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         let alertController = UIAlertController(title: "Discard Post", message:
         "Are your sure you want to give up on your creation?", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "No", style: .Cancel, handler: nil))
             alertController.addAction(UIAlertAction(title: "Discard", style: UIAlertActionStyle.Default, handler: discardView))
-            alertController.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default,handler: nil))
         self.presentViewController(alertController, animated: true, completion: nil)
             print("Step back")
         

@@ -35,6 +35,7 @@
 		886286C91CF694F7007D8C94 /* UpvoteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286B61CF694F7007D8C94 /* UpvoteControl.swift */; };
 		886CA0811CF7D31800C58372 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 886CA0801CF7D31800C58372 /* GoogleService-Info.plist */; };
 		88A334E21D3887BC0043C556 /* RefreshContents.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88A334E11D3887BC0043C556 /* RefreshContents.xib */; };
+		88A334E41D389D0D0043C556 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A334E31D389D0D0043C556 /* MapKit.framework */; };
 		88C71FEC1D054BCD002E26C9 /* menu_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C71FE81D054BCD002E26C9 /* menu_dark.png */; };
 		88C71FED1D054BCD002E26C9 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C71FE91D054BCD002E26C9 /* menu.png */; };
 		88C71FEE1D054BCD002E26C9 /* namefinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C71FEA1D054BCD002E26C9 /* namefinal.png */; };
@@ -106,6 +107,7 @@
 		886286B61CF694F7007D8C94 /* UpvoteControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpvoteControl.swift; sourceTree = "<group>"; };
 		886CA0801CF7D31800C58372 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		88A334E11D3887BC0043C556 /* RefreshContents.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RefreshContents.xib; path = ../Pods/RefreshContents.xib; sourceTree = "<group>"; };
+		88A334E31D389D0D0043C556 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		88C71FE81D054BCD002E26C9 /* menu_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_dark.png; sourceTree = "<group>"; };
 		88C71FE91D054BCD002E26C9 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		88C71FEA1D054BCD002E26C9 /* namefinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = namefinal.png; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88A334E41D389D0D0043C556 /* MapKit.framework in Frameworks */,
 				5B58055E39DA5D2405E6EC5C /* Pods_FocoUnlocked.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +275,7 @@
 		E95CF68BA001D4CA08F03574 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				88A334E31D389D0D0043C556 /* MapKit.framework */,
 				CB54249EEBAC7CB77F9A2573 /* Pods_FocoUnlocked.framework */,
 				8A55E4355A293416EFA7A280 /* Pods_FocoUnlockedTests.framework */,
 				4017D2019F3DF21AA64775D5 /* Pods_FocoUnlockedUITests.framework */,

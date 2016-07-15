@@ -14,10 +14,6 @@ import Firebase
 class MealTableViewController: UITableViewController {
     
     @IBOutlet weak var upvoteButton: UpvoteButton!
-    
-    var customView: UIView!
-    
-    var timer: NSTimer!
 
     var meals = [Meal]()
     var titles = [String]()
