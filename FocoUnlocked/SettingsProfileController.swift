@@ -12,6 +12,8 @@ import Firebase
 
 class SettingsProfileController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     
+    @IBOutlet weak var numberOfPosts: UILabel!
+    @IBOutlet weak var numberOfLikes: UILabel!
     @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var pointsNumber: UILabel!
@@ -50,6 +52,16 @@ class SettingsProfileController: UIViewController, UIImagePickerControllerDelega
         self.usersRef.child("users").child("\(email)").child("Points").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
             if (!(snapshot.value is NSNull)) {
                 self.pointsNumber.text = snapshot.value! as? String
+            } else {
+                self.pointsNumber.text = "0"
+            }
+        })
+        
+        self.usersRef.child("users").child("\(email)").child("Posts").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+            if (!(snapshot.value is NSNull)) {
+                self.numberOfPosts.text = "Number of Posts: \(snapshot.value! as! String)"
+            } else {
+                self.numberOfPosts.text = "Number of Posts: 0"
             }
         })
     

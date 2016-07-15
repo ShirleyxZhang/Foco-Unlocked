@@ -184,6 +184,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     }
                     let newPost: Post = Post(user: author, title: itemName.text!, description: itemDesc.text!, image: base64String, tagsString: itemTags.text!)
                     postsList.append(newPost)
+                    Posts.child("users").child("\(userEmail)").child("Posts").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+                        if (!(snapshot.value is NSNull)) {
+                            var pointsNumberString = Int(snapshot.value! as! String)
+                            pointsNumberString = pointsNumberString! + 1
+                            self.usersRef.child("users").child("\(userEmail)").child("Posts").setValue(String(pointsNumberString!))
+                        } else {
+                            let pointsNumberString : String! = "1"
+                            self.usersRef.child("users").child("\(userEmail)").child("Posts").setValue(pointsNumberString)
+                        }
+                    })
                     Posts.child("posts").child(newPost.getIdString()).setValue(newPost.toArray())
                     
                     let alertController = UIAlertController(title: "Successful Upload", message:

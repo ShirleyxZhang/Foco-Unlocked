@@ -864,7 +864,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6E6-3h-PC0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6E6-3h-PC0">
                                 <rect key="frame" x="87" y="198" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -911,18 +911,26 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of Posts: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Yc-2j-Sjw">
-                                <rect key="frame" x="14" y="269" width="138" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Posts: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Yc-2j-Sjw">
+                                <rect key="frame" x="20" y="272" width="138" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of Likes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5v-OO-8Oz">
-                                <rect key="frame" x="11" y="325" width="130" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Likes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5v-OO-8Oz">
+                                <rect key="frame" x="20" y="329" width="130" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WDJ-mx-RJ9">
+                                <rect key="frame" x="0.0" y="374" width="600" height="2"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="5S2-J1-CLO"/>
+                                    <constraint firstAttribute="height" constant="2" id="T0b-ao-qBk"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -931,23 +939,32 @@
                             <constraint firstItem="BQm-m3-e4o" firstAttribute="top" secondItem="6H7-qw-i3V" secondAttribute="bottom" constant="20" id="2R5-8O-pLf"/>
                             <constraint firstItem="NAI-sK-9A3" firstAttribute="trailing" secondItem="net-sN-u4R" secondAttribute="trailingMargin" id="9RC-AA-7DZ"/>
                             <constraint firstItem="LYW-oY-txW" firstAttribute="trailing" secondItem="net-sN-u4R" secondAttribute="trailingMargin" id="9fu-TV-zCf"/>
+                            <constraint firstItem="WDJ-mx-RJ9" firstAttribute="leading" secondItem="net-sN-u4R" secondAttribute="leading" id="AFM-zT-bt4"/>
+                            <constraint firstItem="6Yc-2j-Sjw" firstAttribute="top" secondItem="net-sN-u4R" secondAttribute="top" constant="272" id="Cwg-Dh-c7x"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Rw6-wh-Vcy" secondAttribute="trailing" constant="439" id="FOk-nM-uxg"/>
                             <constraint firstItem="LYW-oY-txW" firstAttribute="top" secondItem="dr4-6V-Iqn" secondAttribute="bottom" constant="25" id="GSc-Q5-cUl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bqA-7S-Gvc" secondAttribute="trailing" constant="18" id="IXh-pj-ntU"/>
                             <constraint firstItem="EvS-H1-0zb" firstAttribute="bottom" secondItem="6H7-qw-i3V" secondAttribute="bottom" id="Jql-eM-APk"/>
+                            <constraint firstItem="H5v-OO-8Oz" firstAttribute="top" secondItem="6Yc-2j-Sjw" secondAttribute="bottom" constant="36" id="Kf3-dj-Bcf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EvS-H1-0zb" secondAttribute="trailing" constant="-10" id="KoR-tA-BWv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JSE-zX-ywP" secondAttribute="trailing" constant="18" id="PHO-MC-SYd"/>
                             <constraint firstItem="NAI-sK-9A3" firstAttribute="top" secondItem="LYW-oY-txW" secondAttribute="bottom" constant="31" id="Q87-kL-P75"/>
                             <constraint firstItem="JHD-DW-Tkb" firstAttribute="leading" secondItem="net-sN-u4R" secondAttribute="leadingMargin" constant="33" id="VbY-Dv-ZHS"/>
+                            <constraint firstItem="6Yc-2j-Sjw" firstAttribute="top" secondItem="6E6-3h-PC0" secondAttribute="bottom" constant="53" id="XO1-Ks-4HC"/>
+                            <constraint firstItem="WDJ-mx-RJ9" firstAttribute="top" secondItem="H5v-OO-8Oz" secondAttribute="bottom" constant="24" id="ZCf-gB-c0E"/>
                             <constraint firstItem="JHD-DW-Tkb" firstAttribute="top" secondItem="Rw6-wh-Vcy" secondAttribute="bottom" constant="8" id="gjC-XQ-Mrp"/>
+                            <constraint firstItem="H5v-OO-8Oz" firstAttribute="centerX" secondItem="Rw6-wh-Vcy" secondAttribute="centerX" id="h2X-YP-9BI"/>
                             <constraint firstItem="Rw6-wh-Vcy" firstAttribute="top" secondItem="dr4-6V-Iqn" secondAttribute="bottom" constant="8" id="jSz-Ea-wGw"/>
                             <constraint firstItem="JSE-zX-ywP" firstAttribute="top" secondItem="LYW-oY-txW" secondAttribute="bottom" constant="7" id="nVU-by-DgJ"/>
+                            <constraint firstItem="6Yc-2j-Sjw" firstAttribute="leading" secondItem="H5v-OO-8Oz" secondAttribute="leading" id="qxh-s5-XCN"/>
                             <constraint firstItem="Rw6-wh-Vcy" firstAttribute="leading" secondItem="net-sN-u4R" secondAttribute="leadingMargin" constant="8" id="rtg-np-6rr"/>
                             <constraint firstItem="LYW-oY-txW" firstAttribute="leading" secondItem="Rw6-wh-Vcy" secondAttribute="trailing" constant="8" id="xGR-Gi-i0P"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="changeUserEmail" destination="bqA-7S-Gvc" id="RNq-46-K8t"/>
+                        <outlet property="numberOfLikes" destination="H5v-OO-8Oz" id="cll-pd-tyo"/>
+                        <outlet property="numberOfPosts" destination="6Yc-2j-Sjw" id="qKA-wJ-TcG"/>
                         <outlet property="pointsNumber" destination="6E6-3h-PC0" id="6Za-4Y-1KI"/>
                         <outlet property="profileImage" destination="Rw6-wh-Vcy" id="Nhz-65-eLX"/>
                         <outlet property="userEmail" destination="NAI-sK-9A3" id="1hI-t9-HrP"/>
@@ -1021,6 +1038,10 @@
                                     <segue destination="ZZw-mG-EQ9" kind="embed" id="dzp-SW-quF"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGj-yO-szO">
+                                <rect key="frame" x="397" y="503" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1038,6 +1059,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7ok-Br-G6i"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="settingsButton" destination="GOv-ac-had" id="tOF-RX-sIu"/>
                     </connections>
@@ -1164,6 +1186,7 @@
                     <navigationItem key="navigationItem" id="cnw-uN-iNj">
                         <barButtonItem key="leftBarButtonItem" title="Open" id="VtE-0K-pdo"/>
                     </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="Open" destination="VtE-0K-pdo" id="D1B-gM-KIN"/>
                         <outlet property="emailTextField" destination="D1u-NX-ZcG" id="FjK-Nh-0NK"/>
@@ -1187,6 +1210,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <segue destination="PYZ-UE-2FU" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="vTx-CD-GzQ"/>
                         <segue destination="KYl-X9-mBg" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="Ojm-cA-5YY"/>
@@ -1371,6 +1395,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="dJg-QI-aDM"/>
-        <segue reference="iPE-Ci-ocB"/>
+        <segue reference="dM0-zC-EEB"/>
     </inferredMetricsTieBreakers>
 </document>
