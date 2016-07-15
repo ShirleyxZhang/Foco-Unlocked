@@ -209,7 +209,7 @@
                                                 <color key="titleColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                         </button>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OhE-hR-Zoc">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OhE-hR-Zoc">
                                             <rect key="frame" x="0.0" y="40" width="600" height="170"/>
                                         </imageView>
                                     </subviews>
@@ -435,7 +435,7 @@
                                     <action selector="logout:" destination="KYl-X9-mBg" eventType="touchUpInside" id="ptA-Vq-QvU"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user.png" translatesAutoresizingMaskIntoConstraints="NO" id="jS3-ws-voS">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user.png" translatesAutoresizingMaskIntoConstraints="NO" id="jS3-ws-voS">
                                 <rect key="frame" x="20" y="85" width="77" height="77"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="77" id="Z7A-XD-R6N"/>
@@ -664,7 +664,7 @@
                                     <constraint firstItem="c0A-RQ-IRY" firstAttribute="top" secondItem="sUj-vo-wK3" secondAttribute="top" constant="9" id="uMN-qh-FV0"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SZ2-BA-2Bl">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SZ2-BA-2Bl">
                                 <rect key="frame" x="0.0" y="100" width="600" height="222"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                 <constraints>
@@ -872,7 +872,7 @@
                                     <action selector="changeProfileImage:" destination="ClM-e9-U1p" eventType="touchUpInside" id="Nc2-zr-N5e"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rw6-wh-Vcy">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rw6-wh-Vcy">
                                 <rect key="frame" x="28" y="28" width="113" height="113"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="113" id="5Cb-iZ-fC7"/>
@@ -1269,7 +1269,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MiK-fG-1gH">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MiK-fG-1gH">
                                 <rect key="frame" x="0.0" y="106" width="600" height="198"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                 <constraints>
