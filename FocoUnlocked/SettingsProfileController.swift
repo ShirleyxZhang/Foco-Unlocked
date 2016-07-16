@@ -141,6 +141,7 @@ class SettingsProfileController: UIViewController, UIImagePickerControllerDelega
         var user = FIRAuth.auth()?.currentUser
         
         let deleteAccount = { (action: UIAlertAction!) -> Void in
+            print("fdsafdsa")
             user?.deleteWithCompletion { error in
                 if let error = error {
                     let alertController = UIAlertController(title: "Error Occured", message:
@@ -151,6 +152,8 @@ class SettingsProfileController: UIViewController, UIImagePickerControllerDelega
                         "You account has been deleted", preferredStyle: UIAlertControllerStyle.Alert)
                     alertController.addAction(UIAlertAction(title: "Ok", style: .Cancel, handler: nil))
                 }
+                self.navigationController?.popViewControllerAnimated(true)
+                self.navigationController?.popViewControllerAnimated(true)
             }
         }
         let alertController = UIAlertController(title: "Delete Account", message:
