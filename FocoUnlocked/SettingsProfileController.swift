@@ -147,10 +147,24 @@ class SettingsProfileController: UIViewController, UIImagePickerControllerDelega
     }
     
     @IBAction func deleteAccount(sender: AnyObject) {
-        var user = FIRAuth.auth()?.currentUser
+        let user = FIRAuth.auth()?.currentUser
+        
+        let usersEmail = user!.email!
+        let email = usersEmail.componentsSeparatedByString(".")[0]
         
         let deleteAccount = { (action: UIAlertAction!) -> Void in
             print("fdsafdsa")
+            self.usersRef.child("users").observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
+                if (!(snapshot.value is NSNull)) {
+                    let postDict = snapshot.value as? [String : AnyObject]
+                    for object in postDict! {
+                        let name = object.0
+                        if (name == email) {
+                            self.usersRef.child("users").child("\(email)").removeValue()
+                        }
+                    }
+                }
+            })
             user?.deleteWithCompletion { error in
                 if let error = error {
                     let alertController = UIAlertController(title: "Error Occured", message:

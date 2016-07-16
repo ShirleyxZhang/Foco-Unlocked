@@ -72,9 +72,7 @@ class CreateAccountViewController: UIViewController {
         let password = self.passwordTextField.text
         let username = self.usernameTextField.text
         
-        let user = FIRAuth.auth()?.currentUser
-        let emails: String! = user!.email
-        let userEmail = emails.componentsSeparatedByString(".")[0]
+        let userEmail = email!.componentsSeparatedByString(".")[0]
         
         self.usersRef.child("\(userEmail)").child("Username").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
             if (!(snapshot.value is NSNull)) {
