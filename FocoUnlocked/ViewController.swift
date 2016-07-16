@@ -228,15 +228,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     let user = FIRAuth.auth()?.currentUser
                     let email: String! = user!.email
                     let userEmail = email.componentsSeparatedByString(".")[0]
-                    let username = user!.displayName
                     var author: String = ""
+                    self.usersRef.child("\(userEmail)").child("Username").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+                        if (!(snapshot.value is NSNull)) {
+                            author = (snapshot.value as! String)
+                        } else {
+                            author = email
+                        }
+                    })
                     self.imageData = UIImageJPEGRepresentation(photoImageView.image!, 0.1)!
                     let base64String = imageData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength)
-                    if (username != nil) {
-                        author = username!
-                    } else if (username == nil) {
-                        author = userEmail
-                    }
                     let newPost: Post = Post(user: author, title: itemName.text!, description: itemDesc.text!, image: base64String)
                     postsList.append(newPost)
                     Posts.child("posts").child(newPost.getIdString()).setValue(newPost.toArray())

@@ -599,6 +599,7 @@
                         <outlet property="rankNumber" destination="UpD-b8-Y16" id="gbV-15-vln"/>
                         <outlet property="userEmail" destination="n7q-6d-kCz" id="Wa1-KO-enz"/>
                         <outlet property="userImage" destination="jS3-ws-voS" id="rHi-PF-P7Z"/>
+                        <outlet property="userName" destination="IXw-bc-dhW" id="kwJ-0M-ZJ5"/>
                         <segue destination="hK1-YJ-F9N" kind="show" identifier="logout" id="dJg-QI-aDM"/>
                     </connections>
                 </viewController>
@@ -975,6 +976,7 @@
                         <outlet property="pointsNumber" destination="6E6-3h-PC0" id="6Za-4Y-1KI"/>
                         <outlet property="profileImage" destination="Rw6-wh-Vcy" id="Nhz-65-eLX"/>
                         <outlet property="userEmail" destination="NAI-sK-9A3" id="1hI-t9-HrP"/>
+                        <outlet property="userName" destination="LYW-oY-txW" id="l0U-s7-LMt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ii0-6l-OZN" userLabel="First Responder" sceneMemberID="firstResponder"/>

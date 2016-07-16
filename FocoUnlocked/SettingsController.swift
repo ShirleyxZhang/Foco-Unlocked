@@ -18,6 +18,7 @@ class SettingsController: UIViewController {
     
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userEmail: UILabel!
+    @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var rankNumber: UILabel!
     @IBOutlet weak var pointsNumber: UILabel!
     
@@ -42,6 +43,14 @@ class SettingsController: UIViewController {
         userEmail.text = user!.email
         let usersEmail = user!.email
         let email = usersEmail!.componentsSeparatedByString(".")[0]
+            
+            self.usersRef.child("\(email)").child("Username").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+                if (!(snapshot.value is NSNull)) {
+                    self.userName.text = (snapshot.value as! String)
+                } else {
+                    self.userName.text = email
+                }
+            })
         
             self.usersRef.child("users").child("\(email)").child("ProfileImage").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
                 if (!(snapshot.value is NSNull)) {

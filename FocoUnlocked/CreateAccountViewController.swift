@@ -72,6 +72,22 @@ class CreateAccountViewController: UIViewController {
         let password = self.passwordTextField.text
         let username = self.usernameTextField.text
         
+        let user = FIRAuth.auth()?.currentUser
+        let emails: String! = user!.email
+        let userEmail = emails.componentsSeparatedByString(".")[0]
+        
+        self.usersRef.child("\(userEmail)").child("Username").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+            if (!(snapshot.value is NSNull)) {
+                var pointsNumberString = Int(snapshot.value! as! String)
+                if (pointsNumberString > 0) {
+                    pointsNumberString = pointsNumberString! - 1
+                }
+                self.usersRef.child("users").child("\(userEmail)").child("Username").setValue(username!)
+            } else {
+                self.usersRef.child("users").child("\(userEmail)").child("Username").setValue(username!)
+            }
+        })
+        
         if email != "" && password != "" && username != ""
         {
             // Attempts to create a new user
