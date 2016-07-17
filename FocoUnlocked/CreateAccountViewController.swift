@@ -80,9 +80,9 @@ class CreateAccountViewController: UIViewController {
                 if (pointsNumberString > 0) {
                     pointsNumberString = pointsNumberString! - 1
                 }
-                self.usersRef.child("\(userEmail)").child("Username").setValue(username!)
+                self.usersRef.child("users").child("\(userEmail)").child("Username").setValue(username!)
             } else {
-                self.usersRef.child("\(userEmail)").child("Username").setValue(username!)
+                self.usersRef.child("users").child("\(userEmail)").child("Username").setValue(username!)
             }
         })
         
