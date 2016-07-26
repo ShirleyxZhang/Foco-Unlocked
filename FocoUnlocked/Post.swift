@@ -114,11 +114,11 @@ class Post {
     
     // Adds a bite to the current post
     func addBite() {
-        self.bites++
+        self.bites = self.bites + 1
     }
     
     // Subtracts a bite from the current post
     func subBite() {
-        self.bites--
+        self.bites = self.bites - 1
     }
 }

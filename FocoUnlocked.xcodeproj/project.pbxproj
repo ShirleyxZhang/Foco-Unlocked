@@ -10,6 +10,11 @@
 		4075376034636521DCAC6FD6 /* Pods_FocoUnlockedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A55E4355A293416EFA7A280 /* Pods_FocoUnlockedTests.framework */; };
 		5B58055E39DA5D2405E6EC5C /* Pods_FocoUnlocked.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB54249EEBAC7CB77F9A2573 /* Pods_FocoUnlocked.framework */; };
 		68E464EBCD3185C1D67454C2 /* Pods_FocoUnlockedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4017D2019F3DF21AA64775D5 /* Pods_FocoUnlockedUITests.framework */; };
+		881EC9091D47CF0D0071A097 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881EC9081D47CF0D0071A097 /* FeedController.swift */; };
+		881EC90E1D47CF220071A097 /* menu_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 881EC90A1D47CF220071A097 /* menu_dark.png */; };
+		881EC90F1D47CF220071A097 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 881EC90B1D47CF220071A097 /* menu.png */; };
+		881EC9101D47CF220071A097 /* namefinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 881EC90C1D47CF220071A097 /* namefinal.png */; };
+		881EC9111D47CF220071A097 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 881EC90D1D47CF220071A097 /* settings.png */; };
 		886286721CF693B9007D8C94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286711CF693B9007D8C94 /* AppDelegate.swift */; };
 		886286741CF693B9007D8C94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286731CF693B9007D8C94 /* ViewController.swift */; };
 		886286791CF693B9007D8C94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 886286781CF693B9007D8C94 /* Assets.xcassets */; };
@@ -37,10 +42,6 @@
 		88A334E21D3887BC0043C556 /* RefreshContents.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88A334E11D3887BC0043C556 /* RefreshContents.xib */; };
 		88A334E41D389D0D0043C556 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A334E31D389D0D0043C556 /* MapKit.framework */; };
 		88A334EA1D39656E0043C556 /* ios in Resources */ = {isa = PBXBuildFile; fileRef = 88A334E91D39656E0043C556 /* ios */; };
-		88C71FEC1D054BCD002E26C9 /* menu_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C71FE81D054BCD002E26C9 /* menu_dark.png */; };
-		88C71FED1D054BCD002E26C9 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C71FE91D054BCD002E26C9 /* menu.png */; };
-		88C71FEE1D054BCD002E26C9 /* namefinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C71FEA1D054BCD002E26C9 /* namefinal.png */; };
-		88C71FEF1D054BCD002E26C9 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C71FEB1D054BCD002E26C9 /* settings.png */; };
 		88C71FF61D092017002E26C9 /* SuggestionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C71FF51D092017002E26C9 /* SuggestionsController.swift */; };
 		88C71FF81D092861002E26C9 /* SettingsProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C71FF71D092861002E26C9 /* SettingsProfileController.swift */; };
 		88C71FFA1D093586002E26C9 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C71FF91D093586002E26C9 /* user.png */; };
@@ -48,7 +49,6 @@
 		88D174EF1D2A39C8006284A7 /* edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 88D174EE1D2A39C8006284A7 /* edit.png */; };
 		88F77B3B1D10EA2D003B88A2 /* screw.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F77B3A1D10EA2D003B88A2 /* screw.png */; };
 		88F77B3F1D10EA8B003B88A2 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F77B3E1D10EA8B003B88A2 /* SWRevealViewController.m */; };
-		88F77B411D110DFA003B88A2 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F77B401D110DFA003B88A2 /* FeedController.swift */; };
 		88F77B451D1619C7003B88A2 /* SidebarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F77B441D1619C7003B88A2 /* SidebarTableViewController.swift */; };
 		88F77B471D1769F8003B88A2 /* first_user.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F77B461D1769F8003B88A2 /* first_user.png */; };
 		88F77B4D1D176BEF003B88A2 /* feedback.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F77B4C1D176BEF003B88A2 /* feedback.png */; };
@@ -76,6 +76,11 @@
 		4017D2019F3DF21AA64775D5 /* Pods_FocoUnlockedUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FocoUnlockedUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58CCA18E3340271B365D13BC /* Pods-FocoUnlocked.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FocoUnlocked.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FocoUnlocked/Pods-FocoUnlocked.debug.xcconfig"; sourceTree = "<group>"; };
 		59585F6903AE25584EB4F87F /* Pods-FocoUnlocked.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FocoUnlocked.release.xcconfig"; path = "Pods/Target Support Files/Pods-FocoUnlocked/Pods-FocoUnlocked.release.xcconfig"; sourceTree = "<group>"; };
+		881EC9081D47CF0D0071A097 /* FeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
+		881EC90A1D47CF220071A097 /* menu_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu_dark.png; path = FocoUnlocked/menu_dark.png; sourceTree = "<group>"; };
+		881EC90B1D47CF220071A097 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu.png; path = FocoUnlocked/menu.png; sourceTree = "<group>"; };
+		881EC90C1D47CF220071A097 /* namefinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = namefinal.png; path = FocoUnlocked/namefinal.png; sourceTree = "<group>"; };
+		881EC90D1D47CF220071A097 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings.png; path = FocoUnlocked/settings.png; sourceTree = "<group>"; };
 		8862866E1CF693B9007D8C94 /* FocoUnlocked.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocoUnlocked.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		886286711CF693B9007D8C94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		886286731CF693B9007D8C94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,10 +114,6 @@
 		88A334E11D3887BC0043C556 /* RefreshContents.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RefreshContents.xib; path = ../Pods/RefreshContents.xib; sourceTree = "<group>"; };
 		88A334E31D389D0D0043C556 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		88A334E91D39656E0043C556 /* ios */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ios; sourceTree = "<group>"; };
-		88C71FE81D054BCD002E26C9 /* menu_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_dark.png; sourceTree = "<group>"; };
-		88C71FE91D054BCD002E26C9 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
-		88C71FEA1D054BCD002E26C9 /* namefinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = namefinal.png; sourceTree = "<group>"; };
-		88C71FEB1D054BCD002E26C9 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		88C71FF51D092017002E26C9 /* SuggestionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionsController.swift; sourceTree = "<group>"; };
 		88C71FF71D092861002E26C9 /* SettingsProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsProfileController.swift; sourceTree = "<group>"; };
 		88C71FF91D093586002E26C9 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = user.png; path = FocoUnlocked/user.png; sourceTree = "<group>"; };
@@ -122,7 +123,6 @@
 		88F77B3C1D10EA8A003B88A2 /* FocoUnlocked-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FocoUnlocked-Bridging-Header.h"; sourceTree = "<group>"; };
 		88F77B3D1D10EA8B003B88A2 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		88F77B3E1D10EA8B003B88A2 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		88F77B401D110DFA003B88A2 /* FeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedController.swift; path = ../FeedController.swift; sourceTree = "<group>"; };
 		88F77B441D1619C7003B88A2 /* SidebarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarTableViewController.swift; sourceTree = "<group>"; };
 		88F77B461D1769F8003B88A2 /* first_user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = first_user.png; path = FocoUnlocked/first_user.png; sourceTree = "<group>"; };
 		88F77B4A1D176B98003B88A2 /* feedback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = feedback.png; path = FocoUnlocked/feedback.png; sourceTree = "<group>"; };
@@ -189,7 +189,7 @@
 		886286701CF693B9007D8C94 /* FocoUnlocked */ = {
 			isa = PBXGroup;
 			children = (
-				88F77B401D110DFA003B88A2 /* FeedController.swift */,
+				881EC9081D47CF0D0071A097 /* FeedController.swift */,
 				886286711CF693B9007D8C94 /* AppDelegate.swift */,
 				886286731CF693B9007D8C94 /* ViewController.swift */,
 				8862869F1CF693D4007D8C94 /* GoogleService-Info.plist */,
@@ -248,13 +248,13 @@
 				88F77B4A1D176B98003B88A2 /* feedback.png */,
 				88C71FF91D093586002E26C9 /* user.png */,
 				886286B41CF694F7007D8C94 /* unfilled cookie.png */,
+				881EC90A1D47CF220071A097 /* menu_dark.png */,
+				881EC90B1D47CF220071A097 /* menu.png */,
+				881EC90C1D47CF220071A097 /* namefinal.png */,
+				881EC90D1D47CF220071A097 /* settings.png */,
 				88F77B4C1D176BEF003B88A2 /* feedback.png */,
 				88D174EC1D29F4F2006284A7 /* home.png */,
-				88C71FE81D054BCD002E26C9 /* menu_dark.png */,
 				88F77B3A1D10EA2D003B88A2 /* screw.png */,
-				88C71FE91D054BCD002E26C9 /* menu.png */,
-				88C71FEA1D054BCD002E26C9 /* namefinal.png */,
-				88C71FEB1D054BCD002E26C9 /* settings.png */,
 				88D174EE1D2A39C8006284A7 /* edit.png */,
 				886286A91CF694F7007D8C94 /* filled cookie.png */,
 			);
@@ -406,18 +406,18 @@
 				886286C71CF694F7007D8C94 /* unfilled cookie.png in Resources */,
 				88C71FFA1D093586002E26C9 /* user.png in Resources */,
 				88F77B4D1D176BEF003B88A2 /* feedback.png in Resources */,
-				88C71FED1D054BCD002E26C9 /* menu.png in Resources */,
 				88D174ED1D29F4F2006284A7 /* home.png in Resources */,
 				88F77B3B1D10EA2D003B88A2 /* screw.png in Resources */,
 				886286A01CF693D4007D8C94 /* GoogleService-Info.plist in Resources */,
-				88C71FEF1D054BCD002E26C9 /* settings.png in Resources */,
-				88C71FEE1D054BCD002E26C9 /* namefinal.png in Resources */,
+				881EC90F1D47CF220071A097 /* menu.png in Resources */,
 				88D174EF1D2A39C8006284A7 /* edit.png in Resources */,
 				886286791CF693B9007D8C94 /* Assets.xcassets in Resources */,
 				88A334EA1D39656E0043C556 /* ios in Resources */,
 				886CA0811CF7D31800C58372 /* GoogleService-Info.plist in Resources */,
 				886286BC1CF694F7007D8C94 /* filled cookie.png in Resources */,
-				88C71FEC1D054BCD002E26C9 /* menu_dark.png in Resources */,
+				881EC9101D47CF220071A097 /* namefinal.png in Resources */,
+				881EC9111D47CF220071A097 /* settings.png in Resources */,
+				881EC90E1D47CF220071A097 /* menu_dark.png in Resources */,
 				886286A31CF694A9007D8C94 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -577,8 +577,8 @@
 				886286B91CF694F7007D8C94 /* CreateAccountViewController.swift in Sources */,
 				886286C81CF694F7007D8C94 /* UpvoteButton.swift in Sources */,
 				886286BB1CF694F7007D8C94 /* DetailPostViewController.swift in Sources */,
-				88F77B411D110DFA003B88A2 /* FeedController.swift in Sources */,
 				886286C31CF694F7007D8C94 /* Post.swift in Sources */,
+				881EC9091D47CF0D0071A097 /* FeedController.swift in Sources */,
 				886286741CF693B9007D8C94 /* ViewController.swift in Sources */,
 				886286C21CF694F7007D8C94 /* PhotoGalleryCropping.swift in Sources */,
 				886286721CF693B9007D8C94 /* AppDelegate.swift in Sources */,
