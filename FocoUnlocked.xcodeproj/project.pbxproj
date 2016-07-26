@@ -21,7 +21,6 @@
 		8862867C1CF693B9007D8C94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8862867A1CF693B9007D8C94 /* LaunchScreen.storyboard */; };
 		886286871CF693BA007D8C94 /* FocoUnlockedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286861CF693BA007D8C94 /* FocoUnlockedTests.swift */; };
 		886286921CF693BA007D8C94 /* FocoUnlockedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286911CF693BA007D8C94 /* FocoUnlockedUITests.swift */; };
-		886286A01CF693D4007D8C94 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8862869F1CF693D4007D8C94 /* GoogleService-Info.plist */; };
 		886286A31CF694A9007D8C94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 886286A11CF694A9007D8C94 /* Main.storyboard */; };
 		886286B71CF694F7007D8C94 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286A41CF694F7007D8C94 /* BaseService.swift */; };
 		886286B91CF694F7007D8C94 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886286A61CF694F7007D8C94 /* CreateAccountViewController.swift */; };
@@ -93,7 +92,6 @@
 		8862868D1CF693BA007D8C94 /* FocoUnlockedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FocoUnlockedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		886286911CF693BA007D8C94 /* FocoUnlockedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocoUnlockedUITests.swift; sourceTree = "<group>"; };
 		886286931CF693BA007D8C94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8862869F1CF693D4007D8C94 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		886286A21CF694A9007D8C94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		886286A41CF694F7007D8C94 /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		886286A61CF694F7007D8C94 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
@@ -192,7 +190,6 @@
 				881EC9081D47CF0D0071A097 /* FeedController.swift */,
 				886286711CF693B9007D8C94 /* AppDelegate.swift */,
 				886286731CF693B9007D8C94 /* ViewController.swift */,
-				8862869F1CF693D4007D8C94 /* GoogleService-Info.plist */,
 				886286A11CF694A9007D8C94 /* Main.storyboard */,
 				88F77B441D1619C7003B88A2 /* SidebarTableViewController.swift */,
 				88C71FF71D092861002E26C9 /* SettingsProfileController.swift */,
@@ -408,7 +405,6 @@
 				88F77B4D1D176BEF003B88A2 /* feedback.png in Resources */,
 				88D174ED1D29F4F2006284A7 /* home.png in Resources */,
 				88F77B3B1D10EA2D003B88A2 /* screw.png in Resources */,
-				886286A01CF693D4007D8C94 /* GoogleService-Info.plist in Resources */,
 				881EC90F1D47CF220071A097 /* menu.png in Resources */,
 				88D174EF1D2A39C8006284A7 /* edit.png in Resources */,
 				886286791CF693B9007D8C94 /* Assets.xcassets in Resources */,
