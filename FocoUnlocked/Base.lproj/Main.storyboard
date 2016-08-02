@@ -646,10 +646,10 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SZ2-BA-2Bl">
-                                <rect key="frame" x="0.0" y="100" width="600" height="222"/>
+                                <rect key="frame" x="0.0" y="100" width="600" height="239"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="222" id="0Oa-43-m02"/>
+                                    <constraint firstAttribute="height" constant="239" id="0Oa-43-m02"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NF7-i7-XQi">
@@ -698,7 +698,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="yes"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients and Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yI-Ws-h2f">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Ingredients and Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yI-Ws-h2f">
                                 <rect key="frame" x="11" y="354" width="579" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="OxU-u3-uAI"/>
@@ -707,7 +707,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Zb6-ry-Hy6" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Zb6-ry-Hy6" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
                                 <rect key="frame" x="11" y="376" width="579" height="124"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="1" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -735,15 +735,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNG-2i-B7H">
-                                <rect key="frame" x="462" y="325" width="80" height="30"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <color key="tintColor" red="1" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="New Image"/>
-                                <connections>
-                                    <action selector="openCameraButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Mz-O1-qvd"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Item Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SCM-C0-QEN">
                                 <rect key="frame" x="11" y="67" width="579" height="30"/>
                                 <color key="tintColor" red="1" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -753,20 +744,26 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="yes" keyboardAppearance="alert" returnKeyType="done"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_add_a_photo_3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="wig-eO-FCW">
+                                <rect key="frame" x="510" y="233" width="70" height="70"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap to add your photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12Q-Js-xr0">
+                                <rect key="frame" x="406" y="305" width="184" height="21"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.15648674242424243" green="0.15648674242424243" blue="0.15648674242424243" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="SZ2-BA-2Bl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="100" id="1Px-73-5h9"/>
                             <constraint firstItem="z5K-q6-Djy" firstAttribute="top" secondItem="Zb6-ry-Hy6" secondAttribute="bottom" constant="8" id="2Le-iX-svt"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="jNG-2i-B7H" secondAttribute="trailing" constant="18" id="2gR-x5-TOo"/>
                             <constraint firstItem="SCM-C0-QEN" firstAttribute="top" secondItem="sUj-vo-wK3" secondAttribute="bottom" constant="2" id="Fja-e2-FPs"/>
                             <constraint firstItem="25g-b4-sWJ" firstAttribute="top" secondItem="nSX-SP-C1T" secondAttribute="bottom" constant="4" id="HMZ-cx-Xjj"/>
                             <constraint firstItem="Zb6-ry-Hy6" firstAttribute="top" secondItem="4yI-Ws-h2f" secondAttribute="bottom" constant="1" id="JB1-HX-0Gs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="z5K-q6-Djy" secondAttribute="trailing" constant="-10" id="JWp-2I-Voc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="25g-b4-sWJ" secondAttribute="bottom" constant="7" id="LGD-8E-eia"/>
-                            <constraint firstItem="4yI-Ws-h2f" firstAttribute="top" secondItem="jNG-2i-B7H" secondAttribute="bottom" constant="-1" id="LPl-7W-GzX"/>
                             <constraint firstItem="SCM-C0-QEN" firstAttribute="top" secondItem="sUj-vo-wK3" secondAttribute="bottom" constant="2" id="PAz-Lz-dbk"/>
-                            <constraint firstItem="jNG-2i-B7H" firstAttribute="top" secondItem="SZ2-BA-2Bl" secondAttribute="bottom" constant="3" id="RTK-Vg-8yk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nSX-SP-C1T" secondAttribute="trailing" constant="-10" id="SmL-ez-hLG"/>
                             <constraint firstItem="Zb6-ry-Hy6" firstAttribute="centerX" secondItem="sUj-vo-wK3" secondAttribute="centerX" id="URv-2e-Zyk"/>
                             <constraint firstItem="25g-b4-sWJ" firstAttribute="top" secondItem="z5K-q6-Djy" secondAttribute="bottom" constant="23" id="Xzv-3Z-IVr"/>
@@ -787,6 +784,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageLabel" destination="wig-eO-FCW" id="3ew-vd-7PG"/>
+                        <outlet property="imageNoteLabel" destination="12Q-Js-xr0" id="Tth-0V-Pq2"/>
                         <outlet property="itemDesc" destination="Zb6-ry-Hy6" id="wor-hk-yfq"/>
                         <outlet property="itemName" destination="SCM-C0-QEN" id="IQ3-sj-fhU"/>
                         <outlet property="itemTags" destination="nSX-SP-C1T" id="F5P-u6-Uq6"/>
@@ -1376,6 +1375,7 @@
     <resources>
         <image name="feedback.png" width="1200" height="1200"/>
         <image name="first_user.png" width="1200" height="1200"/>
+        <image name="ic_add_a_photo_3x.png" width="72" height="72"/>
         <image name="menu.png" width="1200" height="1200"/>
         <image name="namefinal.png" width="3000" height="900"/>
         <image name="screw.png" width="1200" height="1200"/>

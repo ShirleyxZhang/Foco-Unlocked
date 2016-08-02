@@ -22,6 +22,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet var itemDesc: UITextView!
     @IBOutlet var itemTags: UITextField!
     
+    @IBOutlet weak var imageNoteLabel: UILabel!
+    @IBOutlet weak var imageLabel: UIImageView!
     @IBOutlet var uploadButton: UIButton!
     
     //var photoImageView: UIImageView!
@@ -59,9 +61,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         itemName.layer.addSublayer(border)
         itemName.layer.masksToBounds = true   
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
-        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
+        let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(ViewController.openCameraButton(_:)))
+        photoImageView.userInteractionEnabled = true
+        photoImageView.addGestureRecognizer(tapGestureRecognizer)
     }
     
     
@@ -110,6 +114,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         print("Done Button Did Press")
         // Might not have the images
         photoImageView.image = images[0]
+        imageLabel.hidden = true
+        imageNoteLabel.hidden = true
         dismissViewControllerAnimated(true, completion: nil)
         
     }
