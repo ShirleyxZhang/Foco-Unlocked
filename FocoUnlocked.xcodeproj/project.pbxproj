@@ -47,6 +47,7 @@
 		88BCA8061D516F91000C9E3D /* ic_menu_white_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88BCA8031D516F91000C9E3D /* ic_menu_white_2x.png */; };
 		88BCA8071D516F91000C9E3D /* ic_menu_white_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88BCA8041D516F91000C9E3D /* ic_menu_white_3x.png */; };
 		88BCA8081D516F91000C9E3D /* ic_menu_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 88BCA8051D516F91000C9E3D /* ic_menu_white.png */; };
+		88BCA80A1D5172FC000C9E3D /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BCA8091D5172FC000C9E3D /* NavigationController.swift */; };
 		88C71FF61D092017002E26C9 /* SuggestionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C71FF51D092017002E26C9 /* SuggestionsController.swift */; };
 		88C71FF81D092861002E26C9 /* SettingsProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C71FF71D092861002E26C9 /* SettingsProfileController.swift */; };
 		88C71FFA1D093586002E26C9 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C71FF91D093586002E26C9 /* user.png */; };
@@ -124,6 +125,7 @@
 		88BCA8031D516F91000C9E3D /* ic_menu_white_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_menu_white_2x.png; path = FocoUnlocked/ic_menu_white_24dp/ios/ic_menu_white.imageset/ic_menu_white_2x.png; sourceTree = "<group>"; };
 		88BCA8041D516F91000C9E3D /* ic_menu_white_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_menu_white_3x.png; path = FocoUnlocked/ic_menu_white_24dp/ios/ic_menu_white.imageset/ic_menu_white_3x.png; sourceTree = "<group>"; };
 		88BCA8051D516F91000C9E3D /* ic_menu_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_menu_white.png; path = FocoUnlocked/ic_menu_white_24dp/ios/ic_menu_white.imageset/ic_menu_white.png; sourceTree = "<group>"; };
+		88BCA8091D5172FC000C9E3D /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationController.swift; path = ../NavigationController.swift; sourceTree = "<group>"; };
 		88C71FF51D092017002E26C9 /* SuggestionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionsController.swift; sourceTree = "<group>"; };
 		88C71FF71D092861002E26C9 /* SettingsProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsProfileController.swift; sourceTree = "<group>"; };
 		88C71FF91D093586002E26C9 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = user.png; path = FocoUnlocked/user.png; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 		886286701CF693B9007D8C94 /* FocoUnlocked */ = {
 			isa = PBXGroup;
 			children = (
+				88BCA8091D5172FC000C9E3D /* NavigationController.swift */,
 				881EC9081D47CF0D0071A097 /* FeedController.swift */,
 				886286711CF693B9007D8C94 /* AppDelegate.swift */,
 				886286731CF693B9007D8C94 /* ViewController.swift */,
@@ -605,6 +608,7 @@
 				88C71FF81D092861002E26C9 /* SettingsProfileController.swift in Sources */,
 				886286BA1CF694F7007D8C94 /* DataService.swift in Sources */,
 				886286B71CF694F7007D8C94 /* BaseService.swift in Sources */,
+				88BCA80A1D5172FC000C9E3D /* NavigationController.swift in Sources */,
 				886286C11CF694F7007D8C94 /* MealTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

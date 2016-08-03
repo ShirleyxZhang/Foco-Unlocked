@@ -15,7 +15,6 @@ class DetailPostViewController: UIViewController, UIImagePickerControllerDelegat
     
     @IBOutlet weak var settingsButton: UIButton!
     // Elements that show up on the Upload page
-    @IBOutlet weak var postTitle: UILabel!
     @IBOutlet weak var postImage: UIImageView!
     @IBOutlet weak var postTags: UILabel!
     @IBOutlet weak var postDescription: UITextView!
@@ -34,8 +33,6 @@ class DetailPostViewController: UIViewController, UIImagePickerControllerDelegat
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
 
-        
-        postTitle.text = newTitle
         postDescription.text = newDescription
         let ref = FIRDatabase.database().reference()
         ref.child("posts").queryOrderedByChild("Title")
