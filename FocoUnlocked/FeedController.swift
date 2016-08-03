@@ -59,8 +59,8 @@ class FeedController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(FeedController.showMenu(_:)))
-        swipeRight.direction = UISwipeGestureRecognizerDirection.Right
+        let swipeRight = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(FeedController.showMenu(_:)))
+        swipeRight.edges = .Left
         self.view.addGestureRecognizer(swipeRight)
         
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(FeedController.hideMenu(_:)))
@@ -87,6 +87,7 @@ class FeedController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }, completion: { (Bool) -> Void in
                 self.menuShown = true
                 self.feedContainer.userInteractionEnabled = false
+                self.showMenuCheck = true
         })
     }
     
@@ -96,6 +97,7 @@ class FeedController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }, completion: { (Bool) -> Void in
                 self.menuShown = false
                 self.feedContainer.userInteractionEnabled = true
+                self.showMenuCheck = false
         })
     }
     
@@ -104,10 +106,8 @@ class FeedController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func toggleSettings(sender: AnyObject) {
         if showMenuCheck == false {
             showMenu(self)
-            showMenuCheck = true
         } else if showMenuCheck == true {
             hideMenu(self)
-            showMenuCheck = false
         }
     }
     
