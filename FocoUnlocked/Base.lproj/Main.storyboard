@@ -1006,6 +1006,9 @@
                     <navigationItem key="navigationItem" title="Foco Unlocked" id="7ok-Br-G6i">
                         <barButtonItem key="leftBarButtonItem" image="ic_menu_white.png" id="moo-vA-gDK">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="toggleSettings:" destination="mCP-2e-2eL" id="T6Z-AY-oXl"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>

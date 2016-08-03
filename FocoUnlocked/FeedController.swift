@@ -11,8 +11,6 @@ import UIKit
 
 class FeedController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     @IBOutlet weak var feedContainer: UIView!
-
-    @IBOutlet weak var settingsButton: UIButton!
     
     var leftViewController: UIViewController? {
         willSet{
@@ -61,14 +59,6 @@ class FeedController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        let menuViewController: SettingsController = storyboard.instantiateViewControllerWithIdentifier("SettingsViewController")as! SettingsController
-        
-        self.rightViewController = menuViewController
-        
-        showMenu()*/
-        
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(FeedController.showMenu(_:)))
         swipeRight.direction = UISwipeGestureRecognizerDirection.Right
         self.view.addGestureRecognizer(swipeRight)
@@ -82,10 +72,6 @@ class FeedController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         self.navigationController!.navigationBar.titleTextAttributes = titleDict as! [String : AnyObject]
         
-        if (self.revealViewController() != nil) {
-        settingsButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), forControlEvents: .TouchUpInside)
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
     }
     
     func showMenu(sender: AnyObject) {
@@ -111,6 +97,18 @@ class FeedController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 self.menuShown = false
                 self.feedContainer.userInteractionEnabled = true
         })
+    }
+    
+    var showMenuCheck: Bool = false
+    
+    @IBAction func toggleSettings(sender: AnyObject) {
+        if showMenuCheck == false {
+            showMenu(self)
+            showMenuCheck = true
+        } else if showMenuCheck == true {
+            hideMenu(self)
+            showMenuCheck = false
+        }
     }
     
     override func didReceiveMemoryWarning() {
