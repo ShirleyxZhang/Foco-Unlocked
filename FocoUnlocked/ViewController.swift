@@ -105,12 +105,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     // Function called when user selects wrapper image
-    func wrapperDidPress( images: [UIImage]) {
+    func wrapperDidPress(imagePicker: ImagePickerController, images: [UIImage]) {
         print("Wrapper Did Press")
     }
     
     // Function called when user selects the done button
-    func doneButtonDidPress(images: [UIImage]) {
+    func doneButtonDidPress(imagePicker: ImagePickerController, images: [UIImage]) {
         print("Done Button Did Press")
         // Might not have the images
         photoImageView.image = images[0]
@@ -121,7 +121,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     // Function called when the suer selects the cancel button
-    func cancelButtonDidPress() {
+    func cancelButtonDidPress(imagePicker: ImagePickerController) {
         print("Cancel Button Did Press")
     }
     

@@ -27,6 +27,8 @@ class DetailPostViewController: UIViewController, UIImagePickerControllerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = newTitle
+        
         if (self.revealViewController() != nil) {
         settingsButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), forControlEvents: .TouchUpInside)
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())

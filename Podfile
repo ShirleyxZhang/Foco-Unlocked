@@ -10,7 +10,7 @@ pod 'Firebase/Database'
 pod 'Firebase/Auth'
 pod 'Firebase/Storage'
 pod 'ImagePicker'
-pod 'KMPlaceholderTextView', '~> 1.2.2' 
+pod 'KMPlaceholderTextView', '~> 1.2.2'
 
 end
 

@@ -15,8 +15,13 @@ class FeedController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController!.navigationBar.barTintColor = UIColor(red: 1, green: 128/255, blue: 0, alpha: 1)
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        self.navigationController!.navigationBar.titleTextAttributes = titleDict as! [String : AnyObject]
+        
         if (self.revealViewController() != nil) {
-        settingsButton.addTarget(self.revealViewController(), action: Selector("revealToggle:"), forControlEvents: .TouchUpInside)
+        settingsButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), forControlEvents: .TouchUpInside)
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
     }
