@@ -35,7 +35,6 @@ class SettingsController: UIViewController {
         userImage!.layer.borderWidth = 1
         userImage!.layer.cornerRadius = userImage.frame.size.width / 2
         userImage!.alpha = 0.3
-        //userImage!.backgroundColor = UIColor.lightGrayColor()
         userImage!.clipsToBounds = true
         
         let user = FIRAuth.auth()?.currentUser
@@ -60,15 +59,15 @@ class SettingsController: UIViewController {
                     self.userImage!.clipsToBounds = true
                     self.decodeImageData = NSData(base64EncodedString: snapshot.value as! String, options: NSDataBase64DecodingOptions.IgnoreUnknownCharacters)!
                     self.decodedImage = UIImage(data: self.decodeImageData)!
+                    self.userImage!.alpha = 1.0
                     self.userImage!.image = self.decodedImage
                 } else {
                     self.userImage!.layer.masksToBounds = false
                     self.userImage!.layer.borderWidth = 1
                     self.userImage!.layer.cornerRadius = self.userImage.frame.size.width / 2
                     self.userImage!.alpha = 0.3
-                    //userImage!.backgroundColor = UIColor.lightGrayColor()
                     self.userImage!.clipsToBounds = true
-                    self.userImage.image = UIImage(named: "user.png")
+                    self.userImage.image = UIImage(named: "ic_person_3x.png")
                 }
             })
         

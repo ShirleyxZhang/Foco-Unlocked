@@ -547,7 +547,7 @@
                                     <color key="titleColor" red="0.50196081399917603" green="0.50196081399917603" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user.png" translatesAutoresizingMaskIntoConstraints="NO" id="jS3-ws-voS">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_person_3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="jS3-ws-voS">
                                 <rect key="frame" x="115" y="85" width="77" height="77"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="77" id="Ggl-uj-f8U"/>
@@ -1265,10 +1265,10 @@
         <image name="ic_add_a_photo_3x.png" width="72" height="72"/>
         <image name="ic_edit_3x.png" width="72" height="72"/>
         <image name="ic_menu_white.png" width="24" height="24"/>
+        <image name="ic_person_3x.png" width="72" height="72"/>
         <image name="namefinal.png" width="3000" height="900"/>
         <image name="screw.png" width="1200" height="1200"/>
         <image name="unfilled cookie.png" width="1200" height="1200"/>
-        <image name="user.png" width="1200" height="1200"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="fPB-B0-LoQ"/>

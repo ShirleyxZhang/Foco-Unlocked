@@ -48,6 +48,9 @@
 		88BCA8071D516F91000C9E3D /* ic_menu_white_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88BCA8041D516F91000C9E3D /* ic_menu_white_3x.png */; };
 		88BCA8081D516F91000C9E3D /* ic_menu_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 88BCA8051D516F91000C9E3D /* ic_menu_white.png */; };
 		88BCA80A1D5172FC000C9E3D /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BCA8091D5172FC000C9E3D /* NavigationController.swift */; };
+		88BCA80E1D51988D000C9E3D /* ic_person_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88BCA80B1D51988D000C9E3D /* ic_person_2x.png */; };
+		88BCA80F1D51988D000C9E3D /* ic_person_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88BCA80C1D51988D000C9E3D /* ic_person_3x.png */; };
+		88BCA8101D51988D000C9E3D /* ic_person.png in Resources */ = {isa = PBXBuildFile; fileRef = 88BCA80D1D51988D000C9E3D /* ic_person.png */; };
 		88C71FF61D092017002E26C9 /* SuggestionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C71FF51D092017002E26C9 /* SuggestionsController.swift */; };
 		88C71FF81D092861002E26C9 /* SettingsProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C71FF71D092861002E26C9 /* SettingsProfileController.swift */; };
 		88C71FFA1D093586002E26C9 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C71FF91D093586002E26C9 /* user.png */; };
@@ -126,6 +129,9 @@
 		88BCA8041D516F91000C9E3D /* ic_menu_white_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_menu_white_3x.png; path = FocoUnlocked/ic_menu_white_24dp/ios/ic_menu_white.imageset/ic_menu_white_3x.png; sourceTree = "<group>"; };
 		88BCA8051D516F91000C9E3D /* ic_menu_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_menu_white.png; path = FocoUnlocked/ic_menu_white_24dp/ios/ic_menu_white.imageset/ic_menu_white.png; sourceTree = "<group>"; };
 		88BCA8091D5172FC000C9E3D /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationController.swift; path = ../NavigationController.swift; sourceTree = "<group>"; };
+		88BCA80B1D51988D000C9E3D /* ic_person_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_person_2x.png; path = FocoUnlocked/ic_person_black_24dp/ios/ic_person.imageset/ic_person_2x.png; sourceTree = "<group>"; };
+		88BCA80C1D51988D000C9E3D /* ic_person_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_person_3x.png; path = FocoUnlocked/ic_person_black_24dp/ios/ic_person.imageset/ic_person_3x.png; sourceTree = "<group>"; };
+		88BCA80D1D51988D000C9E3D /* ic_person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_person.png; path = FocoUnlocked/ic_person_black_24dp/ios/ic_person.imageset/ic_person.png; sourceTree = "<group>"; };
 		88C71FF51D092017002E26C9 /* SuggestionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionsController.swift; sourceTree = "<group>"; };
 		88C71FF71D092861002E26C9 /* SettingsProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsProfileController.swift; sourceTree = "<group>"; };
 		88C71FF91D093586002E26C9 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = user.png; path = FocoUnlocked/user.png; sourceTree = "<group>"; };
@@ -257,6 +263,9 @@
 			children = (
 				88A334E91D39656E0043C556 /* ios */,
 				88F77B461D1769F8003B88A2 /* first_user.png */,
+				88BCA80B1D51988D000C9E3D /* ic_person_2x.png */,
+				88BCA80C1D51988D000C9E3D /* ic_person_3x.png */,
+				88BCA80D1D51988D000C9E3D /* ic_person.png */,
 				88BCA8031D516F91000C9E3D /* ic_menu_white_2x.png */,
 				88BCA8041D516F91000C9E3D /* ic_menu_white_3x.png */,
 				88BCA8051D516F91000C9E3D /* ic_menu_white.png */,
@@ -422,6 +431,7 @@
 				88A334E21D3887BC0043C556 /* RefreshContents.xib in Resources */,
 				88BCA8061D516F91000C9E3D /* ic_menu_white_2x.png in Resources */,
 				8862867C1CF693B9007D8C94 /* LaunchScreen.storyboard in Resources */,
+				88BCA8101D51988D000C9E3D /* ic_person.png in Resources */,
 				88BCA8071D516F91000C9E3D /* ic_menu_white_3x.png in Resources */,
 				88F77B471D1769F8003B88A2 /* first_user.png in Resources */,
 				886286C71CF694F7007D8C94 /* unfilled cookie.png in Resources */,
@@ -435,7 +445,9 @@
 				88A334EA1D39656E0043C556 /* ios in Resources */,
 				886CA0811CF7D31800C58372 /* GoogleService-Info.plist in Resources */,
 				886286BC1CF694F7007D8C94 /* filled cookie.png in Resources */,
+				88BCA80E1D51988D000C9E3D /* ic_person_2x.png in Resources */,
 				88BCA8021D516847000C9E3D /* ic_edit.png in Resources */,
+				88BCA80F1D51988D000C9E3D /* ic_person_3x.png in Resources */,
 				88BCA8001D516847000C9E3D /* ic_edit_2x.png in Resources */,
 				881EC9101D47CF220071A097 /* namefinal.png in Resources */,
 				88BCA8081D516F91000C9E3D /* ic_menu_white.png in Resources */,
